@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>O nás – ForestBit</title>
+  <title>Kontakt – ForestBit</title>
   <link rel="preconnect" href="https://api.fontshare.com" />
   <link href="https://api.fontshare.com/v2/css?f[]=clash-display@400,500,600&f[]=satoshi@400,500,700&display=swap" rel="stylesheet" />
   <script src="https://cdn.tailwindcss.com"></script>
@@ -94,68 +94,109 @@
     /* PAGE CONTENT */
     .page-wrap { display: flex; flex-direction: column; align-items: center; gap: 80px; padding-bottom: 0; }
 
-    /* ABOUT CARD */
-    .about-card {
-      width: 1226px;
-      background: rgba(42,42,42,0.2);
-      border-radius: 32px;
-      padding: 40px;
+    /* KONTAKTNÍ INFORMACE */
+    .kontakt-info {
+      width: 1144px;
       display: flex; flex-direction: column; gap: 16px;
     }
-    .about-heading {
+    .kontakt-heading {
+      font-family: 'Clash Display', sans-serif; font-weight: 600; font-size: 64px;
+      color: var(--tertiary-100); letter-spacing: 1.28px; line-height: normal;
+    }
+    .kontakt-text {
+      font-family: 'Satoshi', sans-serif; font-weight: 400; font-size: 24px;
+      color: var(--tertiary-100); line-height: 1.5; letter-spacing: 0.24px;
+    }
+
+    /* INFO CARD */
+    .info-card {
+      width: 1144px;
+      border: 2px solid var(--tertiary-100);
+      border-radius: 32px;
+      padding: 40px;
+      text-align: center;
+    }
+    .info-card-text {
+      font-family: 'Clash Display', sans-serif; font-weight: 500; font-size: 24px;
+      color: var(--tertiary-100); letter-spacing: 0.48px; line-height: normal;
+    }
+
+    /* ÚDAJE O FIRMĚ */
+    .company-section {
+      width: 1144px;
+      display: flex; flex-direction: column; gap: 16px;
+    }
+    .company-heading {
       font-family: 'Clash Display', sans-serif; font-weight: 600; font-size: 48px;
       color: var(--tertiary-100); line-height: normal;
     }
-    .about-text {
+    .company-details {
       font-family: 'Satoshi', sans-serif; font-weight: 400; font-size: 24px;
       color: var(--tertiary-100); line-height: 1.5; letter-spacing: 0.24px;
     }
-    .about-text p + p { margin-top: 24px; }
+    .company-details .label {
+      font-family: 'Clash Display', sans-serif; font-weight: 500; letter-spacing: 0.48px;
+    }
 
-    /* TEAM SECTION */
-    .team-section {
+    /* MAP SECTION */
+    .map-section {
       width: 1144px;
-      display: flex; flex-direction: column; align-items: center; gap: 80px;
+      display: flex; flex-direction: column; gap: 32px;
     }
-    .team-header {
-      display: flex; flex-direction: column; gap: 16px; width: 100%;
-    }
-    .team-heading {
+    .map-heading {
       font-family: 'Clash Display', sans-serif; font-weight: 600; font-size: 48px;
-      color: var(--tertiary-100); line-height: 1;
+      color: var(--tertiary-100); line-height: normal;
     }
-    .team-subtitle {
+    .map-container {
+      position: relative;
+      width: 1144px; height: 570px;
+      border-radius: 32px; overflow: hidden;
+      background: #2a2a2a;
+    }
+    .map-container img {
+      width: 100%; height: 100%; object-fit: cover;
+    }
+    .map-pin {
+      position: absolute;
+      left: 47.5%; top: 36%;
+      transform: translate(-50%, -100%);
+      pointer-events: none;
+    }
+
+    /* FAQ SECTION */
+    .faq-section {
+      width: 1144px;
+      display: flex; flex-direction: column; gap: 32px;
+    }
+    .faq-heading {
+      font-family: 'Clash Display', sans-serif; font-weight: 600; font-size: 48px;
+      color: var(--tertiary-100); line-height: normal;
+    }
+    .faq-card {
+      width: 1144px; height: 230px;
+      border-radius: 32px; overflow: hidden;
+      background: linear-gradient(125deg, #060804 0%, #0e1205 12%, #1a2008 25%, #2d3a0c 38%, #435010 50%, #5a6814 62%, #6e7c12 74%, #808c16 86%, #8a9818 100%);
+      padding: 32px 48px 48px;
+      display: flex; flex-direction: column; gap: 16px;
+    }
+    .faq-question {
+      font-family: 'Clash Display', sans-serif; font-weight: 500; font-size: 32px;
+      color: var(--tertiary-100); letter-spacing: 0.32px; line-height: normal;
+    }
+    .faq-answer {
       font-family: 'Satoshi', sans-serif; font-weight: 400; font-size: 24px;
       color: var(--tertiary-100); line-height: 1.5; letter-spacing: 0.24px;
-      max-width: 778px;
     }
-    .team-grid-row {
-      display: flex; justify-content: center; gap: 80px;
+    .faq-dots {
+      display: flex; justify-content: center; gap: 8px; margin-top: 20px;
     }
-    .team-card {
-      width: 329px;
-      display: flex; flex-direction: column; align-items: center; gap: 24px;
+    .faq-dot {
+      width: 16px; height: 16px; border-radius: 50%;
+      background: rgba(255,255,255,0.3);
+      border: none; cursor: pointer; padding: 0;
+      transition: background 0.2s;
     }
-    .team-photo {
-      width: 329px;
-      aspect-ratio: 213 / 212;
-      border: 2px solid var(--tertiary-100);
-      border-radius: 32px;
-      overflow: hidden;
-      display: flex; align-items: center; justify-content: center;
-      background: var(--bg);
-    }
-    .team-photo img {
-      width: 48px; height: 147px; object-fit: contain;
-    }
-    .team-name {
-      font-family: 'Clash Display', sans-serif; font-weight: 700; font-size: 24px;
-      color: var(--tertiary-100); text-align: center;
-    }
-    .team-desc {
-      font-family: 'Satoshi', sans-serif; font-weight: 400; font-size: 24px;
-      color: var(--neutral-100); line-height: 1.5; text-align: center;
-    }
+    .faq-dot.active { background: var(--tertiary-100); }
 
     /* CONTACT FORM */
     .form-section { display: flex; flex-direction: column; gap: 48px; align-items: center; width: 100%; }
@@ -263,8 +304,8 @@
       <a class="navbar-link" href="index.html">Úvod</a>
       <a class="navbar-link" href="sluzby.html">Služby</a>
       <a class="navbar-link" href="reference.html">Reference</a>
-      <a class="navbar-link active" href="onas.html">O nás</a>
-      <a class="navbar-link" href="kontakt.html">Kontakt</a>
+      <a class="navbar-link" href="onas.html">O nás</a>
+      <a class="navbar-link active" href="kontakt.html">Kontakt</a>
     </div>
     <button class="navbar-cta" onclick="document.getElementById('kontakt').scrollIntoView({behavior:'smooth'})">Poptat projekt</button>
     <div class="navbar-lang">
@@ -281,75 +322,36 @@
 
 <!-- HERO -->
 <section class="hero">
-  <img class="hero-bg" src="https://www.figma.com/api/mcp/asset/98998a44-313a-46e3-8b8a-c669001c929c" alt="" />
+  <img class="hero-bg" src="https://www.figma.com/api/mcp/asset/5d74b0ac-9e4a-4b72-9b5c-9341441cbf60" alt="" />
   <div class="hero-overlay"></div>
   <div class="hero-content">
-    <h1 class="hero-title">O nás</h1>
+    <h1 class="hero-title">Kontakt</h1>
   </div>
 </section>
 
 <!-- MAIN -->
 <div class="page-wrap">
 
-  <!-- ČÍM SE ZABÝVÁME -->
-  <div class="about-card">
-    <h2 class="about-heading">Čím se zabýváme</h2>
-    <div class="about-text">
-      <p>Zaměřujeme se na vývoj a výrobu hardwarových řešení od prvotního návrhu až po finální distribuci. Navrhujeme a vyvíjíme elektroniku včetně návrhu PCB, tvorby prototypů a vývoje firmware pro zařízení. Součástí naší práce je také prototypování pomocí 3D tisku, které umožňuje rychlé ověřování návrhů a iteraci během vývoje.</p>
-      <p>Vedle samotného vývoje zajišťujeme také sestavování zařízení, ruční montáž a kontrolu kvality. Díky tomu máme celý proces pod kontrolou a můžeme garantovat funkčnost i spolehlivost výsledného produktu.</p>
-      <p>Klientům pomáháme také s výrobou a dodávkami komponent. Zajišťujeme sourcing a supply chain z Číny, včetně výroby komponent na míru podle technických specifikací projektu.</p>
-      <p>Součástí našich služeb je i logistika a dropshipping. Pro klienty spravujeme skladové zásoby a zajišťujeme distribuci jejich produktů přímo koncovým zákazníkům.</p>
-    </div>
+  <!-- KONTAKTNÍ INFORMACE -->
+  <div class="kontakt-info">
+    <h2 class="kontakt-heading">Kontaktní informace</h2>
+    <p class="kontakt-text">Máte projekt, který chcete realizovat, nebo hledáte partnera pro vývoj hardwaru, výrobu prototypů či zajištění dodavatelského řetězce? Ozvěte se nám. Rádi s vámi probereme možnosti spolupráce a pomůžeme najít vhodné řešení.</p>
   </div>
 
-  <!-- TÝM FORESTBIT -->
-  <div class="team-section">
-    <div class="team-header">
-      <h2 class="team-heading">Tým ForestBit</h2>
-      <p class="team-subtitle">Postaráme se o vše od návrhu hardwaru a firmware přes prototypování až po sériovou výrobu, kontrolu kvality a logistiku.</p>
-    </div>
-    <div style="display:flex;flex-direction:column;gap:80px;align-items:center;">
-      <!-- Row 1: 3 members -->
-      <div class="team-grid-row">
-        <div class="team-card">
-          <div class="team-photo">
-            <img src="assets/union-icon.svg" alt="" />
-          </div>
-          <h3 class="team-name">Adrian Simonides</h3>
-          <p class="team-desc">Lorem ipsum dolor sin amet lorem ipsum dolor sin amet Lorem ipsum dolor sin amet lorem ipsum dolor sin amet</p>
-        </div>
-        <div class="team-card">
-          <div class="team-photo">
-            <img src="assets/union-icon.svg" alt="" />
-          </div>
-          <h3 class="team-name">Benjamin Voráč</h3>
-          <p class="team-desc">Lorem ipsum dolor sin amet lorem ipsum dolor sin amet Lorem ipsum dolor sin amet lorem ipsum dolor sin amet</p>
-        </div>
-        <div class="team-card">
-          <div class="team-photo">
-            <img src="assets/union-icon.svg" alt="" />
-          </div>
-          <h3 class="team-name">Ignat Hrek</h3>
-          <p class="team-desc">Lorem ipsum dolor sin amet lorem ipsum dolor sin amet Lorem ipsum dolor sin amet lorem ipsum dolor sin amet</p>
-        </div>
-      </div>
-      <!-- Row 2: 2 members -->
-      <div class="team-grid-row">
-        <div class="team-card">
-          <div class="team-photo">
-            <img src="assets/union-icon.svg" alt="" />
-          </div>
-          <h3 class="team-name">Adam Přibyl</h3>
-          <p class="team-desc">Lorem ipsum dolor sin amet lorem ipsum dolor sin amet Lorem ipsum dolor sin amet lorem ipsum dolor sin amet</p>
-        </div>
-        <div class="team-card">
-          <div class="team-photo">
-            <img src="assets/union-icon.svg" alt="" />
-          </div>
-          <h3 class="team-name">Filip Zíka</h3>
-          <p class="team-desc">Lorem ipsum dolor sin amet lorem ipsum dolor sin amet Lorem ipsum dolor sin amet lorem ipsum dolor sin amet</p>
-        </div>
-      </div>
+  <!-- INFO CARD -->
+  <div class="info-card">
+    <p class="info-card-text">Můžete nás kontaktovat prostřednictvím e-mailu, telefonu nebo kontaktního formuláře. Pokud nám pošlete základní informace o vašem projektu, připravíme pro vás další kroky nebo návrh spolupráce.</p>
+  </div>
+
+  <!-- ÚDAJE O FIRMĚ -->
+  <div class="company-section">
+    <h2 class="company-heading">Údaje o firmě</h2>
+    <div class="company-details">
+      <p><span class="label">ForestBit</span> DOPLNIT INFORMACE</p>
+      <p><span class="label">Adresa:</span> ADRESA</p>
+      <p><span class="label">IČ/DIČ:</span> DOPLNIT</p>
+      <p><span class="label">E-mail:</span> DOPLNIT</p>
+      <p><span class="label">Telefon:</span> DOPLNIT</p>
     </div>
   </div>
 
@@ -400,6 +402,35 @@
           <button type="submit" class="submit-btn">Poptat projekt</button>
         </div>
       </form>
+    </div>
+  </div>
+
+  <!-- KDE SE NACHÁZÍME -->
+  <div class="map-section">
+    <h2 class="map-heading">Kde se nacházíme</h2>
+    <div class="map-container">
+      <img src="https://www.figma.com/api/mcp/asset/595b7e8e-7810-4c6b-9c77-9b774f4253f9" alt="Mapa" />
+      <div class="map-pin">
+        <svg width="32" height="44" viewBox="0 0 32 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M16 0C7.163 0 0 7.163 0 16c0 12 16 28 16 28s16-16 16-28C32 7.163 24.837 0 16 0z" fill="#6a61d9"/>
+          <circle cx="16" cy="16" r="6" fill="#fefdf9"/>
+        </svg>
+      </div>
+    </div>
+  </div>
+
+  <!-- FAQ -->
+  <div class="faq-section">
+    <h2 class="faq-heading">FAQ</h2>
+    <div class="faq-card">
+      <p class="faq-question">Lorem ipsum dolor sin amet?</p>
+      <p class="faq-answer">Lorem ipsum dolor sin amet. Lorem ipsum dolor sin amet. Lorem ipsum dolor sin amet.</p>
+    </div>
+    <div class="faq-dots">
+      <button class="faq-dot active" data-index="0"></button>
+      <button class="faq-dot" data-index="1"></button>
+      <button class="faq-dot" data-index="2"></button>
+      <button class="faq-dot" data-index="3"></button>
     </div>
   </div>
 
@@ -484,6 +515,14 @@
   function updateChar(el, id, max) { document.getElementById(id).textContent = el.value.length + '/' + max; }
   function updateFiles(input) { document.getElementById('fileCnt').textContent = Math.min(input.files.length, 3) + '/3 souborů'; }
   function handleDrop(e, zone) { e.preventDefault(); zone.style.borderColor = 'var(--neutral-100)'; document.getElementById('fileCnt').textContent = Math.min(e.dataTransfer.files.length, 3) + '/3 souborů'; }
+
+  // FAQ dot navigation (placeholder)
+  document.querySelectorAll('.faq-dot').forEach(dot => {
+    dot.addEventListener('click', function() {
+      document.querySelectorAll('.faq-dot').forEach(d => d.classList.remove('active'));
+      this.classList.add('active');
+    });
+  });
 </script>
 </body>
 </html>

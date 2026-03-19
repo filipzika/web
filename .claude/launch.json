@@ -1,0 +1,11 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "ForestBit Web",
+      "runtimeExecutable": "C:\\Users\\Filip\\AppData\\Local\\Programs\\Python\\Python311\\python.exe",
+      "runtimeArgs": ["-m", "http.server", "3000", "-d", "C:\\Users\\Filip\\Downloads\\WEB\\web"],
+      "port": 3000
+    }
+  ]
+}

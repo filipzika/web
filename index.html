@@ -314,12 +314,22 @@
       color: var(--tertiary-100);
       line-height: 1.5; letter-spacing: 0.24px;
     }
-    .carousel-nav-col {
-      width: 16px; height: 88px;
-      display: flex; align-items: center; justify-content: center;
-      flex-shrink: 0; cursor: pointer;
+    .carousel-dots {
+      display: flex; flex-direction: column; gap: 8px;
+      flex-shrink: 0;
     }
-    .carousel-nav-col img { transform: rotate(90deg); width: 88px; height: 16px; display: block; }
+    .carousel-dot {
+      width: 16px; height: 16px;
+      border-radius: 4px;
+      border: 1.5px solid var(--tertiary-100);
+      background: transparent;
+      cursor: pointer;
+      padding: 0;
+      transition: background 0.2s;
+    }
+    .carousel-dot.active {
+      background: var(--tertiary-100);
+    }
 
     /* WHY US */
     .why-row {
@@ -671,7 +681,7 @@
       <a class="navbar-link" href="sluzby.html">Služby</a>
       <a class="navbar-link" href="reference.html">Reference</a>
       <a class="navbar-link" href="onas.html">O nás</a>
-      <a class="navbar-link" href="#kontakt">Kontakt</a>
+      <a class="navbar-link" href="kontakt.html">Kontakt</a>
     </div>
     <button class="navbar-cta" onclick="scroll2('#kontakt')">Poptat projekt</button>
     <div class="navbar-lang">
@@ -722,8 +732,11 @@
               <p class="carousel-desc" id="cDesc">Zajišťujeme prototypování a testování zařízení včetně rychlého ověření návrhu, výroby malých sérií a technické validace před zahájením sériové produkce.</p>
             </div>
           </div>
-          <div class="carousel-nav-col" id="carouselNav" onclick="goTo((ci+1)%slides.length)" title="Další">
-            <img src="https://www.figma.com/api/mcp/asset/6ebd8e05-0193-4050-b566-c2f1b7b01ace" alt="" />
+          <div class="carousel-dots" id="carouselDots">
+            <button class="carousel-dot active" onclick="goTo(0)"></button>
+            <button class="carousel-dot" onclick="goTo(1)"></button>
+            <button class="carousel-dot" onclick="goTo(2)"></button>
+            <button class="carousel-dot" onclick="goTo(3)"></button>
           </div>
         </div>
       </div>
@@ -962,6 +975,9 @@
   function renderSlide() {
     document.getElementById('cTitle').textContent = slides[ci].title;
     document.getElementById('cDesc').textContent = slides[ci].desc;
+    document.querySelectorAll('.carousel-dot').forEach((d, i) => {
+      d.classList.toggle('active', i === ci);
+    });
   }
   function goTo(idx) { ci = idx; renderSlide(); }
 

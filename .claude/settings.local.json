@@ -1,0 +1,19 @@
+{
+  "permissions": {
+    "allow": [
+      "mcp__Claude_Preview__preview_start",
+      "Bash(cmd.exe /c \"where python\")",
+      "Bash(cmd.exe /c \"where node\")",
+      "Bash(cmd.exe /c \"where npx\")",
+      "Bash(where node:*)",
+      "Bash(where npx:*)",
+      "Bash(where http-server:*)",
+      "Bash(powershell -command \"Get-Command node,python3,python,npx -ErrorAction SilentlyContinue | Select-Object Name,Source\")",
+      "WebFetch(domain:www.figma.com)",
+      "Bash(curl -sL -o \"C:\\\\Users\\\\Filip\\\\Downloads\\\\WEB\\\\assets\\\\ellipse1.png\" \"https://www.figma.com/api/mcp/asset/b23721d7-371b-444a-9503-e785c78e7367\")",
+      "Bash(curl -sL -o \"C:\\\\Users\\\\Filip\\\\Downloads\\\\WEB\\\\assets\\\\ellipse2.png\" \"https://www.figma.com/api/mcp/asset/86d2ef76-9e3b-4f69-b19a-102a3aea98d5\")",
+      "Bash(curl -sL \"https://www.figma.com/api/mcp/asset/2c7fa6b8-494d-4c69-8a51-8cfa1cf1bac5\")",
+      "Bash(\"C:\\\\Users\\\\Filip\\\\Downloads\\\\WEB\\\\assets\\\\union-icon.svg\")"
+    ]
+  }
+}
