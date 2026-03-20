@@ -283,6 +283,88 @@
     .legal-links a { color: var(--neutral-100); text-decoration: none; transition: color 0.2s; }
     .legal-links a:hover { color: var(--tertiary-100); }
     .copyright { display: flex; gap: 16px; align-items: center; font-family: 'Satoshi', sans-serif; font-size: 14px; color: var(--neutral-100); letter-spacing: 0.28px; }
+
+    /* ── iPad (max-width: 1100px) ── */
+    @media (max-width: 1100px) {
+      .hero { height: 400px; }
+      .hero-title { font-size: 44px; }
+      .page-wrap { gap: 60px; }
+      .kontakt-info { width: 984px; }
+      .kontakt-heading { font-size: 40px; }
+      .kontakt-text { font-size: 20px; }
+      .info-card { width: 984px; }
+      .info-card-text { font-size: 20px; }
+      .company-section { width: 984px; }
+      .company-heading { font-size: 40px; }
+      .company-details { font-size: 20px; }
+      .map-section { width: 984px; }
+      .map-container { width: 984px; height: 480px; }
+      .map-heading { font-size: 40px; }
+      .faq-section { width: 984px; }
+      .faq-card { width: 984px; height: auto; }
+      .faq-heading { font-size: 40px; }
+      .faq-question { font-size: 24px; }
+      .faq-answer { font-size: 20px; }
+      .contact-wrap { width: 984px !important; }
+      .heading-2 { font-size: 40px; }
+      .paragraph-1 { font-size: 20px; }
+      .footer-top { padding: 32px 20px; }
+      .footer-logo-nav { gap: 64px; }
+      .footer-logo { width: 200px; }
+    }
+
+    /* ── iPad Mini / small tablet (max-width: 820px) ── */
+    @media (max-width: 820px) {
+      .navbar { width: calc(100% - 32px); padding: 10px 10px 10px 16px; }
+      .navbar-right { padding-left: 12px; }
+      .navbar-links { gap: 2px; }
+      .navbar-link { font-size: 14px; padding: 6px 8px; }
+      .navbar-cta { font-size: 14px; padding: 6px 10px; }
+      .navbar-lang { margin-left: 12px; }
+
+      .hero { height: 340px; }
+      .hero-title { font-size: 36px; letter-spacing: 2px; }
+
+      .page-wrap { gap: 48px; }
+      .kontakt-info { width: calc(100% - 40px); }
+      .kontakt-heading { font-size: 40px; }
+      .kontakt-text { font-size: 20px; }
+      .info-card { width: calc(100% - 40px); padding: 28px; }
+      .info-card-text { font-size: 20px; }
+      .company-section { width: calc(100% - 40px); }
+      .company-heading { font-size: 32px; }
+      .company-details { font-size: 20px; }
+      .map-section { width: calc(100% - 40px); }
+      .map-container { width: 100%; height: 380px; }
+      .map-heading { font-size: 32px; }
+      .faq-section { width: calc(100% - 40px); }
+      .faq-card { width: 100%; height: auto; padding: 24px 32px 32px; }
+      .faq-heading { font-size: 32px; }
+      .faq-question { font-size: 24px; }
+      .faq-answer { font-size: 18px; }
+
+      .contact-wrap { width: calc(100% - 40px) !important; }
+      .heading-2 { font-size: 32px; }
+      .paragraph-1 { font-size: 18px; }
+      .fi { padding: 20px 28px; font-size: 16px; }
+      .fl { font-size: 16px; padding-left: 28px; }
+      .fta { height: 200px; font-size: 18px; padding: 28px; }
+      .dropzone { height: 150px; padding: 24px 32px; }
+      .dropzone-txt { font-size: 18px; }
+      .dz-footer { padding: 0 32px; font-size: 16px; }
+      .phone-picker { padding: 16px 20px 16px 24px; }
+
+      .footer-top { padding: 24px 16px; flex-direction: column; gap: 32px; }
+      .footer-logo-nav { gap: 32px; flex-wrap: wrap; }
+      .footer-logo { width: 160px; }
+      .footer-nav { gap: 24px; }
+      .footer-col-head { font-size: 20px; }
+      .footer-col a { font-size: 14px; }
+      .newsletter { width: 100%; }
+      .newsletter-title { font-size: 20px; }
+      .newsletter-input { font-size: 20px; }
+      .footer-deco { width: 60px; height: 180px; }
+    }
   </style>
 </head>
 <body>
@@ -356,7 +438,7 @@
   </div>
 
   <!-- CONTACT FORM -->
-  <div style="width:1144px;" id="kontakt">
+  <div class="contact-wrap" style="width:1144px;" id="kontakt">
     <div class="form-section">
       <div style="display:flex;flex-direction:column;gap:16px;width:100%;">
         <h2 class="heading-2">Kontaktní formulář</h2>
