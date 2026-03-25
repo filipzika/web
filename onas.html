@@ -263,7 +263,7 @@
       display: none; position: fixed; inset: 0; z-index: 200;
       backdrop-filter: blur(25px); -webkit-backdrop-filter: blur(25px);
       background: rgba(46,46,46,0.8);
-      flex-direction: column; align-items: center; justify-content: center; gap: 32px;
+      flex-direction: column; padding: 80px 24px 40px;
     }
     .mobile-menu-overlay.open { display: flex; }
     .mobile-menu-close {
@@ -274,12 +274,16 @@
       backdrop-filter: blur(25px); -webkit-backdrop-filter: blur(25px);
     }
     .mobile-menu-logo { position: absolute; top: 12px; left: 24px; height: 40px; width: 134px; }
+    .mobile-menu-nav { display: flex; flex-direction: column; gap: 8px; margin-top: 40px; }
     .mobile-menu-link {
-      font-family: 'Clash Display', sans-serif; font-weight: 500; font-size: 32px;
-      color: var(--tertiary-100); text-decoration: none; letter-spacing: 0.64px;
-      opacity: 0.5; transition: opacity 0.2s;
+      font-family: 'Clash Display', sans-serif; font-weight: 500; font-size: 20px;
+      color: var(--tertiary-100); text-decoration: none; letter-spacing: 0.4px;
+      opacity: 0.5; transition: opacity 0.2s, background 0.2s;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 12px 16px; border-radius: 8px;
     }
-    .mobile-menu-link.active { opacity: 1; font-weight: 600; }
+    .mobile-menu-link.active { opacity: 1; font-weight: 600; background: rgba(192,192,192,0.2); }
+    .mobile-menu-link svg { flex-shrink: 0; }
 
     /* ── iPad (max-width: 1100px) ── */
     @media (max-width: 1100px) {
@@ -468,11 +472,13 @@
   <button class="mobile-menu-close" onclick="closeMobileMenu()" aria-label="Zavřít">
     <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M18 6L6 18M6 6L18 18" stroke="#fefdf9" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
   </button>
-  <a href="index.html" class="mobile-menu-link">Úvod</a>
-  <a href="sluzby.html" class="mobile-menu-link">Služby</a>
-  <a href="reference.html" class="mobile-menu-link">Reference</a>
-  <a href="onas.html" class="mobile-menu-link active">O nás</a>
-  <a href="kontakt.html" class="mobile-menu-link">Kontakt</a>
+  <div class="mobile-menu-nav">
+    <a href="index.html" class="mobile-menu-link">Úvod <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M9 18L15 12L9 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+    <a href="sluzby.html" class="mobile-menu-link">Služby <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M9 18L15 12L9 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+    <a href="reference.html" class="mobile-menu-link">Reference <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M9 18L15 12L9 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+    <a href="onas.html" class="mobile-menu-link active">O nás <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M9 18L15 12L9 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+    <a href="kontakt.html" class="mobile-menu-link">Kontakt <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M9 18L15 12L9 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+  </div>
 </div>
 
 <!-- SCROLL TO TOP -->
@@ -482,7 +488,7 @@
 
 <!-- HERO -->
 <section class="hero">
-  <img class="hero-bg" src="https://www.figma.com/api/mcp/asset/98998a44-313a-46e3-8b8a-c669001c929c" alt="" />
+  <img class="hero-bg" src="assets/hero-onas.jpg" alt="" />
   <div class="hero-overlay"></div>
   <div class="hero-content">
     <h1 class="hero-title">O nás</h1>
@@ -652,13 +658,13 @@
         </div>
       </div>
       <div style="display:flex;align-items:flex-start;padding-top:48px;">
-        <img class="footer-deco" src="https://www.figma.com/api/mcp/asset/82a11ce5-e4ea-4d1a-9206-a60ed3c1f50b" alt="" />
+        <img class="footer-deco" src="assets/union-icon.svg" alt="" />
       </div>
     </div>
     <div class="footer-socials">
       <div class="social-row">
-        <a href="#" aria-label="Instagram"><svg class="social-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a>
-        <a href="#" aria-label="LinkedIn"><svg class="social-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a>
+        <a href="https://www.instagram.com/forestbit_electronics/" target="_blank" aria-label="Instagram"><svg class="social-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a>
+        <a href="https://www.linkedin.com/company/forestbit-electronics-s-r-o/" target="_blank" aria-label="LinkedIn"><svg class="social-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a>
       </div>
       <div class="footer-legal">
         <div class="legal-links">

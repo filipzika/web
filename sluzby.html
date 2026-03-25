@@ -106,7 +106,7 @@
     .hero-btn:hover { background: rgba(106,97,217,0.25); border-color: rgba(106,97,217,0.5); }
 
     /* PAGE CONTENT */
-    .page-wrap { display: flex; flex-direction: column; align-items: center; gap: 80px; padding-top: 80px; }
+    .page-wrap { display: flex; flex-direction: column; align-items: center; gap: 80px; padding-top: 40px; }
     .section-inner { width: 1144px; }
 
     /* SERVICES SECTION */
@@ -252,7 +252,7 @@
       border-radius: 8px; padding: 8px; cursor: pointer;
       display: flex; align-items: center; justify-content: center;
     }
-    .navbar-mobile-hamburger svg { width: 32px; height: 32px; display: block; }
+    .navbar-mobile-hamburger svg { display: block; }
 
     /* MOBILE MENU OVERLAY */
     .mobile-menu-overlay {
@@ -290,7 +290,7 @@
       .hero-title { font-size: 44px; }
       .hero-subtitle { font-size: 20px; }
 
-      .page-wrap { gap: 60px; padding-top: 60px; }
+      .page-wrap { gap: 60px; padding-top: 32px; }
       .section-inner { width: 984px; }
 
       .services-header { margin-bottom: 48px; }
@@ -327,7 +327,7 @@
       .hero-subtitle { font-size: 18px; }
       .hero-btn { font-size: 18px; padding: 14px 28px; }
 
-      .page-wrap { gap: 48px; padding-top: 48px; }
+      .page-wrap { gap: 48px; padding-top: 28px; }
       .section-inner { width: calc(100% - 40px) !important; }
       .services-wrap { width: calc(100% - 40px) !important; }
       .contact-wrap { width: calc(100% - 40px) !important; }
@@ -482,13 +482,7 @@
     </svg>
   </a>
   <button class="navbar-mobile-hamburger" onclick="openMobileMenu()" aria-label="Menu">
-    <svg viewBox="0 0 32 32" fill="none">
-      <rect x="5" y="7" width="8" height="8" rx="2" stroke="#fefdf9" stroke-width="1.5"/>
-      <rect x="19" y="7" width="8" height="8" rx="2" stroke="#fefdf9" stroke-width="1.5"/>
-      <rect x="5" y="17" width="8" height="8" rx="2" stroke="#fefdf9" stroke-width="1.5"/>
-      <rect x="19" y="17" width="8" height="1" rx="0.5" stroke="#fefdf9" stroke-width="1.5"/>
-      <rect x="19" y="21" width="8" height="1" rx="0.5" stroke="#fefdf9" stroke-width="1.5"/>
-    </svg>
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M3 12H21M3 6H21M3 18H21" stroke="#fefdf9" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
   </button>
 </nav>
 
@@ -540,7 +534,7 @@
 
 <!-- HERO -->
 <section class="hero">
-  <img class="hero-bg" src="https://www.figma.com/api/mcp/asset/0442e2b5-2064-4436-8997-a0e763d9a51a" alt="" />
+  <img class="hero-bg" src="assets/hero-sluzby.jpg" alt="" />
   <div class="hero-overlay"></div>
   <div class="hero-content">
     <div class="hero-text">
@@ -679,13 +673,13 @@
         </div>
       </div>
       <div style="display:flex;align-items:flex-start;padding-top:48px;">
-        <img class="footer-deco" src="https://www.figma.com/api/mcp/asset/82a11ce5-e4ea-4d1a-9206-a60ed3c1f50b" alt="" />
+        <img class="footer-deco" src="assets/union-icon.svg" alt="" />
       </div>
     </div>
     <div class="footer-socials">
       <div class="social-row">
-        <a href="#" aria-label="Instagram"><svg class="social-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a>
-        <a href="#" aria-label="LinkedIn"><svg class="social-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a>
+        <a href="https://www.instagram.com/forestbit_electronics/" target="_blank" aria-label="Instagram"><svg class="social-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a>
+        <a href="https://www.linkedin.com/company/forestbit-electronics-s-r-o/" target="_blank" aria-label="LinkedIn"><svg class="social-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a>
       </div>
       <div class="footer-legal">
         <div class="legal-links">
