@@ -143,34 +143,32 @@
     }
     .hero-ellipse-1 {
       position: absolute;
-      left: 50%; bottom: -110px;
-      width: 1000px; height: 700px;
+      left: 50%; top: 310px;
+      width: 1293px; height: 1293px;
       transform: translateX(-50%);
       pointer-events: none;
       z-index: 0;
-      border-radius: 50%;
-      background: linear-gradient(to bottom,
-        rgba(110,90,255,0.9) 0%,
-        rgba(80,60,235,0.7) 20%,
-        rgba(55,38,210,0.45) 40%,
-        rgba(30,18,170,0.2) 60%,
-        rgba(12,8,100,0.06) 80%,
-        transparent 100%
-      );
-      filter: blur(80px);
+      overflow: visible;
+    }
+    .hero-ellipse-1 img {
+      position: absolute;
+      inset: -23.2%;
+      width: 146.4%; height: 146.4%;
+      display: block;
     }
     .hero-ellipse-2 {
       position: absolute;
-      left: -491px; top: 559px;
+      left: 50%; top: 559px;
       width: 2421px; height: 1418px;
+      transform: translateX(-50%);
       pointer-events: none;
-      z-index: 0;
-      border-radius: 50%;
-      background: radial-gradient(ellipse at 50% 50%,
-        rgba(8,8,14,0.35) 0%,
-        transparent 55%
-      );
-      filter: blur(20px);
+      z-index: 1;
+    }
+    .hero-ellipse-2 img {
+      position: absolute;
+      inset: -0.94% -0.55%;
+      width: 101.1%; height: 101.88%;
+      display: block;
     }
     .hero-content {
       position: relative;
@@ -672,10 +670,10 @@
       .hero-subtitle { font-size: 20px; max-width: 563px; }
       .hero-ellipse-1 {
         width: 1024px; height: 1024px;
-        bottom: -684px;
+        top: 200px;
       }
       .hero-ellipse-2 {
-        left: -317px; top: 479px;
+        left: 50%; top: 400px;
         width: 1657px; height: 970px;
       }
 
@@ -721,8 +719,8 @@
       .hero-content { margin-top: -20px; }
       .hero-title { font-size: 36px; letter-spacing: 2px; }
       .hero-subtitle { font-size: 18px; max-width: 480px; }
-      .hero-ellipse-1 { width: 768px; height: 768px; bottom: -300px; }
-      .hero-ellipse-2 { left: -250px; top: 400px; width: 1200px; height: 700px; }
+      .hero-ellipse-1 { width: 768px; height: 768px; top: 150px; }
+      .hero-ellipse-2 { left: 50%; top: 350px; width: 1200px; height: 700px; }
 
       .section-wrap { width: calc(100% - 40px); }
       .page-sections { gap: 60px; }
@@ -1168,12 +1166,7 @@
     <path d="M405.086 164.722L124.215 444.238C122.176 446.267 120.547 447.896 118.111 449.355C94.2552 465.06 64.3512 457.288 49.8398 437.774C40.9729 425.851 31.5419 401.829 47.8047 379.012C49.7667 376.416 51.524 374.228 53.6699 372.389L405.086 20.9727V164.722ZM88.2852 384.138C75.2045 384.138 64.6006 394.742 64.6006 407.822C64.6006 420.903 75.2044 431.507 88.2852 431.507C101.366 431.507 111.97 420.903 111.97 407.822C111.97 394.742 101.366 384.138 88.2852 384.138Z" fill="#fefdf9"/>
   </svg>
   <button class="navbar-mobile-hamburger" onclick="openMobileMenu()" aria-label="Menu">
-    <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <rect x="4" y="6" width="10" height="10" rx="2" stroke="#fefdf9" stroke-width="1.5"/>
-      <rect x="18" y="6" width="10" height="10" rx="2" stroke="#fefdf9" stroke-width="1.5"/>
-      <rect x="4" y="18" width="10" height="10" rx="2" stroke="#fefdf9" stroke-width="1.5"/>
-      <rect x="18" y="18" width="10" height="10" rx="2" stroke="#fefdf9" stroke-width="1.5"/>
-    </svg>
+    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="4" y="4" width="6" height="6" rx="1" stroke="#fefdf9" stroke-width="1.5"/><rect x="4" y="14" width="6" height="6" rx="1" stroke="#fefdf9" stroke-width="1.5"/><rect x="14" y="14" width="6" height="6" rx="1" stroke="#fefdf9" stroke-width="1.5"/><line x1="17" y1="4" x2="17" y2="10" stroke="#fefdf9" stroke-width="1.5" stroke-linecap="round"/><line x1="14" y1="7" x2="20" y2="7" stroke="#fefdf9" stroke-width="1.5" stroke-linecap="round"/></svg>
   </button>
 </nav>
 
@@ -1229,8 +1222,8 @@
 
   <!-- HERO -->
   <section class="hero" id="uvod">
-    <div class="hero-ellipse-1"></div>
-    <div class="hero-ellipse-2"></div>
+    <div class="hero-ellipse-1"><img src="assets/ellipse1.svg" alt="" /></div>
+    <div class="hero-ellipse-2"><img src="assets/ellipse2.svg" alt="" /></div>
     <div class="hero-content">
       <h1 class="hero-title">Vyvíjíme a vyrábíme elektronická <br>zařízení na zakázku.</h1>
       <p class="hero-subtitle">Od návrhu hardwaru a firmware přes prototypování až po sériovou výrobu, kontrolu kvality a logistiku.</p>
@@ -1242,7 +1235,7 @@
   </section>
 
   <!-- CO UMÍME + WHY + REALIZACE + FORM -->
-  <div style="width:100%; display:flex; justify-content:center; position:relative; z-index:2; background:var(--bg);" id="sluzby">
+  <div style="width:100%; display:flex; justify-content:center; position:relative; z-index:2; background:var(--bg); scroll-margin-top:120px;" id="sluzby">
     <div class="section-wrap">
 
       <!-- CO UMÍME -->
@@ -1311,7 +1304,7 @@
       </div>
 
       <!-- KONTAKTNÍ FORMULÁŘ -->
-      <div class="form-section" id="kontakt">
+      <div class="form-section" id="kontakt" style="scroll-margin-top:120px;">
         <div class="section-header">
           <h2 class="heading-2">Kontaktní formulář</h2>
           <p class="paragraph-1" style="max-width:678px;">Spolupráci stavíme na jasně definovaném procesu, aby bylo od začátku zřejmé, co se bude dít a v jakém pořadí.</p>
@@ -1451,7 +1444,7 @@
           <a href="#">Accessibility statement</a>
         </div>
         <div class="copyright">
-          <span>2026</span><span>•</span><span>Forestbit</span><span>•</span><span>All rights reserved</span>
+          <span>2026</span><span>•</span><span>ForestBit Electronics s.r.o.</span><span>•</span><span>All rights reserved</span>
         </div>
       </div>
     </div>
@@ -1491,6 +1484,25 @@
     });
   }
   function goTo(idx) { ci = idx; renderSlide(); }
+
+  // Carousel wheel scroll
+  (() => {
+    const wrap = document.querySelector('.carousel-wrap');
+    if (!wrap) return;
+    let wheelAcc = 0;
+    const threshold = 200;
+    wrap.addEventListener('wheel', (e) => {
+      e.preventDefault();
+      wheelAcc += e.deltaY;
+      if (wheelAcc >= threshold) {
+        wheelAcc = 0;
+        if (ci < slides.length - 1) { ci++; renderSlide(); }
+      } else if (wheelAcc <= -threshold) {
+        wheelAcc = 0;
+        if (ci > 0) { ci--; renderSlide(); }
+      }
+    }, { passive: false });
+  })();
 
   // Char counter
   function updateChar(el, id, max) {
