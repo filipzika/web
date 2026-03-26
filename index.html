@@ -24,7 +24,7 @@
       background: var(--bg);
       color: var(--tertiary-100);
       font-family: 'Satoshi', sans-serif;
-      overflow-x: hidden;
+      overflow-x: clip;
     }
 
     /* ── NAVBAR ── */
@@ -198,8 +198,11 @@
       max-width: 563px;
     }
     .hero-btn {
-      background: rgba(58,58,58,0.15);
-      border: 1px solid rgba(255,255,255,0.15);
+      position: relative;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
       border-radius: 64px;
       padding: 16px 32px;
       font-family: 'Clash Display', sans-serif;
@@ -207,10 +210,25 @@
       font-size: 20px;
       color: var(--tertiary-100);
       letter-spacing: 0.4px;
+      line-height: 1.5;
+      text-align: center;
       cursor: pointer;
-      transition: background 0.2s, border-color 0.2s;
+      border: none;
+      background: rgba(255,255,255,0.06);
+      backdrop-filter: blur(23px) saturate(1.2);
+      -webkit-backdrop-filter: blur(23px) saturate(1.2);
+      box-shadow:
+        inset 0 0.5px 0 0 rgba(255,255,255,0.15),
+        inset 0 -0.5px 0 0 rgba(255,255,255,0.05);
+      transition: opacity 0.26s ease-out;
     }
-    .hero-btn:hover { background: rgba(106,97,217,0.25); border-color: rgba(106,97,217,0.5); }
+    .hero-btn:hover {
+      opacity: 0.85;
+    }
+    .hero-btn:focus-visible {
+      outline: 2px solid #0a84ff;
+      outline-offset: 2px;
+    }
     .hero-scroll {
       position: absolute;
       bottom: 42px;
@@ -262,19 +280,20 @@
       line-height: 1.5; letter-spacing: 0.24px;
     }
 
-    /* CAROUSEL */
-    .carousel-wrap {
-      display: flex;
-      align-items: center;
-      gap: 20px;
+    /* CAROUSEL (scroll-driven) */
+    .carousel-scroll-container {
+      position: relative;
       width: 100%;
-      height: 400px;
+    }
+    .carousel-sticky {
+      position: sticky;
+      top: 120px;
+      width: 100%;
     }
     .carousel-card {
-      flex: 0 0 1108px;
-      width: 1108px;
-      height: 400px;
       position: relative;
+      width: 100%;
+      height: 400px;
       border-radius: 32px;
       overflow: hidden;
       display: flex;
@@ -282,14 +301,37 @@
       gap: 88px;
       padding: 32px 48px 48px;
     }
-    .carousel-card::before {
-      content: '';
+    .carousel-bg {
       position: absolute; inset: 0;
       border-radius: 32px;
-      background:
-        radial-gradient(ellipse at 80% 65%, rgba(160,148,90,0.25) 0%, transparent 55%),
-        linear-gradient(150deg, #0d0c08 0%, #1c1a10 18%, #2e2a1a 32%, #3a3520 42%, #524c32 55%, #6a6240 68%, #7e7548 80%, #918558 95%);
       z-index: 0;
+      transition: opacity 0.4s ease;
+    }
+    .carousel-bg.hidden { opacity: 0; }
+    .carousel-bg.visible { opacity: 1; }
+    /* Supply chain — olive green */
+    .carousel-bg-0 {
+      background:
+        radial-gradient(ellipse at 85% 70%, rgba(120,130,10,0.5) 0%, transparent 60%),
+        linear-gradient(140deg, #0a0c04 0%, #141808 15%, #1e2408 28%, #2d3a0c 40%, #435010 52%, #5a6814 64%, #6e7c12 76%, #808c16 90%);
+    }
+    /* Prototypování — olive to beige */
+    .carousel-bg-1 {
+      background:
+        radial-gradient(ellipse at 90% 30%, rgba(190,180,140,0.35) 0%, transparent 55%),
+        linear-gradient(135deg, #1a1a10 0%, #2a2818 18%, #3d3a22 32%, #524e30 45%, #68643e 58%, #807a50 70%, #9a9468 82%, #b0aa80 95%);
+    }
+    /* Vývoj HW a SW — dark to purple */
+    .carousel-bg-2 {
+      background:
+        radial-gradient(ellipse at 85% 75%, rgba(100,80,180,0.45) 0%, transparent 60%),
+        linear-gradient(140deg, #1a1a22 0%, #22222e 18%, #2a2a3a 32%, #343448 45%, #3e3e58 58%, #4a4a6a 70%, #585880 82%, #6a6a98 95%);
+    }
+    /* Sestavování — dark brown to copper */
+    .carousel-bg-3 {
+      background:
+        radial-gradient(ellipse at 80% 50%, rgba(200,140,90,0.4) 0%, transparent 55%),
+        linear-gradient(140deg, #1c1410 0%, #2a1e16 18%, #3e2e22 32%, #544030 45%, #6a5240 58%, #826450 70%, #9a7860 82%, #b08e72 95%);
     }
     .carousel-card::after {
       content: '';
@@ -315,21 +357,15 @@
       line-height: 1.5; letter-spacing: 0.24px;
     }
     .carousel-dots {
+      position: absolute; right: 48px; top: 50%;
+      transform: translateY(-50%);
       display: flex; flex-direction: column; gap: 8px;
-      flex-shrink: 0;
     }
-    .carousel-dot {
-      width: 16px; height: 16px;
-      border-radius: 4px;
-      border: 1.5px solid var(--tertiary-100);
-      background: transparent;
-      cursor: pointer;
-      padding: 0;
-      transition: background 0.2s;
+    .dot {
+      width: 10px; height: 10px; border-radius: 50%;
+      background: rgba(255,255,255,0.3); transition: background 0.3s, transform 0.3s;
     }
-    .carousel-dot.active {
-      background: var(--tertiary-100);
-    }
+    .dot.active { background: var(--tertiary-100); transform: scale(1.3); }
 
     /* WHY US */
     .why-row {
@@ -682,7 +718,7 @@
 
       /* Carousel */
       .carousel-card {
-        flex: 0 0 948px; width: 948px; height: 360px;
+        height: 360px;
         gap: 48px; padding: 32px 48px 48px;
       }
       .carousel-icon { width: 75px; height: 228px; }
@@ -726,7 +762,7 @@
       .page-sections { gap: 60px; }
 
       .carousel-card {
-        flex: 0 0 calc(100vw - 80px); width: calc(100vw - 80px); height: 320px;
+        height: 320px;
         gap: 32px; padding: 24px 32px 32px;
       }
       .carousel-icon { width: 60px; height: 180px; }
@@ -859,19 +895,14 @@
       }
 
       /* CAROUSEL */
-      .carousel-wrap {
-        height: auto !important;
-        flex-direction: column;
-        gap: 16px;
-      }
+      .carousel-scroll-container { height: auto !important; }
+      .carousel-sticky { position: relative; top: auto; }
       .carousel-card {
-        flex: 0 0 auto !important;
-        width: 350px !important;
+        width: 100% !important;
         height: 164px !important;
         border-radius: 12px !important;
         gap: 16px !important;
         padding: 0 16px 0 8px !important;
-        background: #fff;
       }
       .carousel-card::before {
         border-radius: 12px !important;
@@ -891,38 +922,39 @@
         font-size: 12px !important;
       }
       .carousel-dots {
+        position: relative !important; right: auto !important; top: auto !important;
+        transform: none !important;
         flex-direction: row !important;
         gap: 8px;
-        width: 72px;
         justify-content: center;
+        margin-top: 16px;
       }
-      .carousel-dot {
-        width: 12px !important;
-        height: 12px !important;
+      .dot {
+        width: 8px !important; height: 8px !important;
       }
 
       /* WHY US */
       .why-row {
-        flex-direction: row !important;
-        gap: 20px !important;
+        flex-direction: column !important;
+        gap: 24px !important;
         align-items: stretch;
       }
       .why-card {
-        width: 194px !important;
-        height: 275px !important;
+        width: 100% !important;
+        height: auto !important;
+        min-height: 200px !important;
         border-width: 2px !important;
-        border-radius: 16px !important;
-        padding: 24px !important;
+        border-radius: 20px !important;
+        padding: 28px !important;
       }
-      .quote-img { width: 30px !important; height: 30px !important; }
-      .why-card-text { font-size: 12px !important; }
+      .quote-img { width: 36px !important; height: 36px !important; }
+      .why-card-text { font-size: 16px !important; }
       .why-heading {
-        font-size: 16px !important;
+        font-size: 28px !important;
         font-weight: 600 !important;
         letter-spacing: 0.32px !important;
         line-height: 1.3 !important;
         max-width: none !important;
-        flex: 1;
       }
 
       /* REALIZACE - HIDDEN */
@@ -1129,6 +1161,23 @@
 </head>
 <body>
 
+<!-- SVG Glass Filter -->
+<svg style="position:absolute;width:0;height:0;pointer-events:none;">
+  <defs>
+    <filter id="glass-filter" x="0%" y="0%" width="100%" height="100%" color-interpolation-filters="sRGB">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="23" result="blur" />
+      <feColorMatrix in="blur" type="saturate" values="0" result="desaturated" />
+      <feComponentTransfer in="desaturated" result="dimmed">
+        <feFuncR type="linear" slope="0.94" />
+        <feFuncG type="linear" slope="0.94" />
+        <feFuncB type="linear" slope="0.94" />
+      </feComponentTransfer>
+      <feTurbulence type="fractalNoise" baseFrequency="0.2" numOctaves="3" seed="1" result="noise" />
+      <feDisplacementMap in="dimmed" in2="noise" scale="3" xChannelSelector="R" yChannelSelector="G" result="displaced" />
+    </filter>
+  </defs>
+</svg>
+
 <!-- NAVBAR -->
 <nav class="navbar" id="navbar">
   <svg class="navbar-logo" viewBox="0 0 4098 1338" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="ForestBit">
@@ -1244,22 +1293,35 @@
           <h2 class="heading-1">Co umíme</h2>
           <p class="paragraph-1" style="max-width:678px;">Pomáháme firmám vyvíjet a vyrábět vlastní elektronická zařízení bez nutnosti budovat interní tým nebo výrobu.</p>
         </div>
-        <div class="carousel-wrap">
-          <div class="carousel-card">
-            <img class="carousel-icon" src="assets/union-icon.svg" alt="" />
-            <div class="carousel-text">
-              <h3 class="carousel-title" id="cTitle">Prototypování a testování</h3>
-              <p class="carousel-desc" id="cDesc">Zajišťujeme prototypování a testování zařízení včetně rychlého ověření návrhu, výroby malých sérií a technické validace před zahájením sériové produkce.</p>
-            </div>
-          </div>
-          <div class="carousel-dots" id="carouselDots">
-            <button class="carousel-dot active" onclick="goTo(0)"></button>
-            <button class="carousel-dot" onclick="goTo(1)"></button>
-            <button class="carousel-dot" onclick="goTo(2)"></button>
-            <button class="carousel-dot" onclick="goTo(3)"></button>
-          </div>
-        </div>
       </div>
+    </div><!-- end section-wrap -->
+  </div><!-- end sluzby outer -->
+
+</div><!-- /page-sections (break for carousel) -->
+
+<!-- CAROUSEL (scroll-driven, outside overflow container) -->
+<div class="carousel-scroll-container" id="carouselScroll" style="background:var(--bg); padding-top:40px;">
+  <div class="carousel-sticky">
+    <div class="carousel-card" id="carouselCard" style="max-width:1108px; margin:0 auto;">
+      <div class="carousel-bg carousel-bg-0 visible" id="cbg0"></div>
+      <div class="carousel-bg carousel-bg-1 hidden" id="cbg1"></div>
+      <div class="carousel-bg carousel-bg-2 hidden" id="cbg2"></div>
+      <div class="carousel-bg carousel-bg-3 hidden" id="cbg3"></div>
+      <img class="carousel-icon" src="assets/union-icon.svg" alt="" />
+      <div class="carousel-text">
+        <h3 class="carousel-title" id="cTitle">Supply chain & logistika</h3>
+        <p class="carousel-desc" id="cDesc">Zajišťujeme dodávky komponent, jejich skladování a distribuci hotových zařízení. Postaráme se o sourcing včetně zakázkových dílů, organizaci skladových zásob i následný dropshipping podle potřeb projektu.</p>
+      </div>
+      <div class="carousel-dots" id="carouselDots"></div>
+    </div>
+  </div>
+</div>
+
+<div class="page-sections" style="padding-top:124px;"><!-- resume page-sections after carousel -->
+
+  <!-- REST OF SECTIONS -->
+  <div style="width:100%; display:flex; justify-content:center; position:relative; z-index:2; background:var(--bg);">
+    <div class="section-wrap">
 
       <!-- PROČ S NÁMI -->
       <div class="why-row" id="onas">
@@ -1468,41 +1530,54 @@
     btn.classList.add('active');
   }
 
-  // Carousel
+  // Carousel (scroll-driven)
   const slides = [
+    { title: 'Supply chain & logistika', desc: 'Zajišťujeme dodávky komponent, jejich skladování a distribuci hotových zařízení. Postaráme se o sourcing včetně zakázkových dílů, organizaci skladových zásob i následný dropshipping podle potřeb projektu.' },
     { title: 'Prototypování a testování', desc: 'Zajišťujeme prototypování a testování zařízení včetně rychlého ověření návrhu, výroby malých sérií a technické validace před zahájením sériové produkce.' },
-    { title: 'Vývoj hardwaru', desc: 'Navrhujeme elektronické obvody a DPS pro průmyslové i spotřebitelské aplikace. Pokrýváme celý cyklus od konceptu přes schémata až po finální výrobní podklady.' },
-    { title: 'Firmware a software', desc: 'Vyvíjíme firmware pro embedded systémy, IoT zařízení a průmyslové automaty. Pracujeme s ARM, RISC-V, ESP32 a dalšími platformami.' },
-    { title: 'Sériová výroba a logistika', desc: 'Zajišťujeme sériovou výrobu, kontrolu kvality a dodávky hotových zařízení. Spolupracujeme s ověřenými výrobci v Evropě i Asii.' }
+    { title: 'Vývoj HW a SW', desc: 'Zajišťujeme vývoj hardwaru a firmware od návrhu přes prototypování až po sériovou výrobu, kontrolu kvality a logistiku.' },
+    { title: 'Sestavování a kontrola zařízení', desc: 'Zajišťujeme sestavování zařízení včetně ručního sestavení, kontroly kvality a následného testování před předáním nebo distribucí.' }
   ];
   let ci = 0;
-  function renderSlide() {
+
+  // Build dots
+  const dotsEl = document.getElementById('carouselDots');
+  slides.forEach((_, i) => {
+    const d = document.createElement('div');
+    d.className = 'dot' + (i === 0 ? ' active' : '');
+    dotsEl.appendChild(d);
+  });
+
+  function goTo(idx) {
+    if (idx === ci) return;
+    ci = idx;
     document.getElementById('cTitle').textContent = slides[ci].title;
     document.getElementById('cDesc').textContent = slides[ci].desc;
-    document.querySelectorAll('.carousel-dot').forEach((d, i) => {
-      d.classList.toggle('active', i === ci);
+    document.querySelectorAll('.dot').forEach((d, i) => d.classList.toggle('active', i === ci));
+    // Switch background
+    slides.forEach((_, i) => {
+      const bg = document.getElementById('cbg' + i);
+      if (bg) {
+        bg.classList.toggle('visible', i === ci);
+        bg.classList.toggle('hidden', i !== ci);
+      }
     });
   }
-  function goTo(idx) { ci = idx; renderSlide(); }
 
-  // Carousel wheel scroll
-  (() => {
-    const wrap = document.querySelector('.carousel-wrap');
-    if (!wrap) return;
-    let wheelAcc = 0;
-    const threshold = 200;
-    wrap.addEventListener('wheel', (e) => {
-      e.preventDefault();
-      wheelAcc += e.deltaY;
-      if (wheelAcc >= threshold) {
-        wheelAcc = 0;
-        if (ci < slides.length - 1) { ci++; renderSlide(); }
-      } else if (wheelAcc <= -threshold) {
-        wheelAcc = 0;
-        if (ci > 0) { ci--; renderSlide(); }
-      }
-    }, { passive: false });
-  })();
+  // Set scroll container height
+  const scrollContainer = document.getElementById('carouselScroll');
+  const scrollPerSlide = 270;
+  const cardHeight = 400;
+  const stickyTop = 120;
+  scrollContainer.style.height = (slides.length * scrollPerSlide + cardHeight) + 'px';
+
+  // Scroll-driven slide switching
+  window.addEventListener('scroll', () => {
+    const rect = scrollContainer.getBoundingClientRect();
+    const scrolled = -rect.top + stickyTop;
+    if (scrolled < 0) { goTo(0); return; }
+    const idx = Math.min(Math.floor(scrolled / scrollPerSlide), slides.length - 1);
+    goTo(idx);
+  });
 
   // Char counter
   function updateChar(el, id, max) {
