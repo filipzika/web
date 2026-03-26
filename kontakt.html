@@ -187,8 +187,19 @@
       font-family: 'Satoshi', sans-serif; font-weight: 400; font-size: 24px;
       color: var(--tertiary-100); line-height: 1.5; letter-spacing: 0.24px;
     }
+    .faq-nav {
+      display: flex; align-items: center; justify-content: center; gap: 27px; margin-top: 20px;
+    }
+    .faq-arrow {
+      width: 32px; height: 32px; border-radius: 8px;
+      background: var(--tertiary-100); border: none; cursor: pointer; padding: 0;
+      display: flex; align-items: center; justify-content: center;
+      transition: opacity 0.2s;
+    }
+    .faq-arrow:hover { opacity: 0.8; }
+    .faq-arrow img { width: 32px; height: 32px; display: block; }
     .faq-dots {
-      display: flex; justify-content: center; gap: 8px; margin-top: 20px;
+      display: flex; justify-content: center; gap: 8px;
     }
     .faq-dot {
       width: 16px; height: 16px; border-radius: 50%;
@@ -650,11 +661,19 @@
       <p class="faq-question">Lorem ipsum dolor sin amet?</p>
       <p class="faq-answer">Lorem ipsum dolor sin amet. Lorem ipsum dolor sin amet. Lorem ipsum dolor sin amet.</p>
     </div>
-    <div class="faq-dots">
-      <button class="faq-dot active" data-index="0"></button>
-      <button class="faq-dot" data-index="1"></button>
-      <button class="faq-dot" data-index="2"></button>
-      <button class="faq-dot" data-index="3"></button>
+    <div class="faq-nav">
+      <button class="faq-arrow faq-prev" aria-label="Předchozí">
+        <img src="assets/faq-prev.svg" alt="" />
+      </button>
+      <div class="faq-dots">
+        <button class="faq-dot active" data-index="0"></button>
+        <button class="faq-dot" data-index="1"></button>
+        <button class="faq-dot" data-index="2"></button>
+        <button class="faq-dot" data-index="3"></button>
+      </div>
+      <button class="faq-arrow faq-next" aria-label="Další">
+        <img src="assets/faq-next.svg" alt="" />
+      </button>
     </div>
   </div>
 
@@ -749,13 +768,44 @@
     document.body.style.overflow = '';
   }
 
-  // FAQ dot navigation (placeholder)
-  document.querySelectorAll('.faq-dot').forEach(dot => {
-    dot.addEventListener('click', function() {
-      document.querySelectorAll('.faq-dot').forEach(d => d.classList.remove('active'));
-      this.classList.add('active');
+  // FAQ carousel navigation
+  (() => {
+    const faqSlides = [
+      { q: 'Lorem ipsum dolor sin amet?', a: 'Lorem ipsum dolor sin amet. Lorem ipsum dolor sin amet. Lorem ipsum dolor sin amet.' },
+      { q: 'Jak dlouho trvá vývoj prototypu?', a: 'Záleží na složitosti projektu. Obvykle 4–12 týdnů od zadání po funkční prototyp.' },
+      { q: 'Zajišťujete i sériovou výrobu?', a: 'Ano, zajišťujeme kompletní výrobní proces včetně osazení DPS, montáže a testování.' },
+      { q: 'Jaké jsou minimální objemy výroby?', a: 'Nemáme striktní minimální objemy. Spolupracujeme na projektech od jednotek kusů po tisícové série.' },
+    ];
+    let faqIdx = 0;
+    const dots = document.querySelectorAll('.faq-dot');
+    const questionEl = document.querySelector('.faq-question');
+    const answerEl = document.querySelector('.faq-answer');
+    const prevBtn = document.querySelector('.faq-prev');
+    const nextBtn = document.querySelector('.faq-next');
+
+    function renderFaq() {
+      questionEl.textContent = faqSlides[faqIdx].q;
+      answerEl.textContent = faqSlides[faqIdx].a;
+      dots.forEach((d, i) => d.classList.toggle('active', i === faqIdx));
+    }
+
+    dots.forEach(dot => {
+      dot.addEventListener('click', function() {
+        faqIdx = parseInt(this.dataset.index);
+        renderFaq();
+      });
     });
-  });
+
+    prevBtn.addEventListener('click', () => {
+      faqIdx = faqIdx > 0 ? faqIdx - 1 : faqSlides.length - 1;
+      renderFaq();
+    });
+
+    nextBtn.addEventListener('click', () => {
+      faqIdx = faqIdx < faqSlides.length - 1 ? faqIdx + 1 : 0;
+      renderFaq();
+    });
+  })();
 </script>
 </body>
 </html>
