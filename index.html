@@ -289,6 +289,7 @@
       position: sticky;
       top: 120px;
       width: 100%;
+      z-index: 2;
     }
     .carousel-card {
       position: relative;
@@ -540,19 +541,22 @@
     }
     .phone-label { padding-left: 32px; }
     .phone-inner { display: flex; gap: 20px; align-items: center; }
-    .phone-picker {
+    .phone-prefix-input {
       background: var(--bg);
       border: 3px solid var(--tertiary-100);
       border-radius: 64px;
-      padding: 20px 24px 20px 32px;
-      display: flex; align-items: center; gap: 8px;
-      flex-shrink: 0; cursor: pointer;
-    }
-    .phone-picker-txt {
-      font-family: 'Clash Display', sans-serif;
+      padding: 20px 16px 20px 24px;
+      font-family: 'Satoshi', sans-serif;
       font-weight: 400; font-size: 18px;
-      color: var(--neutral-100);
-      letter-spacing: 0.36px; white-space: nowrap;
+      color: var(--neutral-300);
+      letter-spacing: 0.36px;
+      width: 100px;
+      text-align: center;
+      flex-shrink: 0;
+      outline: none;
+    }
+    .phone-prefix-input:focus {
+      border-color: var(--secondary-200);
     }
     .fta {
       background: var(--bg);
@@ -897,6 +901,7 @@
       /* CAROUSEL */
       .carousel-scroll-container { height: auto !important; }
       .carousel-sticky { position: relative; top: auto; }
+      .carousel-next-preview { display: none !important; }
       .carousel-card {
         width: 100% !important;
         height: 164px !important;
@@ -1007,11 +1012,12 @@
         flex-direction: row;
         gap: 12px;
       }
-      .phone-picker {
+      .phone-prefix-input {
         border-width: 2px !important;
-        padding: 16px 20px !important;
+        padding: 16px 12px !important;
+        font-size: 14px !important;
+        width: 80px !important;
       }
-      .phone-picker-txt { font-size: 14px !important; }
 
       /* Submit */
       .submit-btn {
@@ -1317,14 +1323,14 @@
   </div>
 </div>
 
-<div class="page-sections" style="padding-top:124px;"><!-- resume page-sections after carousel -->
+<div class="page-sections" id="postCarouselSections" style="padding-top:40px;"><!-- resume page-sections after carousel -->
 
   <!-- REST OF SECTIONS -->
   <div style="width:100%; display:flex; justify-content:center; position:relative; z-index:2; background:var(--bg);">
     <div class="section-wrap">
 
       <!-- PROČ S NÁMI -->
-      <div class="why-row" id="onas">
+      <div class="why-row" id="onas2">
         <div class="why-card">
           <img class="quote-img" src="assets/quote-mark.svg" alt="" />
           <p class="why-card-text">Máte projekt, který potřebujete vyvinout nebo vyrobit?<br><br>Napište nám základní informace a ozveme se vám s dalším postupem.</p>
@@ -1371,31 +1377,26 @@
           <h2 class="heading-2">Kontaktní formulář</h2>
           <p class="paragraph-1" style="max-width:678px;">Spolupráci stavíme na jasně definovaném procesu, aby bylo od začátku zřejmé, co se bude dít a v jakém pořadí.</p>
         </div>
-        <form class="form-fields" onsubmit="return false;">
+        <form class="form-fields" id="contactForm" onsubmit="return handleContactSubmit(event);">
           <div class="form-block1">
             <div class="fg">
               <label class="fl">Název firmy</label>
-              <input type="text" class="fi" placeholder="Zadejte jméno firmy" />
+              <input type="text" class="fi" name="company_name" placeholder="Zadejte jméno firmy" />
             </div>
             <div class="fg">
               <label class="fl">Jméno a příjmení</label>
-              <input type="text" class="fi" placeholder="Zadejte jméno a příjmení" />
+              <input type="text" class="fi" name="full_name" placeholder="Zadejte jméno a příjmení" required />
             </div>
             <div class="form-row-2">
               <div class="fg">
                 <label class="fl">Email</label>
-                <input type="email" class="fi" placeholder="Zadejte email" />
+                <input type="email" class="fi" name="email" placeholder="Zadejte email" required />
               </div>
               <div class="phone-group">
                 <label class="fl phone-label">Telefonní číslo</label>
                 <div class="phone-inner">
-                  <div class="phone-picker">
-                    <span class="phone-picker-txt">CZ +420</span>
-                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
-                      <path d="M5 7.5L10 12.5L15 7.5" stroke="#e1e1e1" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg>
-                  </div>
-                  <input type="tel" class="fi" placeholder="Zadejte tel. číslo" style="flex:1;" />
+                  <input type="text" class="phone-prefix-input" name="phone_prefix" value="+420" placeholder="+420" />
+                  <input type="tel" class="fi" name="phone" placeholder="Zadejte tel. číslo" style="flex:1;" />
                 </div>
               </div>
             </div>
@@ -1403,22 +1404,10 @@
           <div class="form-block2">
             <div class="fg">
               <label class="fl">Stručný popis projektu</label>
-              <textarea class="fta" placeholder="Popište váš projekt" id="projDesc" oninput="updateChar(this,'charCnt',1000)"></textarea>
+              <textarea class="fta" name="message" placeholder="Popište váš projekt" id="projDesc" oninput="updateChar(this,'charCnt',1000)" required></textarea>
               <div class="char-row"><span id="charCnt">0/1000</span></div>
             </div>
             <div class="fg">
-              <label class="fl dz-label">Přílohy</label>
-              <div class="dropzone" onclick="document.getElementById('fileIn').click()"
-                   ondragover="event.preventDefault();this.style.borderColor='var(--secondary-200)'"
-                   ondragleave="this.style.borderColor='var(--neutral-100)'"
-                   ondrop="handleDrop(event,this)">
-                <p class="dropzone-txt"><u>Vyberte ze složky</u> nebo soubory přetáhněte.</p>
-              </div>
-              <div class="dz-footer">
-                <span>Max 3 soubory. Celková velikost 20 MB.</span>
-                <span id="fileCnt">0/3 souborů</span>
-              </div>
-              <input type="file" id="fileIn" multiple style="display:none;" onchange="updateFiles(this)" />
             </div>
           </div>
           <div style="display:flex;justify-content:center;">
@@ -1570,14 +1559,80 @@
   const stickyTop = 120;
   scrollContainer.style.height = (slides.length * scrollPerSlide + cardHeight) + 'px';
 
-  // Scroll-driven slide switching
+  // Scroll-driven slide switching + next section reveal
+  const postSections = document.getElementById('postCarouselSections');
+  const totalScroll = slides.length * scrollPerSlide + cardHeight;
+  const isMobile = window.matchMedia('(max-width: 480px)');
+
   window.addEventListener('scroll', () => {
+    if (isMobile.matches) return; // On mobile, carousel is swipe-based, no scroll-driven logic
     const rect = scrollContainer.getBoundingClientRect();
     const scrolled = -rect.top + stickyTop;
+
+    // Reveal next section: fade in across entire carousel scroll
+    if (postSections) {
+      const progress = Math.max(0, Math.min(1, scrolled / totalScroll));
+      postSections.style.opacity = 0.15 + progress * 0.85;
+      postSections.style.transform = 'scale(' + (0.95 + progress * 0.05) + ')';
+      postSections.style.transformOrigin = 'center top';
+    }
+
     if (scrolled < 0) { goTo(0); return; }
     const idx = Math.min(Math.floor(scrolled / scrollPerSlide), slides.length - 1);
     goTo(idx);
   });
+
+  // On mobile: reset postSections to static (no animation) and enable swipe
+  function resetMobileStatic() {
+    if (isMobile.matches && postSections) {
+      postSections.style.opacity = '1';
+      postSections.style.transform = 'none';
+    }
+  }
+  isMobile.addEventListener('change', resetMobileStatic);
+  resetMobileStatic();
+
+  // Touch swipe for carousel on mobile
+  (function() {
+    const card = document.getElementById('carouselCard');
+    if (!card) return;
+    let touchStartX = 0;
+    let touchEndX = 0;
+    card.addEventListener('touchstart', function(e) {
+      touchStartX = e.changedTouches[0].screenX;
+    }, { passive: true });
+    card.addEventListener('touchend', function(e) {
+      touchEndX = e.changedTouches[0].screenX;
+      const diff = touchStartX - touchEndX;
+      if (Math.abs(diff) > 40) {
+        if (diff > 0 && ci < slides.length - 1) {
+          goTo(ci + 1);
+        } else if (diff < 0 && ci > 0) {
+          goTo(ci - 1);
+        }
+      }
+    }, { passive: true });
+  })();
+
+  // Touch swipe for realizace carousel on mobile
+  (function() {
+    var realizaceCard = document.querySelector('.realizace-card');
+    if (!realizaceCard) return;
+    var prevBtn = realizaceCard.querySelector('[aria-label="Předchozí"]');
+    var nextBtn = realizaceCard.querySelector('[aria-label="Další"]');
+    if (!prevBtn || !nextBtn) return;
+    var rStartX = 0;
+    realizaceCard.addEventListener('touchstart', function(e) {
+      rStartX = e.changedTouches[0].screenX;
+    }, { passive: true });
+    realizaceCard.addEventListener('touchend', function(e) {
+      var diff = rStartX - e.changedTouches[0].screenX;
+      if (Math.abs(diff) > 40) {
+        if (diff > 0) nextBtn.click();
+        else prevBtn.click();
+      }
+    }, { passive: true });
+  })();
 
   // Char counter
   function updateChar(el, id, max) {
@@ -1586,14 +1641,12 @@
 
   // File count
   function updateFiles(input) {
-    document.getElementById('fileCnt').textContent = Math.min(input.files.length, 3) + '/3 souborů';
   }
 
   // Drag & drop
   function handleDrop(e, zone) {
     e.preventDefault();
     zone.style.borderColor = 'var(--neutral-100)';
-    document.getElementById('fileCnt').textContent = Math.min(e.dataTransfer.files.length, 3) + '/3 souborů';
   }
 
   // Mobile menu
@@ -1604,6 +1657,82 @@
   function closeMobileMenu() {
     document.getElementById('mobileMenu').classList.remove('open');
     document.body.style.overflow = '';
+  }
+</script>
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<script>
+  emailjs.init('DhPaiacQzrwxKkBSF');
+
+  function handleContactSubmit(e) {
+    e.preventDefault();
+    const form = document.getElementById('contactForm');
+    const btn = form.querySelector('.submit-btn');
+    const origText = btn.textContent;
+
+    // Validace povinných polí
+    const name = form.querySelector('[name="full_name"]').value.trim();
+    const email = form.querySelector('[name="email"]').value.trim();
+    const message = form.querySelector('[name="message"]').value.trim();
+    if (!name || !email || !message) {
+      showFormMsg(form, 'Vyplňte prosím všechna povinná pole (jméno, email, popis projektu).', 'error');
+      return false;
+    }
+
+    // Očistit telefonní číslo – odstranit předvolbu (+420, 00420 atd.)
+    const phoneInput = form.querySelector('[name="phone"]');
+    if (phoneInput && phoneInput.value) {
+      phoneInput.value = phoneInput.value.trim().replace(/^(\+|00)\d{1,3}\s*/, '');
+    }
+
+    btn.disabled = true;
+    btn.textContent = 'Odesílání...';
+
+    emailjs.sendForm('service_8vwiv8m', 'template_71av8jr', form)
+      .then(function() {
+        showFormMsg(form, 'Zpráva byla úspěšně odeslána! Ozveme se vám co nejdříve.', 'success');
+        form.reset();
+        document.getElementById('charCnt').textContent = '0/1000';
+      }, function(err) {
+        showFormMsg(form, 'Odeslání se nezdařilo: ' + (err.text || err.message || JSON.stringify(err)), 'error');
+        console.error('EmailJS error:', JSON.stringify(err));
+      })
+      .finally(function() {
+        btn.disabled = false;
+        btn.textContent = origText;
+      });
+
+    return false;
+  }
+
+  // Auto-detect prefix in phone field and move it to prefix input
+  (function() {
+    var phoneInput = document.querySelector('[name="phone"]');
+    var prefixInput = document.querySelector('[name="phone_prefix"]');
+    if (!phoneInput || !prefixInput) return;
+    phoneInput.addEventListener('input', function() {
+      var val = phoneInput.value.trim();
+      var match = val.match(/^(\+\d{1,4}|00\d{1,4})\s*/);
+      if (match) {
+        var prefix = match[1].replace(/^00/, '+');
+        prefixInput.value = prefix;
+        phoneInput.value = val.slice(match[0].length);
+      }
+    });
+  })();
+
+  function showFormMsg(form, text, type) {
+    let msg = form.querySelector('.form-msg');
+    if (!msg) {
+      msg = document.createElement('div');
+      msg.className = 'form-msg';
+      form.appendChild(msg);
+    }
+    msg.textContent = text;
+    msg.style.cssText = 'text-align:center;padding:16px;margin-top:16px;border-radius:12px;font-family:inherit;font-size:16px;' +
+      (type === 'success'
+        ? 'background:rgba(106,97,217,0.15);color:#6a61d9;border:1px solid #6a61d9;'
+        : 'background:rgba(220,38,38,0.1);color:#dc2626;border:1px solid #dc2626;');
+    setTimeout(function() { msg.remove(); }, 6000);
   }
 </script>
 </body>
