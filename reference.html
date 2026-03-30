@@ -30,10 +30,10 @@
     }
     .navbar-logo { height: 40px; width: auto; flex-shrink: 0; }
     .navbar-right { display: flex; align-items: center; flex: 1; padding-left: 24px; justify-content: space-between; }
-    .navbar-links { width: 100px; text-align: center; outline: none; }
+    .navbar-links { display: flex; align-items: center; gap: 8px; }
     .navbar-link {
       font-family: 'Satoshi', sans-serif; font-weight: 500; font-size: 16px;
-      color: var(--neutral-300); text-decoration: none; padding: 8px 12px;
+      color: var(--neutral-100); text-decoration: none; padding: 8px 12px;
       border-radius: 4px; letter-spacing: 0.32px; transition: background 0.2s;
     }
     .navbar-link:hover { background: rgba(255,255,255,0.08); }
@@ -765,7 +765,7 @@
     if (!phoneInput || !prefixInput) return;
     phoneInput.addEventListener('input', function() {
       var val = phoneInput.value.trim();
-      var match = val.match(/^(+d{1,4}|00d{1,4})s*/);
+      var match = val.match(/^(\+\d{1,4}|00\d{1,4})\s*/);
       if (match) {
         var prefix = match[1].replace(/^00/, '+');
         prefixInput.value = prefix;
