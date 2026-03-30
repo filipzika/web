@@ -702,7 +702,8 @@
     const message = form.querySelector('[name="message"]').value.trim();
     if (!name || !email || !message) { showFormMsg(form, 'Vyplňte prosím všechna povinná pole (jméno, email, popis projektu).', 'error'); return false; }
     var phoneInput = form.querySelector('[name="phone"]');
-    if (phoneInput && phoneInput.value) { phoneInput.value = phoneInput.value.trim().replace(/^(\+|00)\d{1,3}\s*/, ''); }
+    var phoneVal = phoneInput ? phoneInput.value.trim().replace(/\s/g, '') : '';
+    if (phoneVal && !/^\d{6,15}$/.test(phoneVal)) { showFormMsg(form, 'Zadejte platné telefonní číslo (pouze číslice, bez předvolby).', 'error'); return false; }
     btn.disabled = true;
     btn.textContent = 'Odesílání...';
     emailjs.sendForm('service_8vwiv8m', 'template_71av8jr', form)
@@ -722,7 +723,8 @@
     var phoneInput = document.querySelector('[name="phone"]');
     var prefixInput = document.querySelector('[name="phone_prefix"]');
     if (!phoneInput || !prefixInput) return;
-    phoneInput.addEventListener('input', function() {
+    prefixInput.addEventListener('focus', function() { prefixInput.select(); });
+    phoneInput.addEventListener('blur', function() {
       var val = phoneInput.value.trim();
       var match = val.match(/^(\+\d{1,4}|00\d{1,4})\s*/);
       if (match) {
