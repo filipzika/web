@@ -669,6 +669,13 @@
     document.getElementById('scrollTopBtn').classList.toggle('visible', window.scrollY > 500);
   });
   function setLang(btn) {
+    var t = btn.textContent.trim();
+    if (t === 'EN') {
+      var map = {'index.html':'en/index.html','sluzby.html':'en/sluzby.html','reference.html':'en/reference.html','onas.html':'en/onas.html','kontakt.html':'en/kontakt.html'};
+      var page = location.pathname.split('/').pop() || 'index.html';
+      window.location.href = map[page] || 'en/index.html';
+      return;
+    }
     document.querySelectorAll('.lang-btn').forEach(b => b.classList.remove('active'));
     btn.classList.add('active');
   }

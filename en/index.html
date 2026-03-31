@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="cs">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>ForestBit – Elektronická zařízení na zakázku</title>
+  <title>ForestBit – Custom Electronic Devices</title>
   <link rel="preconnect" href="https://api.fontshare.com" />
   <link href="https://api.fontshare.com/v2/css?f[]=clash-display@400,500,600&f[]=satoshi@400,500,700&display=swap" rel="stylesheet" />
   <style>
@@ -324,13 +324,13 @@
         radial-gradient(ellipse at 85% 70%, rgba(120,130,10,0.5) 0%, transparent 60%),
         linear-gradient(140deg, #0a0c04 0%, #141808 15%, #1e2408 28%, #2d3a0c 40%, #435010 52%, #5a6814 64%, #6e7c12 76%, #808c16 90%);
     }
-    /* Prototypování — olive to beige */
+    /* Prototyping — olive to beige */
     .carousel-bg-1 {
       background:
         radial-gradient(ellipse at 90% 30%, rgba(190,180,140,0.35) 0%, transparent 55%),
         linear-gradient(135deg, #1a1a10 0%, #2a2818 18%, #3d3a22 32%, #524e30 45%, #68643e 58%, #807a50 70%, #9a9468 82%, #b0aa80 95%);
     }
-    /* Vývoj HW a SW — dark to purple */
+    /* Development HW a SW — dark to purple */
     .carousel-bg-2 {
       background:
         radial-gradient(ellipse at 85% 75%, rgba(100,80,180,0.45) 0%, transparent 60%),
@@ -1223,16 +1223,16 @@
   </svg>
   <div class="navbar-right">
     <div class="navbar-links">
-      <a class="navbar-link active" href="#uvod">Úvod</a>
-      <a class="navbar-link" href="sluzby.html">Služby</a>
-      <a class="navbar-link" href="reference.html">Reference</a>
-      <a class="navbar-link" href="onas.html">O nás</a>
-      <a class="navbar-link" href="kontakt.html">Kontakt</a>
+      <a class="navbar-link active" href="#uvod">Home</a>
+      <a class="navbar-link" href="sluzby.html">Services</a>
+      <a class="navbar-link" href="reference.html">Projects</a>
+      <a class="navbar-link" href="onas.html">About Us</a>
+      <a class="navbar-link" href="kontakt.html">Contact</a>
     </div>
-    <button class="navbar-cta" onclick="scroll2('#kontakt')">Poptat projekt</button>
+    <button class="navbar-cta" onclick="scroll2('#kontakt')">Request a Project</button>
     <div class="navbar-lang">
-      <button class="lang-btn active" onclick="setLang(this)">CZ</button>
-      <button class="lang-btn" onclick="setLang(this)">EN</button>
+      <button class="lang-btn" onclick="setLang(this)">CZ</button>
+      <button class="lang-btn active" onclick="setLang(this)">EN</button>
     </div>
   </div>
 </nav>
@@ -1255,7 +1255,7 @@
 <!-- MOBILE MENU OVERLAY -->
 <div class="mobile-menu-overlay" id="mobileMenu">
   <div class="mobile-menu-header">
-    <button class="mobile-menu-close" onclick="closeMobileMenu()" aria-label="Zavřít menu">
+    <button class="mobile-menu-close" onclick="closeMobileMenu()" aria-label="Close menu">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
         <path d="M18 6L6 18"/><path d="M6 6l12 12"/>
       </svg>
@@ -1271,30 +1271,30 @@
   </div>
   <div class="mobile-menu-items">
     <a class="mobile-menu-item active" href="#uvod" onclick="closeMobileMenu()">
-      Úvod
+      Home
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg>
     </a>
     <a class="mobile-menu-item" href="sluzby.html" onclick="closeMobileMenu()">
-      Služby
+      Services
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg>
     </a>
     <a class="mobile-menu-item" href="reference.html" onclick="closeMobileMenu()">
-      Reference
+      Projects
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg>
     </a>
     <a class="mobile-menu-item" href="onas.html" onclick="closeMobileMenu()">
-      O nás
+      About Us
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg>
     </a>
     <a class="mobile-menu-item" href="kontakt.html" onclick="closeMobileMenu()">
-      Kontakt
+      Contact
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg>
     </a>
   </div>
 </div>
 
 <!-- SCROLL TO TOP -->
-<button class="scroll-top" id="scrollTopBtn" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Zpět nahoru">
+<button class="scroll-top" id="scrollTopBtn" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Back to top">
   <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
     <path d="M24 36V12M24 12L14 22M24 12L34 22" stroke="#141414" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
   </svg>
@@ -1304,15 +1304,15 @@
 
   <!-- HERO -->
   <section class="hero" id="uvod">
-    <div class="hero-ellipse-1"><img src="assets/ellipse1.svg" alt="" /></div>
-    <div class="hero-ellipse-2"><img src="assets/ellipse2.svg" alt="" /></div>
+    <div class="hero-ellipse-1"><img src="../assets/ellipse1.svg" alt="" /></div>
+    <div class="hero-ellipse-2"><img src="../assets/ellipse2.svg" alt="" /></div>
     <div class="hero-content">
-      <h1 class="hero-title">Vyvíjíme a vyrábíme elektronická <br>zařízení na zakázku.</h1>
-      <p class="hero-subtitle">Od návrhu hardwaru a firmware přes prototypování až po sériovou výrobu, kontrolu kvality a logistiku.</p>
-      <button class="hero-btn" onclick="scroll2('#kontakt')">Poptat projekt</button>
+      <h1 class="hero-title">We develop and manufacture custom electronic <br>devices.</h1>
+      <p class="hero-subtitle">From hardware and firmware design through prototyping to mass production, quality control and logistics.</p>
+      <button class="hero-btn" onclick="scroll2('#kontakt')">Request a Project</button>
     </div>
-    <div class="hero-scroll" onclick="scroll2('#sluzby')" role="button" aria-label="Scroll dolů">
-      <img src="assets/scroll-arrow.svg" alt="" />
+    <div class="hero-scroll" onclick="scroll2('#sluzby')" role="button" aria-label="Scroll down">
+      <img src="../assets/scroll-arrow.svg" alt="" />
     </div>
   </section>
 
@@ -1323,8 +1323,8 @@
       <!-- CO UMÍME -->
       <div style="display:flex;flex-direction:column;gap:48px;align-items:center;width:100%;">
         <div class="section-header">
-          <h2 class="heading-1">Co umíme</h2>
-          <p class="paragraph-1" style="max-width:678px;">Pomáháme firmám vyvíjet a vyrábět vlastní elektronická zařízení bez nutnosti budovat interní tým nebo výrobu.</p>
+          <h2 class="heading-1">What We Do</h2>
+          <p class="paragraph-1" style="max-width:678px;">We help companies develop and manufacture their own electronic devices without the need to build an internal team or production line.</p>
         </div>
       </div>
     </div><!-- end section-wrap -->
@@ -1340,10 +1340,10 @@
       <div class="carousel-bg carousel-bg-1 hidden" id="cbg1"></div>
       <div class="carousel-bg carousel-bg-2 hidden" id="cbg2"></div>
       <div class="carousel-bg carousel-bg-3 hidden" id="cbg3"></div>
-      <img class="carousel-icon" src="assets/union-icon.svg" alt="" />
+      <img class="carousel-icon" src="../assets/union-icon.svg" alt="" />
       <div class="carousel-text">
-        <h3 class="carousel-title" id="cTitle">Supply chain & logistika</h3>
-        <p class="carousel-desc" id="cDesc">Zajišťujeme dodávky komponent, jejich skladování a distribuci hotových zařízení. Postaráme se o sourcing včetně zakázkových dílů, organizaci skladových zásob i následný dropshipping podle potřeb projektu.</p>
+        <h3 class="carousel-title" id="cTitle">Supply Chain & Logistics</h3>
+        <p class="carousel-desc" id="cDesc">We manage component sourcing, storage and distribution of finished devices. We take care of sourcing, including custom parts, inventory organization and subsequent dropshipping based on the project’s needs.</p>
       </div>
       <div class="carousel-dots" id="carouselDots"></div>
     </div>
@@ -1359,20 +1359,20 @@
       <!-- PROČ S NÁMI -->
       <div class="why-row" id="onas2">
         <div class="why-card">
-          <img class="quote-img" src="assets/quote-mark.svg" alt="" />
-          <p class="why-card-text">Máte projekt, který potřebujete vyvinout nebo vyrobit?<br><br>Napište nám základní informace a ozveme se vám s dalším postupem.</p>
+          <img class="quote-img" src="../assets/quote-mark.svg" alt="" />
+          <p class="why-card-text">Do you have a project that needs to be developed or manufactured?<br><br>Send us the basic details and we will get back to you with the next steps.</p>
         </div>
-        <h2 class="why-heading">Proč s námi spolupracovat?</h2>
+        <h2 class="why-heading">Why Work With Us?</h2>
       </div>
 
       <!-- VYBRANÉ REALIZACE -->
       <div style="display:flex;flex-direction:column;gap:40px;width:100%;" id="realizace">
-        <h2 class="heading-2">Vybrané realizace</h2>
+        <h2 class="heading-2">Selected Projects</h2>
         <div class="realizace-row">
           <div class="realizace-info">
             <div>
-              <p class="realizace-label">Klient</p>
-              <p class="realizace-name">Jméno projektu</p>
+              <p class="realizace-label">Client</p>
+              <p class="realizace-name">Project Name</p>
             </div>
             <div style="display:flex;flex-direction:column;gap:4px;">
               <p class="realizace-sub">Lorem ipsum</p>
@@ -1380,9 +1380,9 @@
             </div>
           </div>
           <div class="realizace-card">
-            <img class="realizace-img" src="assets/project-realizace.jpg" alt="Projekt" />
+            <img class="realizace-img" src="../assets/project-realizace.jpg" alt="Project" />
             <div class="stepper">
-              <button class="stepper-btn" aria-label="Předchozí">
+              <button class="stepper-btn" aria-label="Previous">
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M15 18L9 12L15 6" stroke="#fefdf9" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
               </button>
               <span class="stepper-num">
@@ -1390,7 +1390,7 @@
                 <span class="stepper-sep"> | </span>
                 <span class="stepper-tot">04</span>
               </span>
-              <button class="stepper-btn" aria-label="Další">
+              <button class="stepper-btn" aria-label="Next">
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M9 18L15 12L9 6" stroke="#fefdf9" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
               </button>
             </div>
@@ -1401,44 +1401,44 @@
       <!-- KONTAKTNÍ FORMULÁŘ -->
       <div class="form-section" id="kontakt" style="scroll-margin-top:120px;">
         <div class="section-header">
-          <h2 class="heading-2">Kontaktní formulář</h2>
-          <p class="paragraph-1" style="max-width:678px;">Spolupráci stavíme na jasně definovaném procesu, aby bylo od začátku zřejmé, co se bude dít a v jakém pořadí.</p>
+          <h2 class="heading-2">Contact Form</h2>
+          <p class="paragraph-1" style="max-width:678px;">We build every collaboration on a clearly defined process, so from the very beginning it is clear what will happen and in what order.</p>
         </div>
         <form class="form-fields" id="contactForm" onsubmit="return handleContactSubmit(event);">
           <div class="form-block1">
             <div class="fg">
-              <label class="fl">Název firmy</label>
-              <input type="text" class="fi" name="company_name" placeholder="Zadejte jméno firmy" />
+              <label class="fl">Company Name</label>
+              <input type="text" class="fi" name="company_name" placeholder="Enter company name" />
             </div>
             <div class="fg">
-              <label class="fl">Jméno a příjmení</label>
-              <input type="text" class="fi" name="full_name" placeholder="Zadejte jméno a příjmení" required />
+              <label class="fl">Full Name</label>
+              <input type="text" class="fi" name="full_name" placeholder="Enter full name" required />
             </div>
             <div class="form-row-2">
               <div class="fg">
                 <label class="fl">Email</label>
-                <input type="email" class="fi" name="email" placeholder="Zadejte email" required />
+                <input type="email" class="fi" name="email" placeholder="Enter email" required />
               </div>
               <div class="phone-group">
-                <label class="fl phone-label">Telefonní číslo</label>
+                <label class="fl phone-label">Phone Number</label>
                 <div class="phone-inner">
                   <input type="text" class="phone-prefix-input" name="phone_prefix" value="+420" placeholder="+420" />
-                  <input type="tel" class="fi" name="phone" placeholder="Zadejte tel. číslo" style="flex:1;" />
+                  <input type="tel" class="fi" name="phone" placeholder="Enter phone number" style="flex:1;" />
                 </div>
               </div>
             </div>
           </div>
           <div class="form-block2">
             <div class="fg">
-              <label class="fl">Stručný popis projektu</label>
-              <textarea class="fta" name="message" placeholder="Popište váš projekt" id="projDesc" oninput="updateChar(this,'charCnt',1000)" required></textarea>
+              <label class="fl">Brief Project Description</label>
+              <textarea class="fta" name="message" placeholder="Describe your project" id="projDesc" oninput="updateChar(this,'charCnt',1000)" required></textarea>
               <div class="char-row"><span id="charCnt">0/1000</span></div>
             </div>
             <div class="fg">
             </div>
           </div>
           <div style="display:flex;justify-content:center;">
-            <button type="submit" class="submit-btn">Poptat projekt</button>
+            <button type="submit" class="submit-btn">Request a Project</button>
           </div>
         </form>
       </div>
@@ -1461,28 +1461,28 @@
           </svg>
           <nav class="footer-nav">
             <div class="footer-col">
-              <span class="footer-col-head">Úvod</span>
-              <a href="sluzby.html">Služby</a>
-              <a href="#kontakt">Poptávka</a>
+              <span class="footer-col-head">Home</span>
+              <a href="sluzby.html">Services</a>
+              <a href="#kontakt">Inquiry</a>
             </div>
             <div class="footer-col">
-              <span class="footer-col-head">Služby</span>
-              <a href="sluzby.html#vyvoj">Vývoj</a>
-              <a href="sluzby.html#firmware">Výroba</a>
-              <a href="sluzby.html#prototypovani">Prototypování</a>
-              <a href="sluzby.html#dodavky">Dodávky</a>
+              <span class="footer-col-head">Services</span>
+              <a href="sluzby.html#vyvoj">Development</a>
+              <a href="sluzby.html#firmware">Production</a>
+              <a href="sluzby.html#prototypovani">Prototyping</a>
+              <a href="sluzby.html#dodavky">Supply</a>
             </div>
             <div class="footer-col">
-              <span class="footer-col-head">Reference</span>
-              <a href="#realizace">Projekty</a>
-              <a href="#kontakt">Poptávka</a>
+              <span class="footer-col-head">Projects</span>
+              <a href="#realizace">Projects</a>
+              <a href="#kontakt">Inquiry</a>
             </div>
             <div class="footer-col">
-              <span class="footer-col-head">O nás</span>
-              <a href="#">Tým</a>
-              <a href="#">Jak pracujeme</a>
-              <a href="#">O firmě</a>
-              <a href="#">Kontakt</a>
+              <span class="footer-col-head">About Us</span>
+              <a href="#">Team</a>
+              <a href="#">How We Work</a>
+              <a href="#">About the Company</a>
+              <a href="#">Contact</a>
             </div>
           </nav>
         </div>
@@ -1534,24 +1534,17 @@
   });
 
   // Language toggle
-  function setLang(btn) {
-    var t = btn.textContent.trim();
-    if (t === 'EN') {
-      var map = {'index.html':'en/index.html','sluzby.html':'en/sluzby.html','reference.html':'en/reference.html','onas.html':'en/onas.html','kontakt.html':'en/kontakt.html'};
-      var page = location.pathname.split('/').pop() || 'index.html';
-      window.location.href = map[page] || 'en/index.html';
-      return;
-    }
+  function setLang(btn) { var t=btn.textContent.trim(); if(t==='CZ'){var map={'index.html':'../index.html','sluzby.html':'../sluzby.html','reference.html':'../reference.html','onas.html':'../onas.html','kontakt.html':'../kontakt.html'}; var page=location.pathname.split('/').pop()||'index.html'; window.location.href=map[page]||'../index.html'; return;}
     document.querySelectorAll('.lang-btn').forEach(b => b.classList.remove('active'));
     btn.classList.add('active');
   }
 
   // Carousel (scroll-driven)
   const slides = [
-    { title: 'Supply chain & logistika', desc: 'Zajišťujeme dodávky komponent, jejich skladování a distribuci hotových zařízení. Postaráme se o sourcing včetně zakázkových dílů, organizaci skladových zásob i následný dropshipping podle potřeb projektu.' },
-    { title: 'Prototypování a testování', desc: 'Zajišťujeme prototypování a testování zařízení včetně rychlého ověření návrhu, výroby malých sérií a technické validace před zahájením sériové produkce.' },
-    { title: 'Vývoj HW a SW', desc: 'Zajišťujeme vývoj hardwaru a firmware od návrhu přes prototypování až po sériovou výrobu, kontrolu kvality a logistiku.' },
-    { title: 'Sestavování a kontrola zařízení', desc: 'Zajišťujeme sestavování zařízení včetně ručního sestavení, kontroly kvality a následného testování před předáním nebo distribucí.' }
+    { title: 'Supply Chain & Logistics', desc: 'We manage component sourcing, storage and distribution of finished devices. We take care of sourcing, including custom parts, inventory organization and subsequent dropshipping based on the project’s needs.' },
+    { title: 'Prototyping & Testing', desc: 'We provide device prototyping and testing, including rapid design verification, small-batch production and technical validation before mass production begins.' },
+    { title: 'Development HW a SW', desc: 'We provide hardware and firmware development from design through prototyping to mass production, quality control and logistics.' },
+    { title: 'Device Assembly & Inspection', desc: 'We provide device assembly, including manual assembly, quality inspection and subsequent testing before handover or distribution.' }
   ];
   let ci = 0;
 
@@ -1629,7 +1622,7 @@
     slides.forEach(function(s, i) {
       var card = document.createElement('div');
       card.className = 'mobile-carousel-slide ' + (bgClasses[i] || '');
-      card.innerHTML = '<img class="carousel-icon" src="assets/union-icon.svg" alt="" />' +
+      card.innerHTML = '<img class="carousel-icon" src="../assets/union-icon.svg" alt="" />' +
         '<div class="carousel-text"><h3 class="carousel-title">' + s.title + '</h3>' +
         '<p class="carousel-desc">' + s.desc + '</p></div>';
       scrollRow.appendChild(card);
@@ -1641,8 +1634,8 @@
   (function() {
     var realizaceCard = document.querySelector('.realizace-card');
     if (!realizaceCard) return;
-    var prevBtn = realizaceCard.querySelector('[aria-label="Předchozí"]');
-    var nextBtn = realizaceCard.querySelector('[aria-label="Další"]');
+    var prevBtn = realizaceCard.querySelector('[aria-label="Previous"]');
+    var nextBtn = realizaceCard.querySelector('[aria-label="Next"]');
     if (!prevBtn || !nextBtn) return;
     var rStartX = 0;
     realizaceCard.addEventListener('touchstart', function(e) {
@@ -1692,33 +1685,33 @@
     const btn = form.querySelector('.submit-btn');
     const origText = btn.textContent;
 
-    // Validace povinných polí
+    // Required field validation
     const name = form.querySelector('[name="full_name"]').value.trim();
     const email = form.querySelector('[name="email"]').value.trim();
     const message = form.querySelector('[name="message"]').value.trim();
     if (!name || !email || !message) {
-      showFormMsg(form, 'Vyplňte prosím všechna povinná pole (jméno, email, popis projektu).', 'error');
+      showFormMsg(form, 'Please fill in all required fields (name, email, project description).', 'error');
       return false;
     }
 
-    // Validace telefonního čísla
+    // Phone number validation
     const phoneInput = form.querySelector('[name="phone"]');
     const phoneVal = phoneInput ? phoneInput.value.trim().replace(/\s/g, '') : '';
     if (phoneVal && !/^\d{6,15}$/.test(phoneVal)) {
-      showFormMsg(form, 'Zadejte platné telefonní číslo (pouze číslice, bez předvolby).', 'error');
+      showFormMsg(form, 'Enter a valid phone number (digits only, without the country code).', 'error');
       return false;
     }
 
     btn.disabled = true;
-    btn.textContent = 'Odesílání...';
+    btn.textContent = 'Sending...';
 
     emailjs.sendForm('service_8vwiv8m', 'template_71av8jr', form)
       .then(function() {
-        showFormMsg(form, 'Zpráva byla úspěšně odeslána! Ozveme se vám co nejdříve.', 'success');
+        showFormMsg(form, 'Your message has been sent successfully. We will get back to you as soon as possible.', 'success');
         form.reset();
         document.getElementById('charCnt').textContent = '0/1000';
       }, function(err) {
-        showFormMsg(form, 'Odeslání se nezdařilo: ' + (err.text || err.message || JSON.stringify(err)), 'error');
+        showFormMsg(form, 'Sending failed: ' + (err.text || err.message || JSON.stringify(err)), 'error');
         console.error('EmailJS error:', JSON.stringify(err));
       })
       .finally(function() {

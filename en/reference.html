@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="cs">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Reference – ForestBit</title>
+  <title>Projects – ForestBit</title>
   <link rel="preconnect" href="https://api.fontshare.com" />
   <link href="https://api.fontshare.com/v2/css?f[]=clash-display@400,500,600&f[]=satoshi@400,500,700&display=swap" rel="stylesheet" />
   <style>
@@ -436,16 +436,16 @@
   </a>
   <div class="navbar-right">
     <div class="navbar-links">
-      <a class="navbar-link" href="index.html">Úvod</a>
-      <a class="navbar-link" href="sluzby.html">Služby</a>
-      <a class="navbar-link active" href="reference.html">Reference</a>
-      <a class="navbar-link" href="onas.html">O nás</a>
-      <a class="navbar-link" href="kontakt.html">Kontakt</a>
+      <a class="navbar-link" href="index.html">Home</a>
+      <a class="navbar-link" href="sluzby.html">Services</a>
+      <a class="navbar-link active" href="reference.html">Projects</a>
+      <a class="navbar-link" href="onas.html">About Us</a>
+      <a class="navbar-link" href="kontakt.html">Contact</a>
     </div>
-    <button class="navbar-cta" onclick="document.getElementById('kontakt').scrollIntoView({behavior:'smooth'})">Poptat projekt</button>
+    <button class="navbar-cta" onclick="document.getElementById('kontakt').scrollIntoView({behavior:'smooth'})">Request a Project</button>
     <div class="navbar-lang">
-      <button class="lang-btn active" onclick="setLang(this)">CZ</button>
-      <button class="lang-btn" onclick="setLang(this)">EN</button>
+      <button class="lang-btn" onclick="setLang(this)">CZ</button>
+      <button class="lang-btn active" onclick="setLang(this)">EN</button>
     </div>
   </div>
 </nav>
@@ -469,7 +469,7 @@
 
 <!-- MOBILE MENU OVERLAY -->
 <div class="mobile-menu-overlay" id="mobileMenu">
-  <button class="mobile-menu-close" onclick="closeMobileMenu()" aria-label="Zavřít">
+  <button class="mobile-menu-close" onclick="closeMobileMenu()" aria-label="Close">
     <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M18 6L6 18M6 6L18 18" stroke="#fefdf9" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
   </button>
   <a href="index.html" class="mobile-menu-logo">
@@ -482,16 +482,16 @@
     </svg>
   </a>
   <div class="mobile-menu-nav">
-    <a href="index.html" class="mobile-menu-link">Úvod <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M9 18L15 12L9 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
-    <a href="sluzby.html" class="mobile-menu-link">Služby <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M9 18L15 12L9 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
-    <a href="reference.html" class="mobile-menu-link active">Reference <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M9 18L15 12L9 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
-    <a href="onas.html" class="mobile-menu-link">O nás <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M9 18L15 12L9 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
-    <a href="kontakt.html" class="mobile-menu-link">Kontakt <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M9 18L15 12L9 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+    <a href="index.html" class="mobile-menu-link">Home <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M9 18L15 12L9 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+    <a href="sluzby.html" class="mobile-menu-link">Services <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M9 18L15 12L9 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+    <a href="reference.html" class="mobile-menu-link active">Projects <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M9 18L15 12L9 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+    <a href="onas.html" class="mobile-menu-link">About Us <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M9 18L15 12L9 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+    <a href="kontakt.html" class="mobile-menu-link">Contact <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M9 18L15 12L9 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
   </div>
 </div>
 
 <!-- SCROLL TO TOP -->
-<button class="scroll-top" id="scrollTopBtn" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Zpět nahoru">
+<button class="scroll-top" id="scrollTopBtn" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Back to top">
   <svg viewBox="0 0 48 48" fill="none"><path d="M24 36V12M24 12L14 22M24 12L34 22" stroke="#141414" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
 </button>
 
@@ -503,8 +503,8 @@
 <!-- HERO -->
 <section class="hero">
   <div class="hero-content">
-    <h1 class="hero-title">Reference</h1>
-    <p class="hero-subtitle">Ukázky projektů, na kterých jsme se podíleli v oblasti vývoje, výroby a logistiky elektronických zařízení.</p>
+    <h1 class="hero-title">Projects</h1>
+    <p class="hero-subtitle">Examples of projects we have contributed to in the development, manufacturing and logistics of electronic devices.</p>
   </div>
 </section>
 
@@ -517,7 +517,7 @@
       <div class="project-text">
         <div class="project-meta">
           <p class="project-client" id="pClient">Klient</p>
-          <p class="project-name" id="pName">Jméno projektu</p>
+          <p class="project-name" id="pName">Project Name</p>
         </div>
         <div class="project-body">
           <p class="project-label" id="pLabel">Lorem ipsum</p>
@@ -525,9 +525,9 @@
         </div>
       </div>
       <div class="project-image-wrap">
-        <img id="pImg" src="assets/project-placeholder.png" alt="Projekt" />
+        <img id="pImg" src="../assets/project-placeholder.png" alt="Projekt" />
         <div class="stepper">
-          <button class="stepper-btn" id="sPrev" aria-label="Předchozí">
+          <button class="stepper-btn" id="sPrev" aria-label="Previous">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M15 18L9 12L15 6" stroke="#3a3a3a" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
           </button>
           <div class="stepper-count">
@@ -535,7 +535,7 @@
             <span class="stepper-sep">|</span>
             <span class="stepper-tot" id="sTot">04</span>
           </div>
-          <button class="stepper-btn" id="sNext" aria-label="Další">
+          <button class="stepper-btn" id="sNext" aria-label="Next">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M9 6L15 12L9 18" stroke="#3a3a3a" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
           </button>
         </div>
@@ -547,35 +547,35 @@
   <div class="contact-wrap" style="width:1147px; scroll-margin-top:120px;" id="kontakt">
     <div class="form-section">
       <div style="display:flex;flex-direction:column;gap:16px;width:100%;">
-        <h2 class="heading-2">Kontaktní formulář</h2>
-        <p class="paragraph-1">Spolupráci stavíme na jasně definovaném procesu, aby bylo od začátku zřejmé, co se bude dít a v jakém pořadí.</p>
+        <h2 class="heading-2">Contact Form</h2>
+        <p class="paragraph-1">We build every collaboration on a clearly defined process, so from the very beginning it is clear what will happen and in what order.</p>
       </div>
       <form class="form-fields" id="contactForm" onsubmit="return handleContactSubmit(event);">
         <div class="form-block1">
-          <div class="fg"><label class="fl">Název firmy</label><input type="text" class="fi" name="company_name" placeholder="Zadejte jméno firmy" /></div>
-          <div class="fg"><label class="fl">Jméno a příjmení</label><input type="text" class="fi" name="full_name" placeholder="Zadejte jméno a příjmení" required /></div>
+          <div class="fg"><label class="fl">Company Name</label><input type="text" class="fi" name="company_name" placeholder="Enter company name" /></div>
+          <div class="fg"><label class="fl">Full Name</label><input type="text" class="fi" name="full_name" placeholder="Enter full name" required /></div>
           <div class="form-row-2">
-            <div class="fg"><label class="fl">Email</label><input type="email" class="fi" name="email" placeholder="Zadejte email" required /></div>
+            <div class="fg"><label class="fl">Email</label><input type="email" class="fi" name="email" placeholder="Enter email" required /></div>
             <div class="phone-group">
-              <label class="fl phone-label">Telefonní číslo</label>
+              <label class="fl phone-label">Phone Number</label>
               <div class="phone-inner">
                 <input type="text" class="phone-prefix-input" name="phone_prefix" value="+420" placeholder="+420" />
-                <input type="tel" class="fi" name="phone" placeholder="Zadejte tel. číslo" style="flex:1;" />
+                <input type="tel" class="fi" name="phone" placeholder="Enter phone number" style="flex:1;" />
               </div>
             </div>
           </div>
         </div>
         <div class="form-block2">
           <div class="fg">
-            <label class="fl">Stručný popis projektu</label>
-            <textarea class="fta" name="message" placeholder="Popište váš projekt" required id="projDesc" oninput="updateChar(this,'charCnt',1000)"></textarea>
+            <label class="fl">Brief Project Description</label>
+            <textarea class="fta" name="message" placeholder="Describe your project" required id="projDesc" oninput="updateChar(this,'charCnt',1000)"></textarea>
             <div class="char-row"><span id="charCnt">0/1000</span></div>
           </div>
           <div class="fg">
           </div>
         </div>
         <div style="display:flex;justify-content:center;">
-          <button type="submit" class="submit-btn">Poptat projekt</button>
+          <button type="submit" class="submit-btn">Request a Project</button>
         </div>
       </form>
     </div>
@@ -596,28 +596,28 @@
           </svg>
           <nav class="footer-nav">
             <div class="footer-col">
-              <span class="footer-col-head">Úvod</span>
-              <a href="sluzby.html">Služby</a>
-              <a href="#kontakt">Poptávka</a>
+              <span class="footer-col-head">Home</span>
+              <a href="sluzby.html">Services</a>
+              <a href="#kontakt">Inquiry</a>
             </div>
             <div class="footer-col">
-              <span class="footer-col-head">Služby</span>
-              <a href="sluzby.html#vyvoj">Vývoj</a>
-              <a href="sluzby.html#firmware">Výroba</a>
-              <a href="sluzby.html#prototypovani">Prototypování</a>
-              <a href="sluzby.html#dodavky">Dodávky</a>
+              <span class="footer-col-head">Services</span>
+              <a href="sluzby.html#vyvoj">Development</a>
+              <a href="sluzby.html#firmware">Production</a>
+              <a href="sluzby.html#prototypovani">Prototyping</a>
+              <a href="sluzby.html#dodavky">Supply</a>
             </div>
             <div class="footer-col">
-              <span class="footer-col-head">Reference</span>
-              <a href="reference.html">Projekty</a>
-              <a href="#kontakt">Poptávka</a>
+              <span class="footer-col-head">Projects</span>
+              <a href="reference.html">Projects</a>
+              <a href="#kontakt">Inquiry</a>
             </div>
             <div class="footer-col">
-              <span class="footer-col-head">O nás</span>
-              <a href="#">Tým</a>
-              <a href="#">Jak pracujeme</a>
-              <a href="#">O firmě</a>
-              <a href="#">Kontakt</a>
+              <span class="footer-col-head">About Us</span>
+              <a href="#">Team</a>
+              <a href="#">How We Work</a>
+              <a href="#">About the Company</a>
+              <a href="#">Contact</a>
             </div>
           </nav>
         </div>
@@ -650,36 +650,29 @@
   window.addEventListener('scroll', () => {
     document.getElementById('scrollTopBtn').classList.toggle('visible', window.scrollY > 300);
   });
-  function setLang(btn) {
-    var t = btn.textContent.trim();
-    if (t === 'EN') {
-      var map = {'index.html':'en/index.html','sluzby.html':'en/sluzby.html','reference.html':'en/reference.html','onas.html':'en/onas.html','kontakt.html':'en/kontakt.html'};
-      var page = location.pathname.split('/').pop() || 'index.html';
-      window.location.href = map[page] || 'en/index.html';
-      return;
-    }
+  function setLang(btn) { var t=btn.textContent.trim(); if(t==='CZ'){var map={'index.html':'../index.html','sluzby.html':'../sluzby.html','reference.html':'../reference.html','onas.html':'../onas.html','kontakt.html':'../kontakt.html'}; var page=location.pathname.split('/').pop()||'index.html'; window.location.href=map[page]||'../index.html'; return;}
     document.querySelectorAll('.lang-btn').forEach(b => b.classList.remove('active'));
     btn.classList.add('active');
   }
 
   const projects = [
     {
-      client: 'Klient', name: 'Jméno projektu', label: 'Lorem ipsum',
+      client: 'Client', name: 'Project Name', label: 'Lorem ipsum',
       desc: 'Lorem ipsum dolor sit amet consectetur. Eu viverra sagittis neque pellentesque gravida ac id. Pellentesque felis aenean elementum adipiscing. Ipsum in id gravida elit. Aliquam adipiscing pretium accumsan mi.',
       img: 'assets/project-placeholder.png'
     },
     {
-      client: 'Klient', name: 'Jméno projektu', label: 'Lorem ipsum',
+      client: 'Client', name: 'Project Name', label: 'Lorem ipsum',
       desc: 'Lorem ipsum dolor sit amet consectetur. Eu viverra sagittis neque pellentesque gravida ac id. Pellentesque felis aenean elementum adipiscing. Ipsum in id gravida elit. Aliquam adipiscing pretium accumsan mi.',
       img: 'assets/project-placeholder.png'
     },
     {
-      client: 'Klient', name: 'Jméno projektu', label: 'Lorem ipsum',
+      client: 'Client', name: 'Project Name', label: 'Lorem ipsum',
       desc: 'Lorem ipsum dolor sit amet consectetur. Eu viverra sagittis neque pellentesque gravida ac id. Pellentesque felis aenean elementum adipiscing. Ipsum in id gravida elit. Aliquam adipiscing pretium accumsan mi.',
       img: 'assets/project-placeholder.png'
     },
     {
-      client: 'Klient', name: 'Jméno projektu', label: 'Lorem ipsum',
+      client: 'Client', name: 'Project Name', label: 'Lorem ipsum',
       desc: 'Lorem ipsum dolor sit amet consectetur. Eu viverra sagittis neque pellentesque gravida ac id. Pellentesque felis aenean elementum adipiscing. Ipsum in id gravida elit. Aliquam adipiscing pretium accumsan mi.',
       img: 'assets/project-placeholder.png'
     }
@@ -743,19 +736,19 @@
     const name = form.querySelector('[name="full_name"]').value.trim();
     const email = form.querySelector('[name="email"]').value.trim();
     const message = form.querySelector('[name="message"]').value.trim();
-    if (!name || !email || !message) { showFormMsg(form, 'Vyplňte prosím všechna povinná pole (jméno, email, popis projektu).', 'error'); return false; }
+    if (!name || !email || !message) { showFormMsg(form, 'Please fill in all required fields (name, email, project description).', 'error'); return false; }
     var phoneInput = form.querySelector('[name="phone"]');
     var phoneVal = phoneInput ? phoneInput.value.trim().replace(/\s/g, '') : '';
-    if (phoneVal && !/^\d{6,15}$/.test(phoneVal)) { showFormMsg(form, 'Zadejte platné telefonní číslo (pouze číslice, bez předvolby).', 'error'); return false; }
+    if (phoneVal && !/^\d{6,15}$/.test(phoneVal)) { showFormMsg(form, 'Enter a valid phone number (digits only, without the country code).', 'error'); return false; }
     btn.disabled = true;
-    btn.textContent = 'Odesílání...';
+    btn.textContent = 'Sending...';
     emailjs.sendForm('service_8vwiv8m', 'template_71av8jr', form)
       .then(function() {
-        showFormMsg(form, 'Zpráva byla úspěšně odeslána! Ozveme se vám co nejdříve.', 'success');
+        showFormMsg(form, 'Your message has been sent successfully. We will get back to you as soon as possible.', 'success');
         form.reset();
         document.getElementById('charCnt').textContent = '0/1000';
       }, function(err) {
-        showFormMsg(form, 'Odeslání se nezdařilo. Zkuste to prosím znovu.', 'error');
+        showFormMsg(form, 'Sending failed. Please try again.', 'error');
         console.error('EmailJS error:', err);
       })
       .finally(function() { btn.disabled = false; btn.textContent = origText; });
