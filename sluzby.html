@@ -224,6 +224,62 @@
     .submit-btn:hover { opacity: 0.85; }
     .submit-btn:active { transform: scale(0.98); }
 
+    /* SERVICE DETAIL SECTIONS */
+    .service-details { display: flex; flex-direction: column; gap: 0; width: 100%; }
+    .service-detail {
+      display: flex; align-items: stretch; width: 100%; min-height: 480px;
+      border-bottom: 1px solid rgba(225,225,225,0.1);
+      scroll-margin-top: 120px;
+    }
+    .service-detail:last-child { border-bottom: none; }
+    .service-detail-number {
+      flex-shrink: 0; width: 120px; display: flex; align-items: flex-start; justify-content: center;
+      padding-top: 64px;
+      font-family: 'Clash Display', sans-serif; font-weight: 500; font-size: 80px;
+      color: rgba(106,97,217,0.3); line-height: 1;
+    }
+    .service-detail-content {
+      flex: 1; display: flex; flex-direction: column; gap: 32px; padding: 64px 0 64px 40px;
+    }
+    .service-detail-header {
+      display: flex; flex-direction: column; gap: 16px;
+    }
+    .service-detail-title {
+      font-family: 'Satoshi', sans-serif; font-weight: 600; font-size: 40px;
+      color: var(--tertiary-100); line-height: 1.2; letter-spacing: 0.8px;
+    }
+    .service-detail-subtitle {
+      font-family: 'Satoshi', sans-serif; font-weight: 400; font-size: 20px;
+      color: var(--neutral-300); line-height: 1.5; letter-spacing: 0.2px; max-width: 700px;
+    }
+    .service-detail-features {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 24px 48px;
+    }
+    .service-feature {
+      display: flex; gap: 16px; align-items: flex-start;
+    }
+    .service-feature-icon {
+      flex-shrink: 0; width: 40px; height: 40px; border-radius: 10px;
+      background: rgba(106,97,217,0.12); border: 1px solid rgba(106,97,217,0.25);
+      display: flex; align-items: center; justify-content: center; margin-top: 2px;
+    }
+    .service-feature-icon svg { width: 20px; height: 20px; color: var(--secondary-200); }
+    .service-feature-text {
+      display: flex; flex-direction: column; gap: 4px;
+    }
+    .service-feature-name {
+      font-family: 'Satoshi', sans-serif; font-weight: 600; font-size: 18px;
+      color: var(--tertiary-100); letter-spacing: 0.36px;
+    }
+    .service-feature-desc {
+      font-family: 'Satoshi', sans-serif; font-weight: 400; font-size: 16px;
+      color: var(--neutral-300); line-height: 1.5; letter-spacing: 0.16px;
+    }
+    .service-detail-divider {
+      width: 100%; height: 1px; background: linear-gradient(90deg, transparent 0%, rgba(106,97,217,0.3) 50%, transparent 100%);
+      margin: 0;
+    }
+
     /* FOOTER */
     footer { width: 100%; display: flex; flex-direction: column; align-items: center; gap: 32px; padding-bottom: 32px; }
     .footer-top { display: flex; gap: 64px; align-items: flex-start; padding: 32px 64px; width: 100%; }
@@ -317,6 +373,14 @@
       .services-wrap { width: 984px !important; }
       .contact-wrap { width: 984px !important; }
 
+      .service-detail { min-height: 400px; }
+      .service-detail-number { font-size: 64px; width: 100px; padding-top: 48px; }
+      .service-detail-content { padding: 48px 0 48px 32px; gap: 24px; }
+      .service-detail-title { font-size: 34px; }
+      .service-detail-subtitle { font-size: 18px; }
+      .service-feature-name { font-size: 16px; }
+      .service-feature-desc { font-size: 15px; }
+
       .fta { height: 250px; font-size: 20px; }
       .dropzone { height: 180px; }
       .dropzone-txt { font-size: 20px; }
@@ -353,6 +417,17 @@
       .carousel-card { height: 420px; gap: 40px; padding: 24px 32px 32px; }
       .carousel-title { font-size: 32px; }
       .carousel-desc { font-size: 18px; }
+
+      .service-detail { min-height: auto; }
+      .service-detail-number { font-size: 48px; width: 72px; padding-top: 40px; }
+      .service-detail-content { padding: 40px 0 40px 24px; gap: 20px; }
+      .service-detail-title { font-size: 28px; }
+      .service-detail-subtitle { font-size: 16px; }
+      .service-detail-features { grid-template-columns: 1fr; gap: 16px; }
+      .service-feature-icon { width: 36px; height: 36px; border-radius: 8px; }
+      .service-feature-icon svg { width: 18px; height: 18px; }
+      .service-feature-name { font-size: 15px; }
+      .service-feature-desc { font-size: 14px; }
 
       .heading-2 { font-size: 36px; }
       .fi { padding: 20px 28px; font-size: 16px; }
@@ -434,6 +509,19 @@
       .mobile-carousel-slide .mc-text { position: relative; z-index: 2; flex: 1; display: flex; flex-direction: column; gap: 8px; }
       .mobile-carousel-slide .mc-title { font-family: 'Clash Display', sans-serif; font-size: 16px; color: #fefdf9; }
       .mobile-carousel-slide .mc-desc { font-family: 'Satoshi', sans-serif; font-size: 12px; color: #fefdf9; line-height: 1.5; }
+
+      /* Service details mobile */
+      .service-detail { flex-direction: column; min-height: auto; }
+      .service-detail-number { width: 100%; padding: 32px 0 0 0; font-size: 40px; justify-content: flex-start; }
+      .service-detail-content { padding: 8px 0 32px 0; gap: 16px; }
+      .service-detail-title { font-size: 22px; }
+      .service-detail-subtitle { font-size: 14px; }
+      .service-detail-features { grid-template-columns: 1fr; gap: 12px; }
+      .service-feature { gap: 12px; }
+      .service-feature-icon { width: 32px; height: 32px; border-radius: 8px; }
+      .service-feature-icon svg { width: 16px; height: 16px; }
+      .service-feature-name { font-size: 14px; }
+      .service-feature-desc { font-size: 13px; }
 
       /* Contact form */
       .heading-2 { font-size: 24px; letter-spacing: 0.48px; }
@@ -625,6 +713,176 @@
     </div>
   </div>
 
+  <!-- SERVICE DETAILS -->
+  <div style="width:1144px; margin:0 auto;" class="services-wrap">
+    <div class="service-details">
+
+      <!-- 1. Supply chain & logistika -->
+      <div class="service-detail" id="dodavky">
+        <div class="service-detail-number">01</div>
+        <div class="service-detail-content">
+          <div class="service-detail-header">
+            <h3 class="service-detail-title">Supply chain & logistika</h3>
+            <p class="service-detail-subtitle">Zajišťujeme kompletní dodavatelský řetězec od sourcingu komponent až po doručení hotových produktů zákazníkům.</p>
+          </div>
+          <div class="service-detail-features">
+            <div class="service-feature">
+              <div class="service-feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg></div>
+              <div class="service-feature-text">
+                <span class="service-feature-name">Sourcing komponent</span>
+                <span class="service-feature-desc">Vyhledáváme a zajišťujeme elektronické součástky včetně zakázkových dílů od ověřených dodavatelů.</span>
+              </div>
+            </div>
+            <div class="service-feature">
+              <div class="service-feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg></div>
+              <div class="service-feature-text">
+                <span class="service-feature-name">Skladování a distribuce</span>
+                <span class="service-feature-desc">Organizujeme skladové zásoby a zajišťujeme logistiku distribuce hotových zařízení.</span>
+              </div>
+            </div>
+            <div class="service-feature">
+              <div class="service-feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+              <div class="service-feature-text">
+                <span class="service-feature-name">Řízení kvality dodávek</span>
+                <span class="service-feature-desc">Kontrolujeme kvalitu a původ komponent pro zajištění spolehlivosti výsledného produktu.</span>
+              </div>
+            </div>
+            <div class="service-feature">
+              <div class="service-feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></div>
+              <div class="service-feature-text">
+                <span class="service-feature-name">Dropshipping</span>
+                <span class="service-feature-desc">Nabízíme přímé zasílání produktů koncovým zákazníkům podle potřeb projektu.</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="service-detail-divider"></div>
+
+      <!-- 2. Prototypování a testování -->
+      <div class="service-detail" id="prototypovani">
+        <div class="service-detail-number">02</div>
+        <div class="service-detail-content">
+          <div class="service-detail-header">
+            <h3 class="service-detail-title">Prototypování a testování</h3>
+            <p class="service-detail-subtitle">Rychle ověříme váš návrh a provedeme technickou validaci ještě před zahájením sériové výroby.</p>
+          </div>
+          <div class="service-detail-features">
+            <div class="service-feature">
+              <div class="service-feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg></div>
+              <div class="service-feature-text">
+                <span class="service-feature-name">Rychlé prototypy</span>
+                <span class="service-feature-desc">Vytváříme funkční prototypy pro ověření konceptu během dní, ne týdnů.</span>
+              </div>
+            </div>
+            <div class="service-feature">
+              <div class="service-feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg></div>
+              <div class="service-feature-text">
+                <span class="service-feature-name">Technická validace</span>
+                <span class="service-feature-desc">Důkladné testování elektrických parametrů, EMC a funkčnosti před sériovou výrobou.</span>
+              </div>
+            </div>
+            <div class="service-feature">
+              <div class="service-feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg></div>
+              <div class="service-feature-text">
+                <span class="service-feature-name">Malé série</span>
+                <span class="service-feature-desc">Výroba malých sérií pro pilotní nasazení a ověření na reálných uživatelích.</span>
+              </div>
+            </div>
+            <div class="service-feature">
+              <div class="service-feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></div>
+              <div class="service-feature-text">
+                <span class="service-feature-name">Iterativní vývoj</span>
+                <span class="service-feature-desc">Postupné vylepšování návrhu na základě výsledků testů a zpětné vazby.</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="service-detail-divider"></div>
+
+      <!-- 3. Vývoj hardwaru -->
+      <div class="service-detail" id="vyvoj">
+        <div class="service-detail-number">03</div>
+        <div class="service-detail-content">
+          <div class="service-detail-header">
+            <h3 class="service-detail-title">Vývoj hardwaru</h3>
+            <p class="service-detail-subtitle">Navrhujeme elektronické obvody a DPS pro průmyslové i spotřebitelské aplikace — od konceptu po výrobní podklady.</p>
+          </div>
+          <div class="service-detail-features">
+            <div class="service-feature">
+              <div class="service-feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="2" ry="2"/><rect x="9" y="9" width="6" height="6"/><line x1="9" y1="1" x2="9" y2="4"/><line x1="15" y1="1" x2="15" y2="4"/><line x1="9" y1="20" x2="9" y2="23"/><line x1="15" y1="20" x2="15" y2="23"/><line x1="20" y1="9" x2="23" y2="9"/><line x1="20" y1="14" x2="23" y2="14"/><line x1="1" y1="9" x2="4" y2="9"/><line x1="1" y1="14" x2="4" y2="14"/></svg></div>
+              <div class="service-feature-text">
+                <span class="service-feature-name">Návrh schémat a DPS</span>
+                <span class="service-feature-desc">Kompletní návrh elektronických schémat a desek plošných spojů včetně vícevrstvých designů.</span>
+              </div>
+            </div>
+            <div class="service-feature">
+              <div class="service-feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.55a11 11 0 0 1 14.08 0"/><path d="M1.42 9a16 16 0 0 1 21.16 0"/><path d="M8.53 16.11a6 6 0 0 1 6.95 0"/><line x1="12" y1="20" x2="12.01" y2="20"/></svg></div>
+              <div class="service-feature-text">
+                <span class="service-feature-name">Bezdrátová komunikace</span>
+                <span class="service-feature-desc">Integrace Wi-Fi, BLE, LoRa, NB-IoT a dalších bezdrátových technologií do vašich zařízení.</span>
+              </div>
+            </div>
+            <div class="service-feature">
+              <div class="service-feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg></div>
+              <div class="service-feature-text">
+                <span class="service-feature-name">Výrobní podklady</span>
+                <span class="service-feature-desc">Příprava kompletní výrobní dokumentace — Gerber soubory, BOM, osazovací plány.</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="service-detail-divider"></div>
+
+      <!-- 4. Firmware a software -->
+      <div class="service-detail" id="firmware">
+        <div class="service-detail-number">04</div>
+        <div class="service-detail-content">
+          <div class="service-detail-header">
+            <h3 class="service-detail-title">Firmware a software</h3>
+            <p class="service-detail-subtitle">Vyvíjíme firmware pro embedded systémy a IoT zařízení — od nízkoúrovňových driverů po cloudovou integraci.</p>
+          </div>
+          <div class="service-detail-features">
+            <div class="service-feature">
+              <div class="service-feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg></div>
+              <div class="service-feature-text">
+                <span class="service-feature-name">Embedded firmware</span>
+                <span class="service-feature-desc">Vývoj firmware pro ARM, RISC-V, ESP32, STM32 a další mikrokontroléry.</span>
+              </div>
+            </div>
+            <div class="service-feature">
+              <div class="service-feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg></div>
+              <div class="service-feature-text">
+                <span class="service-feature-name">Řídicí aplikace</span>
+                <span class="service-feature-desc">Desktopové a mobilní aplikace pro ovládání, konfiguraci a monitoring zařízení.</span>
+              </div>
+            </div>
+            <div class="service-feature">
+              <div class="service-feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg></div>
+              <div class="service-feature-text">
+                <span class="service-feature-name">IoT a cloud integrace</span>
+                <span class="service-feature-desc">Propojení zařízení s cloudovými platformami, sběr dat a vzdálená správa.</span>
+              </div>
+            </div>
+            <div class="service-feature">
+              <div class="service-feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M2 8h20"/><path d="M9 4v4"/></svg></div>
+              <div class="service-feature-text">
+                <span class="service-feature-name">Hromadné nahrávání SD karet</span>
+                <span class="service-feature-desc">Automatizované programování a nahrávání firmware či dat na SD karty ve velkých sériích.</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
   <!-- CONTACT FORM -->
   <div class="contact-wrap" style="width:1144px; scroll-margin-top:120px;" id="kontakt">
     <div class="form-section">
@@ -684,10 +942,10 @@
             </div>
             <div class="footer-col">
               <span class="footer-col-head">Služby</span>
-              <a href="#">Vývoj</a>
-              <a href="#">Výroba</a>
-              <a href="#">Prototypování</a>
-              <a href="#">Dodávky</a>
+              <a href="sluzby.html#vyvoj">Vývoj</a>
+              <a href="sluzby.html#firmware">Výroba</a>
+              <a href="sluzby.html#prototypovani">Prototypování</a>
+              <a href="sluzby.html#dodavky">Dodávky</a>
             </div>
             <div class="footer-col">
               <span class="footer-col-head">Reference</span>
@@ -704,14 +962,9 @@
           </nav>
         </div>
         <div class="footer-bottom">
-          <div class="newsletter">
-            <p class="newsletter-title">Přihlaste se k newsletteru</p>
-            <div class="newsletter-row"><input class="newsletter-input" type="email" placeholder="Zadejte email" /></div>
-          </div>
         </div>
       </div>
       <div style="display:flex;align-items:flex-start;padding-top:48px;">
-        <img class="footer-deco" src="assets/union-icon.svg" alt="" />
       </div>
     </div>
     <div class="footer-socials">
