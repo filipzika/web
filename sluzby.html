@@ -343,6 +343,9 @@
     .mobile-menu-close svg { width: 32px; height: 32px; color: #ededed; }
     .mobile-menu-logo { width: 134px; height: 40px; }
     .mobile-menu-items { display: flex; flex-direction: column; gap: 16px; padding: 32px 24px; }
+    .mobile-lang { display: flex; align-items: center; justify-content: center; gap: 4px; padding: 24px 24px 0; }
+    .mobile-lang-btn { font-family: 'Satoshi', sans-serif; font-size: 16px; font-weight: 500; padding: 8px 20px; border-radius: 8px; border: none; cursor: pointer; letter-spacing: 0.32px; text-decoration: none; text-align: center; color: var(--neutral-300); background: none; }
+    .mobile-lang-btn.active { background: rgba(225,225,225,0.3); color: var(--tertiary-100); font-weight: 700; }
     .mobile-menu-item {
       display: flex; align-items: center; justify-content: space-between;
       padding: 8px 16px; border-radius: 8px; text-decoration: none;
@@ -662,6 +665,10 @@
       Kontakt
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg>
     </a>
+  </div>
+  <div class="mobile-lang">
+    <span class="mobile-lang-btn active">CZ</span>
+    <a href="en/sluzby.html" class="mobile-lang-btn">EN</a>
   </div>
 </div>
 
