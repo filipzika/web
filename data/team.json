@@ -1,0 +1,34 @@
+{
+  "items": [
+    {
+      "name": "Adrian Simonides",
+      "desc": "Lorem ipsum dolor sin amet lorem ipsum dolor sin amet Lorem ipsum dolor sin amet lorem ipsum dolor sin amet",
+      "desc_en": "Lorem ipsum dolor sit amet lorem ipsum dolor sit amet Lorem ipsum dolor sit amet lorem ipsum dolor sit amet",
+      "photo": "assets/union-icon.svg"
+    },
+    {
+      "name": "Benjamin Voráč",
+      "desc": "Lorem ipsum dolor sin amet lorem ipsum dolor sin amet Lorem ipsum dolor sin amet lorem ipsum dolor sin amet",
+      "desc_en": "Lorem ipsum dolor sit amet lorem ipsum dolor sit amet Lorem ipsum dolor sit amet lorem ipsum dolor sit amet",
+      "photo": "assets/union-icon.svg"
+    },
+    {
+      "name": "Ignat Hrek",
+      "desc": "Lorem ipsum dolor sin amet lorem ipsum dolor sin amet Lorem ipsum dolor sin amet lorem ipsum dolor sin amet",
+      "desc_en": "Lorem ipsum dolor sit amet lorem ipsum dolor sit amet Lorem ipsum dolor sit amet lorem ipsum dolor sit amet",
+      "photo": "assets/union-icon.svg"
+    },
+    {
+      "name": "Adam Přibyl",
+      "desc": "Lorem ipsum dolor sin amet lorem ipsum dolor sin amet Lorem ipsum dolor sin amet lorem ipsum dolor sin amet",
+      "desc_en": "Lorem ipsum dolor sit amet lorem ipsum dolor sit amet Lorem ipsum dolor sit amet lorem ipsum dolor sit amet",
+      "photo": "assets/union-icon.svg"
+    },
+    {
+      "name": "Filip Zíka",
+      "desc": "Lorem ipsum dolor sin amet lorem ipsum dolor sin amet Lorem ipsum dolor sin amet lorem ipsum dolor sin amet",
+      "desc_en": "Lorem ipsum dolor sit amet lorem ipsum dolor sit amet Lorem ipsum dolor sit amet lorem ipsum dolor sit amet",
+      "photo": "assets/union-icon.svg"
+    }
+  ]
+}

@@ -527,49 +527,24 @@
       <h2 class="team-heading">Tým ForestBit</h2>
       <p class="team-subtitle">Postaráme se o vše od návrhu hardwaru a firmware přes prototypování až po sériovou výrobu, kontrolu kvality a logistiku.</p>
     </div>
-    <div style="display:flex;flex-direction:column;gap:80px;align-items:center;">
-      <!-- Row 1: 3 members -->
-      <div class="team-grid-row">
-        <div class="team-card">
-          <div class="team-photo">
-            <img src="assets/union-icon.svg" alt="" />
-          </div>
-          <h3 class="team-name">Adrian Simonides</h3>
-          <p class="team-desc">Lorem ipsum dolor sin amet lorem ipsum dolor sin amet Lorem ipsum dolor sin amet lorem ipsum dolor sin amet</p>
-        </div>
-        <div class="team-card">
-          <div class="team-photo">
-            <img src="assets/union-icon.svg" alt="" />
-          </div>
-          <h3 class="team-name">Benjamin Voráč</h3>
-          <p class="team-desc">Lorem ipsum dolor sin amet lorem ipsum dolor sin amet Lorem ipsum dolor sin amet lorem ipsum dolor sin amet</p>
-        </div>
-        <div class="team-card">
-          <div class="team-photo">
-            <img src="assets/union-icon.svg" alt="" />
-          </div>
-          <h3 class="team-name">Ignat Hrek</h3>
-          <p class="team-desc">Lorem ipsum dolor sin amet lorem ipsum dolor sin amet Lorem ipsum dolor sin amet lorem ipsum dolor sin amet</p>
-        </div>
-      </div>
-      <!-- Row 2: 2 members -->
-      <div class="team-grid-row">
-        <div class="team-card">
-          <div class="team-photo">
-            <img src="assets/union-icon.svg" alt="" />
-          </div>
-          <h3 class="team-name">Adam Přibyl</h3>
-          <p class="team-desc">Lorem ipsum dolor sin amet lorem ipsum dolor sin amet Lorem ipsum dolor sin amet lorem ipsum dolor sin amet</p>
-        </div>
-        <div class="team-card">
-          <div class="team-photo">
-            <img src="assets/union-icon.svg" alt="" />
-          </div>
-          <h3 class="team-name">Filip Zíka</h3>
-          <p class="team-desc">Lorem ipsum dolor sin amet lorem ipsum dolor sin amet Lorem ipsum dolor sin amet lorem ipsum dolor sin amet</p>
-        </div>
-      </div>
+    <div id="teamContainer" style="display:flex;flex-direction:column;gap:80px;align-items:center;">
     </div>
+    <script>
+      fetch('data/team.json')
+        .then(r => r.json())
+        .then(data => {
+          var container = document.getElementById('teamContainer');
+          var members = data.items;
+          var row1 = members.slice(0, 3);
+          var row2 = members.slice(3);
+          function makeCard(m) {
+            return '<div class="team-card"><div class="team-photo"><img src="' + m.photo + '" alt="" /></div><h3 class="team-name">' + m.name + '</h3><p class="team-desc">' + m.desc + '</p></div>';
+          }
+          var html = '<div class="team-grid-row">' + row1.map(makeCard).join('') + '</div>';
+          if (row2.length) html += '<div class="team-grid-row">' + row2.map(makeCard).join('') + '</div>';
+          container.innerHTML = html;
+        });
+    </script>
   </div>
 
   <!-- CONTACT FORM -->

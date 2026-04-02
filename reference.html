@@ -673,29 +673,18 @@
     btn.classList.add('active');
   }
 
-  const projects = [
-    {
-      client: 'Klient', name: 'Jméno projektu', label: 'Lorem ipsum',
-      desc: 'Lorem ipsum dolor sit amet consectetur. Eu viverra sagittis neque pellentesque gravida ac id. Pellentesque felis aenean elementum adipiscing. Ipsum in id gravida elit. Aliquam adipiscing pretium accumsan mi.',
-      img: 'assets/project-placeholder.png'
-    },
-    {
-      client: 'Klient', name: 'Jméno projektu', label: 'Lorem ipsum',
-      desc: 'Lorem ipsum dolor sit amet consectetur. Eu viverra sagittis neque pellentesque gravida ac id. Pellentesque felis aenean elementum adipiscing. Ipsum in id gravida elit. Aliquam adipiscing pretium accumsan mi.',
-      img: 'assets/project-placeholder.png'
-    },
-    {
-      client: 'Klient', name: 'Jméno projektu', label: 'Lorem ipsum',
-      desc: 'Lorem ipsum dolor sit amet consectetur. Eu viverra sagittis neque pellentesque gravida ac id. Pellentesque felis aenean elementum adipiscing. Ipsum in id gravida elit. Aliquam adipiscing pretium accumsan mi.',
-      img: 'assets/project-placeholder.png'
-    },
-    {
-      client: 'Klient', name: 'Jméno projektu', label: 'Lorem ipsum',
-      desc: 'Lorem ipsum dolor sit amet consectetur. Eu viverra sagittis neque pellentesque gravida ac id. Pellentesque felis aenean elementum adipiscing. Ipsum in id gravida elit. Aliquam adipiscing pretium accumsan mi.',
-      img: 'assets/project-placeholder.png'
-    }
-  ];
+  let projects = [];
   let pi = 0;
+
+  fetch('data/projects.json')
+    .then(r => r.json())
+    .then(data => {
+      projects = data.items.map(p => ({
+        client: p.client, name: p.name, label: p.label, desc: p.desc, img: p.img
+      }));
+      document.getElementById('sTot').textContent = pad(projects.length - 1);
+      goProject(0);
+    });
 
   function pad(n) { return String(n + 1).padStart(2, '0'); }
 

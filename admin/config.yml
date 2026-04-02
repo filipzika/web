@@ -1,0 +1,46 @@
+backend:
+  name: github
+  repo: filipzika/web
+  branch: main
+  auth_type: pkce
+  app_id: "Ov23li9uvTkq7j9waE2W"
+
+media_folder: "assets"
+public_folder: "assets"
+
+collections:
+  - name: "data"
+    label: "Data"
+    files:
+      - name: "projects"
+        label: "Projekty / Projects"
+        file: "data/projects.json"
+        format: "json"
+        fields:
+          - name: "items"
+            label: "Projekty"
+            widget: "list"
+            fields:
+              - { name: "client", label: "Klient (CZ)", widget: "string" }
+              - { name: "client_en", label: "Client (EN)", widget: "string" }
+              - { name: "name", label: "Název projektu (CZ)", widget: "string" }
+              - { name: "name_en", label: "Project Name (EN)", widget: "string" }
+              - { name: "label", label: "Štítek (CZ)", widget: "string" }
+              - { name: "label_en", label: "Label (EN)", widget: "string" }
+              - { name: "desc", label: "Popis (CZ)", widget: "text" }
+              - { name: "desc_en", label: "Description (EN)", widget: "text" }
+              - { name: "img", label: "Obrázek", widget: "image" }
+
+      - name: "team"
+        label: "Tým / Team"
+        file: "data/team.json"
+        format: "json"
+        fields:
+          - name: "items"
+            label: "Členové týmu"
+            widget: "list"
+            fields:
+              - { name: "name", label: "Jméno", widget: "string" }
+              - { name: "desc", label: "Popis (CZ)", widget: "text" }
+              - { name: "desc_en", label: "Description (EN)", widget: "text" }
+              - { name: "photo", label: "Fotka", widget: "image" }

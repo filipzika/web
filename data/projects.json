@@ -1,0 +1,48 @@
+{
+  "items": [
+    {
+      "client": "Klient",
+      "client_en": "Client",
+      "name": "Jméno projektu",
+      "name_en": "Project Name",
+      "label": "Lorem ipsum",
+      "label_en": "Lorem ipsum",
+      "desc": "Lorem ipsum dolor sit amet consectetur. Eu viverra sagittis neque pellentesque gravida ac id. Pellentesque felis aenean elementum adipiscing. Ipsum in id gravida elit. Aliquam adipiscing pretium accumsan mi.",
+      "desc_en": "Lorem ipsum dolor sit amet consectetur. Eu viverra sagittis neque pellentesque gravida ac id. Pellentesque felis aenean elementum adipiscing. Ipsum in id gravida elit. Aliquam adipiscing pretium accumsan mi.",
+      "img": "assets/project-placeholder.png"
+    },
+    {
+      "client": "Klient",
+      "client_en": "Client",
+      "name": "Jméno projektu",
+      "name_en": "Project Name",
+      "label": "Lorem ipsum",
+      "label_en": "Lorem ipsum",
+      "desc": "Lorem ipsum dolor sit amet consectetur. Eu viverra sagittis neque pellentesque gravida ac id. Pellentesque felis aenean elementum adipiscing. Ipsum in id gravida elit. Aliquam adipiscing pretium accumsan mi.",
+      "desc_en": "Lorem ipsum dolor sit amet consectetur. Eu viverra sagittis neque pellentesque gravida ac id. Pellentesque felis aenean elementum adipiscing. Ipsum in id gravida elit. Aliquam adipiscing pretium accumsan mi.",
+      "img": "assets/project-placeholder.png"
+    },
+    {
+      "client": "Klient",
+      "client_en": "Client",
+      "name": "Jméno projektu",
+      "name_en": "Project Name",
+      "label": "Lorem ipsum",
+      "label_en": "Lorem ipsum",
+      "desc": "Lorem ipsum dolor sit amet consectetur. Eu viverra sagittis neque pellentesque gravida ac id. Pellentesque felis aenean elementum adipiscing. Ipsum in id gravida elit. Aliquam adipiscing pretium accumsan mi.",
+      "desc_en": "Lorem ipsum dolor sit amet consectetur. Eu viverra sagittis neque pellentesque gravida ac id. Pellentesque felis aenean elementum adipiscing. Ipsum in id gravida elit. Aliquam adipiscing pretium accumsan mi.",
+      "img": "assets/project-placeholder.png"
+    },
+    {
+      "client": "Klient",
+      "client_en": "Client",
+      "name": "Jméno projektu",
+      "name_en": "Project Name",
+      "label": "Lorem ipsum",
+      "label_en": "Lorem ipsum",
+      "desc": "Lorem ipsum dolor sit amet consectetur. Eu viverra sagittis neque pellentesque gravida ac id. Pellentesque felis aenean elementum adipiscing. Ipsum in id gravida elit. Aliquam adipiscing pretium accumsan mi.",
+      "desc_en": "Lorem ipsum dolor sit amet consectetur. Eu viverra sagittis neque pellentesque gravida ac id. Pellentesque felis aenean elementum adipiscing. Ipsum in id gravida elit. Aliquam adipiscing pretium accumsan mi.",
+      "img": "assets/project-placeholder.png"
+    }
+  ]
+}
