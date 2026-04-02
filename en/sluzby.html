@@ -24,7 +24,7 @@
     /* NAVBAR */
     .navbar {
       position: fixed; top: 32px; left: 50%; transform: translateX(-50%);
-      width: 908px;
+      width: min(908px, calc(100% - 64px));
       background: rgba(0,0,0,0.2); backdrop-filter: blur(25px); -webkit-backdrop-filter: blur(25px);
       border: 1px solid rgba(192,192,192,0.2); border-radius: 16px;
       display: flex; align-items: center; justify-content: space-between;
@@ -394,14 +394,16 @@
     }
 
     /* ── iPad Mini / small tablet (max-width: 820px) ── */
-    @media (max-width: 820px) {
+    @media (max-width: 960px) {
       .navbar { width: calc(100% - 32px); padding: 10px 10px 10px 16px; }
       .navbar-right { padding-left: 12px; }
       .navbar-links { gap: 2px; }
       .navbar-link { font-size: 14px; padding: 6px 8px; }
       .navbar-cta { font-size: 14px; padding: 6px 10px; }
       .navbar-lang { margin-left: 12px; }
+    }
 
+    @media (max-width: 820px) {
       .hero { height: 420px; }
       .hero-content { width: calc(100% - 64px); gap: 32px; }
       .hero-title { font-size: 36px; letter-spacing: 2px; }
@@ -454,9 +456,12 @@
     }
 
     /* ── Mobile (max-width: 480px) ── */
-    @media (max-width: 480px) {
+    @media (max-width: 768px) {
       .navbar { display: none; }
       .navbar-mobile { display: flex; }
+    }
+
+    @media (max-width: 480px) {
       .scroll-top { right: 16px; bottom: 24px; }
       .scroll-top svg { width: 36px; height: 36px; }
 
