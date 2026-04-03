@@ -539,7 +539,9 @@
           var row1 = members.slice(0, 3);
           var row2 = members.slice(3);
           function makeCard(m) {
-            return '<div class="team-card"><div class="team-photo"><img src="../' + m.photo.replace(/^\//, '') + '" alt="" /></div><h3 class="team-name">' + m.name + '</h3><p class="team-desc">' + m.desc_en + '</p></div>';
+            var photo = m.photo.replace(/^\//, '');
+            if (!photo.match(/^https?:\/\//)) photo = '../' + photo;
+            return '<div class="team-card"><div class="team-photo"><img src="' + photo + '" alt="" /></div><h3 class="team-name">' + m.name + '</h3><p class="team-desc">' + m.desc_en + '</p></div>';
           }
           var html = '<div class="team-grid-row">' + row1.map(makeCard).join('') + '</div>';
           if (row2.length) html += '<div class="team-grid-row">' + row2.map(makeCard).join('') + '</div>';
