@@ -105,12 +105,13 @@
     }
 
     /* PROJECT CARDS */
-    .projects-section { width: 1147px; display: flex; flex-direction: column; gap: 40px; }
+    .projects-section { width: 1147px; display: flex; flex-direction: column; gap: 64px; }
 
     .project-card {
       display: flex; align-items: center; justify-content: space-between;
       width: 100%;
     }
+    .project-card:nth-child(even) { flex-direction: row-reverse; }
     .project-text {
       display: flex; flex-direction: column; gap: 48px;
       width: 563px; color: var(--tertiary-100);
@@ -138,33 +139,11 @@
       position: relative; width: 446px; height: 444px;
       border: 3px solid var(--tertiary-100); border-radius: 40px;
       overflow: hidden; flex-shrink: 0;
-      display: flex; align-items: flex-end; justify-content: flex-end;
-      padding: 16px;
     }
     .project-image-wrap img {
       position: absolute; inset: 0; width: 100%; height: 100%;
       object-fit: cover; border-radius: 40px;
     }
-    .stepper {
-      position: relative; z-index: 2;
-      background: var(--neutral-100); border-radius: 24px;
-      width: 100px; text-align: center; outline: none;
-      height: 40px; padding: 0 4px;
-    }
-    .stepper-btn {
-      width: 36px; height: 36px; background: none; border: none; cursor: pointer;
-      display: flex; align-items: center; justify-content: center; border-radius: 8px;
-      color: var(--neutral-400); transition: background 0.2s;
-    }
-    .stepper-btn:hover { background: rgba(0,0,0,0.08); }
-    .stepper-count {
-      font-family: 'Satoshi', sans-serif; font-weight: 300; font-size: 14px;
-      letter-spacing: 0.28px; display: flex; gap: 4px; align-items: center;
-      white-space: nowrap;
-    }
-    .stepper-cur { color: var(--neutral-400); }
-    .stepper-sep { color: var(--neutral-400); }
-    .stepper-tot { color: #6a6a6a; }
 
     /* CONTACT FORM */
     .form-section { display: flex; flex-direction: column; gap: 48px; align-items: center; width: 1147px; }
@@ -344,7 +323,7 @@
 
       .page-wrap { gap: 48px; padding-top: 28px; }
       .projects-section { width: calc(100% - 40px); }
-      .project-card { flex-direction: column; gap: 32px; }
+      .project-card, .project-card:nth-child(even) { flex-direction: column; gap: 32px; }
       .project-text { width: 100%; gap: 24px; }
       .project-name { font-size: 32px; }
       .project-label { font-size: 24px; }
@@ -390,14 +369,13 @@
       .page-wrap { gap: 40px; padding-top: 40px; }
 
       .projects-section { width: calc(100% - 48px); gap: 32px; }
-      .project-card { flex-direction: column; gap: 24px; }
+      .project-card, .project-card:nth-child(even) { flex-direction: column; gap: 24px; }
       .project-text { width: 100%; gap: 24px; }
       .project-client { font-size: 16px; }
       .project-name { font-size: 24px; }
       .project-label { font-size: 20px; }
       .project-desc { font-size: 16px; }
       .project-image-wrap { width: 100%; height: 370px; border-radius: 40px; border-width: 3px; }
-      .stepper { height: 40px; border-radius: 24px; }
 
       .form-section { width: calc(100% - 48px); gap: 32px; }
       .contact-wrap { width: calc(100% - 48px) !important; }
@@ -523,35 +501,7 @@
 <div class="page-wrap">
 
   <!-- PROJECTS -->
-  <div class="projects-section">
-    <div class="project-card">
-      <div class="project-text">
-        <div class="project-meta">
-          <p class="project-client" id="pClient">Klient</p>
-          <p class="project-name" id="pName">Jméno projektu</p>
-        </div>
-        <div class="project-body">
-          <p class="project-label" id="pLabel">Lorem ipsum</p>
-          <p class="project-desc" id="pDesc">Lorem ipsum dolor sit amet consectetur. Eu viverra sagittis neque pellentesque gravida ac id. Pellentesque felis aenean elementum adipiscing. Ipsum in id gravida elit. Aliquam adipiscing pretium accumsan mi.</p>
-        </div>
-      </div>
-      <div class="project-image-wrap">
-        <img id="pImg" src="assets/project-placeholder.png" alt="Projekt" />
-        <div class="stepper">
-          <button class="stepper-btn" id="sPrev" aria-label="Předchozí">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M15 18L9 12L15 6" stroke="#3a3a3a" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          </button>
-          <div class="stepper-count">
-            <span class="stepper-cur" id="sCur">01</span>
-            <span class="stepper-sep">|</span>
-            <span class="stepper-tot" id="sTot">04</span>
-          </div>
-          <button class="stepper-btn" id="sNext" aria-label="Další">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M9 6L15 12L9 18" stroke="#3a3a3a" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          </button>
-        </div>
-      </div>
-    </div>
+  <div class="projects-section" id="projectsContainer">
   </div>
 
   <!-- CONTACT FORM -->
@@ -673,53 +623,30 @@
     btn.classList.add('active');
   }
 
-  let projects = [];
-  let pi = 0;
-
   fetch('data/projects.json')
     .then(r => r.json())
     .then(data => {
-      projects = data.items.map(p => ({
-        client: p.client, name: p.name, label: p.label, desc: p.desc,
-        img: p.img.replace(/^\//, '')
-      }));
-      document.getElementById('sTot').textContent = pad(projects.length - 1);
-      goProject(0);
+      var container = document.getElementById('projectsContainer');
+      var html = data.items.map(function(p) {
+        var img = p.img.replace(/^\//, '');
+        return '<div class="project-card">' +
+          '<div class="project-text">' +
+            '<div class="project-meta">' +
+              '<p class="project-client">' + p.client + '</p>' +
+              '<p class="project-name">' + p.name + '</p>' +
+            '</div>' +
+            '<div class="project-body">' +
+              '<p class="project-label">' + p.label + '</p>' +
+              '<p class="project-desc">' + p.desc + '</p>' +
+            '</div>' +
+          '</div>' +
+          '<div class="project-image-wrap">' +
+            '<img src="' + img + '" alt="' + p.name + '" />' +
+          '</div>' +
+        '</div>';
+      }).join('');
+      container.innerHTML = html;
     });
-
-  function pad(n) { return String(n + 1).padStart(2, '0'); }
-
-  function goProject(idx) {
-    pi = (idx + projects.length) % projects.length;
-    const p = projects[pi];
-    document.getElementById('pClient').textContent = p.client;
-    document.getElementById('pName').textContent = p.name;
-    document.getElementById('pLabel').textContent = p.label;
-    document.getElementById('pDesc').textContent = p.desc;
-    document.getElementById('pImg').src = p.img;
-    document.getElementById('sCur').textContent = pad(pi);
-    document.getElementById('sTot').textContent = pad(projects.length - 1);
-  }
-
-  document.getElementById('sNext').addEventListener('click', () => goProject(pi + 1));
-  document.getElementById('sPrev').addEventListener('click', () => goProject(pi - 1));
-
-  // Touch swipe for project carousel on mobile
-  (function() {
-    var imgWrap = document.querySelector('.project-image-wrap');
-    if (!imgWrap) return;
-    var startX = 0;
-    imgWrap.addEventListener('touchstart', function(e) {
-      startX = e.changedTouches[0].screenX;
-    }, { passive: true });
-    imgWrap.addEventListener('touchend', function(e) {
-      var diff = startX - e.changedTouches[0].screenX;
-      if (Math.abs(diff) > 40) {
-        if (diff > 0) goProject(pi + 1);
-        else goProject(pi - 1);
-      }
-    }, { passive: true });
-  })();
 
   function updateChar(el, id, max) { document.getElementById(id).textContent = el.value.length + '/' + max; }
 
