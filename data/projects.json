@@ -10,7 +10,7 @@
       "desc": "Jsme frajeři",
       "desc_en": "We are goated",
       "img": "https://picsum.photos/id/527/1920/1280.webp",
-      "featured": false
+      "featured": true
     },
     {
       "client": "Test",
