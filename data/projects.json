@@ -1,15 +1,15 @@
 {
   "items": [
     {
-      "client": "Klient",
-      "client_en": "Client",
-      "name": "Jméno projektu",
-      "name_en": "Project Name",
-      "label": "Lorem ipsum",
-      "label_en": "Lorem ipsum",
-      "desc": "Lorem ipsum dolor sit amet consectetur. Eu viverra sagittis neque pellentesque gravida ac id. Pellentesque felis aenean elementum adipiscing. Ipsum in id gravida elit. Aliquam adipiscing pretium accumsan mi.",
-      "desc_en": "Lorem ipsum dolor sit amet consectetur. Eu viverra sagittis neque pellentesque gravida ac id. Pellentesque felis aenean elementum adipiscing. Ipsum in id gravida elit. Aliquam adipiscing pretium accumsan mi.",
-      "img": "assets/project-placeholder.png"
+      "client": "Test",
+      "client_en": "Test",
+      "name": "Chytrá hrazda",
+      "name_en": "Smart hrazda",
+      "label": "HW",
+      "label_en": "Hmmmm",
+      "desc": "Projekt chytrá hrazda je do škol.",
+      "desc_en": "Project Chytrá hrazda is meant for schools.",
+      "img": "/assets/obrázek_2026-04-03_101937918.png"
     },
     {
       "client": "Klient",
