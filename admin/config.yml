@@ -31,6 +31,7 @@ collections:
               - { name: "desc", label: "Popis (CZ)", widget: "text" }
               - { name: "desc_en", label: "Description (EN)", widget: "text" }
               - { name: "img", label: "Obrázek", widget: "image" }
+              - { name: "featured", label: "Zobrazit na úvodní stránce", widget: "boolean", default: false }
 
       - name: "team"
         label: "Tým / Team"

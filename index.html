@@ -1389,33 +1389,7 @@
       <!-- VYBRANÉ REALIZACE -->
       <div style="display:flex;flex-direction:column;gap:40px;width:100%;" id="realizace">
         <h2 class="heading-2">Vybrané realizace</h2>
-        <div class="realizace-row">
-          <div class="realizace-info">
-            <div>
-              <p class="realizace-label">Klient</p>
-              <p class="realizace-name">Jméno projektu</p>
-            </div>
-            <div style="display:flex;flex-direction:column;gap:4px;">
-              <p class="realizace-sub">Lorem ipsum</p>
-              <p class="realizace-body">Lorem ipsum dolor sit amet consectetur. Eu viverra sagittis neque pellentesque gravida ac id. Pellentesque felis aenean elementum adipiscing. Ipsum in id gravida elit. Aliquam adipiscing pretium accumsan mi.</p>
-            </div>
-          </div>
-          <div class="realizace-card">
-            <img class="realizace-img" src="assets/project-realizace.jpg" alt="Projekt" />
-            <div class="stepper">
-              <button class="stepper-btn" aria-label="Předchozí">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M15 18L9 12L15 6" stroke="#fefdf9" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-              </button>
-              <span class="stepper-num">
-                <span class="stepper-cur">01</span>
-                <span class="stepper-sep"> | </span>
-                <span class="stepper-tot">04</span>
-              </span>
-              <button class="stepper-btn" aria-label="Další">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M9 18L15 12L9 6" stroke="#fefdf9" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-              </button>
-            </div>
-          </div>
+        <div class="realizace-row" id="realizaceContent">
         </div>
       </div>
 
@@ -1548,6 +1522,29 @@
   function scroll2(id) {
     document.querySelector(id).scrollIntoView({ behavior: 'smooth' });
   }
+
+  // Load featured project
+  fetch('data/projects.json')
+    .then(r => r.json())
+    .then(data => {
+      var p = data.items.find(function(item) { return item.featured; }) || data.items[0];
+      if (!p) return;
+      var img = p.img.replace(/^\//, '');
+      document.getElementById('realizaceContent').innerHTML =
+        '<div class="realizace-info">' +
+          '<div>' +
+            '<p class="realizace-label">' + p.client + '</p>' +
+            '<p class="realizace-name">' + p.name + '</p>' +
+          '</div>' +
+          '<div style="display:flex;flex-direction:column;gap:4px;">' +
+            '<p class="realizace-sub">' + p.label + '</p>' +
+            '<p class="realizace-body">' + p.desc + '</p>' +
+          '</div>' +
+        '</div>' +
+        '<div class="realizace-card">' +
+          '<img class="realizace-img" src="' + img + '" alt="' + p.name + '" />' +
+        '</div>';
+    });
 
   // Scroll to top visibility
   window.addEventListener('scroll', () => {

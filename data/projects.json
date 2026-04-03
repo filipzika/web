@@ -3,13 +3,14 @@
     {
       "client": "Test",
       "client_en": "Test",
-      "name": "Chytrá hrazda",
-      "name_en": "Smart hrazda",
+      "name": "Chytrá hrazba",
+      "name_en": "Smart hrazba",
       "label": "HW",
       "label_en": "Hmmmm",
-      "desc": "Projekt chytrá hrazda je do škol.",
-      "desc_en": "Project Chytrá hrazda is meant for schools.",
-      "img": "/assets/obrázek_2026-04-03_101937918.png"
+      "desc": "Projekt chytrá hrazba je do škol.",
+      "desc_en": "Project Chytrá hrazba is meant for schools.",
+      "img": "/assets/obrázek_2026-04-03_101937918.png",
+      "featured": true
     },
     {
       "client": "CITA",
@@ -20,7 +21,8 @@
       "label_en": "EN",
       "desc": "Jsme frajeři",
       "desc_en": "We are goated",
-      "img": "https://picsum.photos/id/527/1920/1280.webp"
+      "img": "https://picsum.photos/id/527/1920/1280.webp",
+      "featured": false
     }
   ]
 }
