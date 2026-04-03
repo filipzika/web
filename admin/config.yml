@@ -4,8 +4,6 @@ backend:
   branch: main
   auth_type: pkce
   app_id: "Ov23li9uvTkq7j9waE2W"
-  base_url: "https://filipzika.github.io"
-  site_domain: "filipzika.github.io"
 
 site_url: "https://filipzika.github.io/web/"
 
