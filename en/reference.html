@@ -673,7 +673,8 @@
     .then(r => r.json())
     .then(data => {
       projects = data.items.map(p => ({
-        client: p.client_en, name: p.name_en, label: p.label_en, desc: p.desc_en, img: '../' + p.img
+        client: p.client_en, name: p.name_en, label: p.label_en, desc: p.desc_en,
+        img: '../' + p.img.replace(/^\//, '')
       }));
       document.getElementById('sTot').textContent = pad(projects.length - 1);
       goProject(0);
