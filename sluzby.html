@@ -885,8 +885,9 @@
       detailsEl.innerHTML = data.items.map(function(s, idx) {
         var num = String(idx + 1).padStart(2, '0');
         var featuresHtml = s.features.map(function(f) {
+          var iconHtml = f.img ? '<img src="' + f.img.replace(/^\//, '') + '" alt="" style="width:100%;height:100%;object-fit:contain;" />' : (f.icon || '');
           return '<div class="service-feature">' +
-            '<div class="service-feature-icon">' + (f.icon || '') + '</div>' +
+            '<div class="service-feature-icon">' + iconHtml + '</div>' +
             '<div class="service-feature-text">' +
               '<span class="service-feature-name">' + f.name + '</span>' +
               '<span class="service-feature-desc">' + f.desc + '</span>' +

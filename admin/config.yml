@@ -59,6 +59,7 @@ collections:
                   - { name: "desc", label: "Popis (CZ)", widget: "text" }
                   - { name: "desc_en", label: "Description (EN)", widget: "text" }
                   - { name: "icon", label: "Ikona (SVG kód)", widget: "string", required: false }
+                  - { name: "img", label: "Obrázek ikony", widget: "image", required: false }
 
       - name: "team"
         label: "Tým / Team"
