@@ -33,6 +33,32 @@ collections:
               - { name: "img", label: "Obrázek", widget: "image" }
               - { name: "featured", label: "Zobrazit na úvodní stránce", widget: "boolean", default: false }
 
+      - name: "services"
+        label: "Služby / Services"
+        file: "data/services.json"
+        format: "json"
+        fields:
+          - name: "items"
+            label: "Služby"
+            widget: "list"
+            fields:
+              - { name: "id", label: "ID (pro kotvu v URL)", widget: "string" }
+              - { name: "title", label: "Název (CZ)", widget: "string" }
+              - { name: "title_en", label: "Title (EN)", widget: "string" }
+              - { name: "subtitle", label: "Popis (CZ)", widget: "text" }
+              - { name: "subtitle_en", label: "Description (EN)", widget: "text" }
+              - { name: "carousel_desc", label: "Krátký popis pro karusel (CZ)", widget: "text" }
+              - { name: "carousel_desc_en", label: "Short carousel description (EN)", widget: "text" }
+              - name: "features"
+                label: "Vlastnosti"
+                widget: "list"
+                fields:
+                  - { name: "name", label: "Název (CZ)", widget: "string" }
+                  - { name: "name_en", label: "Name (EN)", widget: "string" }
+                  - { name: "desc", label: "Popis (CZ)", widget: "text" }
+                  - { name: "desc_en", label: "Description (EN)", widget: "text" }
+                  - { name: "icon", label: "Ikona (SVG kód)", widget: "text", required: false }
+
       - name: "team"
         label: "Tým / Team"
         file: "data/team.json"
