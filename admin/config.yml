@@ -52,12 +52,13 @@ collections:
               - name: "features"
                 label: "Vlastnosti"
                 widget: "list"
+                summary: "{{fields.name}}"
                 fields:
                   - { name: "name", label: "Název (CZ)", widget: "string" }
                   - { name: "name_en", label: "Name (EN)", widget: "string" }
                   - { name: "desc", label: "Popis (CZ)", widget: "text" }
                   - { name: "desc_en", label: "Description (EN)", widget: "text" }
-                  - { name: "icon", label: "Ikona (SVG kód)", widget: "text", required: false }
+                  - { name: "icon", label: "Ikona (SVG kód)", widget: "string", required: false }
 
       - name: "team"
         label: "Tým / Team"
