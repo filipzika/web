@@ -75,6 +75,14 @@
           "desc": "Postupné vylepšování návrhu na základě výsledků testů a zpětné vazby.",
           "desc_en": "Progressive design improvements based on test results and feedback.",
           "icon": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><polyline points=\"22 12 18 12 15 21 9 3 6 12 2 12\"/></svg>"
+        },
+        {
+          "name": "3D tisk",
+          "name_en": "3D printing",
+          "desc": "Poskytujeme 3D tisk a modelování ať už pro fázi prototypu, nebo pro tisk menších sérií.",
+          "desc_en": "We provide 3D printing and modeling, whether for the prototyping stage or for printing small production runs.",
+          "icon": "",
+          "img": "/assets/icon-3d-print.svg"
         }
       ]
     },
