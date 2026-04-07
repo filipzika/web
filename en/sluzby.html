@@ -718,7 +718,7 @@
           </div>
           <div class="relative z-[1] flex flex-col gap-4 w-[765px]">
             <h3 id="cTitle" class="font-['Clash_Display',sans-serif] font-normal text-[48px] leading-[100%] text-[#fefdf9] whitespace-nowrap">Supply Chain & Logistics</h3>
-            <p id="cDesc" class="font-['Satoshi',sans-serif] font-normal text-[24px] leading-[1.5] tracking-[0.24px] text-[#fefdf9]">We manage component sourcing, storage and distribution of finished devices. We take care of sourcing, including custom parts, inventory organization and subsequent dropshipping based on the project’s needs.</p>
+            <p id="cDesc" class="font-['Satoshi',sans-serif] font-normal text-[24px] leading-[1.5] tracking-[0.24px] text-[#fefdf9]">We manage component sourcing, storage and distribution of finished devices. We take care of sourcing, including custom parts, inventory organization and subsequent dropshipping based on the project's needs.</p>
           </div>
           <div class="carousel-dots" id="dots"></div>
         </div>
@@ -856,83 +856,83 @@
   let slides = [];
   let ci = 0;
 
-  fetch(‘../data/services.json’)
-    .then(r => r.json())
-    .then(data => {
+  fetch('../data/services.json')
+    .then(function(r) { return r.json(); })
+    .then(function(data) {
       slides = data.items.map(function(s) { return { title: s.title_en, desc: s.carousel_desc_en }; });
-      document.getElementById(‘cTitle’).textContent = slides[0].title;
-      document.getElementById(‘cDesc’).textContent = slides[0].desc;
-      var dotsEl = document.getElementById(‘dots’);
-      dotsEl.innerHTML = ‘’;
+      document.getElementById('cTitle').textContent = slides[0].title;
+      document.getElementById('cDesc').textContent = slides[0].desc;
+      var dotsEl = document.getElementById('dots');
+      dotsEl.innerHTML = '';
       slides.forEach(function(_, i) {
-        var d = document.createElement(‘div’);
-        d.className = ‘dot’ + (i === 0 ? ‘ active’ : ‘’);
+        var d = document.createElement('div');
+        d.className = 'dot' + (i === 0 ? ' active' : '');
         dotsEl.appendChild(d);
       });
-      var detailsEl = document.getElementById(‘serviceDetails’);
+      var detailsEl = document.getElementById('serviceDetails');
       detailsEl.innerHTML = data.items.map(function(s, idx) {
-        var num = String(idx + 1).padStart(2, ‘0’);
+        var num = String(idx + 1).padStart(2, '0');
         var featuresHtml = s.features.map(function(f) {
-          var imgSrc = f.img ? f.img.replace(/^\//, ‘’) : ‘’;
-          if (imgSrc && !imgSrc.match(/^https?:\/\//)) imgSrc = ‘../’ + imgSrc;
-          var iconHtml = f.img ? ‘<img src="’ + imgSrc + ‘" alt="" style="width:100%;height:100%;object-fit:contain;" />’ : (f.icon || ‘’);
-          return ‘<div class="service-feature">’ +
-            ‘<div class="service-feature-icon">’ + iconHtml + ‘</div>’ +
-            ‘<div class="service-feature-text">’ +
-              ‘<span class="service-feature-name">’ + f.name_en + ‘</span>’ +
-              ‘<span class="service-feature-desc">’ + f.desc_en + ‘</span>’ +
-            ‘</div></div>’;
-        }).join(‘’);
-        var divider = idx < data.items.length - 1 ? ‘<div class="service-detail-divider"></div>’ : ‘’;
-        return ‘<div class="service-detail" id="’ + s.id + ‘">’ +
-          ‘<div class="service-detail-number">’ + num + ‘</div>’ +
-          ‘<div class="service-detail-content">’ +
-            ‘<div class="service-detail-header">’ +
-              ‘<h3 class="service-detail-title">’ + s.title_en + ‘</h3>’ +
-              ‘<p class="service-detail-subtitle">’ + s.subtitle_en + ‘</p>’ +
-            ‘</div>’ +
-            ‘<div class="service-detail-features">’ + featuresHtml + ‘</div>’ +
-          ‘</div></div>’ + divider;
-      }).join(‘’);
-      var scrollContainer = document.getElementById(‘carouselScroll’);
-      scrollContainer.style.height = (slides.length * 270 + 630) + ‘px’;
+          var imgSrc = f.img ? f.img.replace(/^\//, '') : '';
+          if (imgSrc && !imgSrc.match(/^https?:\/\//)) imgSrc = '../' + imgSrc;
+          var iconHtml = f.img ? '<img src="' + imgSrc + '" alt="" style="width:100%;height:100%;object-fit:contain;" />' : (f.icon || '');
+          return '<div class="service-feature">' +
+            '<div class="service-feature-icon">' + iconHtml + '</div>' +
+            '<div class="service-feature-text">' +
+              '<span class="service-feature-name">' + f.name_en + '</span>' +
+              '<span class="service-feature-desc">' + f.desc_en + '</span>' +
+            '</div></div>';
+        }).join('');
+        var divider = idx < data.items.length - 1 ? '<div class="service-detail-divider"></div>' : '';
+        return '<div class="service-detail" id="' + s.id + '">' +
+          '<div class="service-detail-number">' + num + '</div>' +
+          '<div class="service-detail-content">' +
+            '<div class="service-detail-header">' +
+              '<h3 class="service-detail-title">' + s.title_en + '</h3>' +
+              '<p class="service-detail-subtitle">' + s.subtitle_en + '</p>' +
+            '</div>' +
+            '<div class="service-detail-features">' + featuresHtml + '</div>' +
+          '</div></div>' + divider;
+      }).join('');
+      var scrollContainer = document.getElementById('carouselScroll');
+      scrollContainer.style.height = (slides.length * 270 + 630) + 'px';
       if (isMobile.matches) {
         var bgs = [
-          ‘linear-gradient(125deg, #060804 0%, #0e1205 12%, #1a2008 25%, #2d3a0c 38%, #435010 50%, #5a6814 62%, #6e7c12 74%, #808c16 86%, #8a9818 100%)’,
-          ‘linear-gradient(135deg, #1a1a10 0%, #2a2818 18%, #3d3a22 32%, #524e30 45%, #68643e 58%, #807a50 70%, #9a9468 82%, #b0aa80 95%)’,
-          ‘linear-gradient(140deg, #1a1a22 0%, #22222e 18%, #2a2a3a 32%, #343448 45%, #3e3e58 58%, #4a4a6a 70%, #585880 82%, #6a6a98 95%)’,
-          ‘linear-gradient(140deg, #1c1410 0%, #2a1e16 18%, #3e2e22 32%, #544030 45%, #6a5240 58%, #826450 70%, #9a7860 82%, #b08e72 95%)’
+          'linear-gradient(125deg, #060804 0%, #0e1205 12%, #1a2008 25%, #2d3a0c 38%, #435010 50%, #5a6814 62%, #6e7c12 74%, #808c16 86%, #8a9818 100%)',
+          'linear-gradient(135deg, #1a1a10 0%, #2a2818 18%, #3d3a22 32%, #524e30 45%, #68643e 58%, #807a50 70%, #9a9468 82%, #b0aa80 95%)',
+          'linear-gradient(140deg, #1a1a22 0%, #22222e 18%, #2a2a3a 32%, #343448 45%, #3e3e58 58%, #4a4a6a 70%, #585880 82%, #6a6a98 95%)',
+          'linear-gradient(140deg, #1c1410 0%, #2a1e16 18%, #3e2e22 32%, #544030 45%, #6a5240 58%, #826450 70%, #9a7860 82%, #b08e72 95%)'
         ];
-        var scrollRow = document.createElement(‘div’);
-        scrollRow.className = ‘mobile-carousel-scroll’;
+        var scrollRow = document.createElement('div');
+        scrollRow.className = 'mobile-carousel-scroll';
         slides.forEach(function(s, i) {
-          var card = document.createElement(‘div’);
-          card.className = ‘mobile-carousel-slide’;
+          var card = document.createElement('div');
+          card.className = 'mobile-carousel-slide';
           card.style.background = bgs[i % bgs.length];
-          card.innerHTML = ‘<img src="../assets/union-icon.svg" alt="" />’ +
-            ‘<div class="mc-text"><h3 class="mc-title">’ + s.title + ‘</h3>’ +
-            ‘<p class="mc-desc">’ + s.desc + ‘</p></div>’;
+          card.innerHTML = '<img src="../assets/union-icon.svg" alt="" />' +
+            '<div class="mc-text"><h3 class="mc-title">' + s.title + '</h3>' +
+            '<p class="mc-desc">' + s.desc + '</p></div>';
           scrollRow.appendChild(card);
         });
         scrollContainer.appendChild(scrollRow);
       }
-    });
+    }).catch(function(e) { console.error('Services load error:', e); });
 
   function goTo(idx) {
     if (idx === ci || !slides.length) return;
     ci = idx;
-    document.getElementById(‘cTitle’).textContent = slides[ci].title;
-    document.getElementById(‘cDesc’).textContent = slides[ci].desc;
-    document.querySelectorAll(‘.dot’).forEach((d, i) => d.classList.toggle(‘active’, i === ci));
+    document.getElementById('cTitle').textContent = slides[ci].title;
+    document.getElementById('cDesc').textContent = slides[ci].desc;
+    document.querySelectorAll('.dot').forEach((d, i) => d.classList.toggle('active', i === ci));
   }
 
   const scrollPerSlide = 270;
   const stickyTop = Math.max(0, (window.innerHeight - 630) / 2);
-  const isMobile = window.matchMedia(‘(max-width: 480px)’);
+  const isMobile = window.matchMedia('(max-width: 480px)');
 
-  window.addEventListener(‘scroll’, () => {
+  window.addEventListener('scroll', () => {
     if (isMobile.matches || !slides.length) return;
-    var scrollContainer = document.getElementById(‘carouselScroll’);
+    var scrollContainer = document.getElementById('carouselScroll');
     const rect = scrollContainer.getBoundingClientRect();
     const scrolled = -rect.top + stickyTop;
     if (scrolled < 0) { goTo(0); return; }
