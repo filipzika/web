@@ -301,7 +301,7 @@
       display: none;
       position: fixed; top: 0; left: 0; right: 0;
       z-index: 100; align-items: center; justify-content: space-between;
-      padding: 12px 24px; background: transparent;
+      padding: 12px 24px; background: rgba(10,10,10,0.7); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px);
     }
     .navbar-mobile-logo { height: 40px; width: 134px; flex-shrink: 0; }
     .navbar-mobile-hamburger {
@@ -612,15 +612,15 @@
       </div>
       <form class="form-fields" id="contactForm" onsubmit="return handleContactSubmit(event);">
         <div class="form-block1">
-          <div class="fg"><label class="fl">Company Name</label><input type="text" class="fi" name="company_name" placeholder="Enter company name" /></div>
-          <div class="fg"><label class="fl">Full Name</label><input type="text" class="fi" name="full_name" placeholder="Enter full name" required /></div>
+          <div class="fg"><label class="fl" for="company_name">Company Name</label><input type="text" class="fi" name="company_name" id="company_name" autocomplete="organization" placeholder="Enter company name" /></div>
+          <div class="fg"><label class="fl" for="full_name">Full Name</label><input type="text" class="fi" name="full_name" id="full_name" autocomplete="name" placeholder="Enter full name" required /></div>
           <div class="form-row-2">
-            <div class="fg"><label class="fl">Email</label><input type="email" class="fi" name="email" placeholder="Enter email" required /></div>
+            <div class="fg"><label class="fl" for="email">Email</label><input type="email" class="fi" name="email" id="email" autocomplete="email" placeholder="Enter email" required /></div>
             <div class="phone-group">
-              <label class="fl phone-label">Phone Number</label>
+              <label class="fl phone-label" for="phone">Phone Number</label>
               <div class="phone-inner">
-                <input type="text" class="phone-prefix-input" name="phone_prefix" value="+420" placeholder="+420" />
-                <input type="tel" class="fi" name="phone" placeholder="Enter phone number" style="flex:1;" />
+                <input type="text" class="phone-prefix-input" name="phone_prefix" id="phone_prefix" autocomplete="tel-country-code" value="+420" placeholder="+420" />
+                <input type="tel" class="fi" name="phone" id="phone" autocomplete="tel-national" placeholder="Enter phone number" style="flex:1;" />
               </div>
             </div>
           </div>
