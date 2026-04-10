@@ -4,37 +4,37 @@
       "name": "Adrian Simonides",
       "desc": "Manufacturing Manager",
       "desc_en": "Manufacturing Manager",
-      "photo": "/assets/Profilovka - gradient.png"
+      "photo": "/assets/Profilovka - white.png"
     },
     {
       "name": "Benjamin Voráč",
       "desc": "Electronics Design Engineer",
       "desc_en": "Electronics Design Engineer",
-      "photo": "/assets/Profilovka - gradient.png"
+      "photo": "/assets/Profilovka - white.png"
     },
     {
       "name": "Ignat Hrek",
       "desc": "Manufacturing Specialist & Music Producer",
       "desc_en": "Manufacturing Specialist & Music Producer",
-      "photo": "/assets/Profilovka - gradient.png"
+      "photo": "/assets/Profilovka - white.png"
+    },
+    {
+      "name": "Ema Hasprová",
+      "desc": "Manufacturing assistant",
+      "desc_en": "Manufacturing assistant",
+      "photo": "/assets/Profilovka - white.png"
     },
     {
       "name": "Adam Přibyl",
       "desc": "Jednatel & CTO",
       "desc_en": "Jednatel & CTO",
-      "photo": "/assets/Profilovka - gradient.png"
+      "photo": "/assets/Profilovka - white.png"
     },
     {
       "name": "Filip Zíka",
       "desc": "Jednatel & COO",
       "desc_en": "Executive & COO",
       "photo": "/assets/WhatsApp Image 2026-02-04 at 10.58.57.jpeg"
-    },
-    {
-      "name": "Ema Hasprová",
-      "desc": "Manufacturing assistant",
-      "desc_en": "Manufacturing assistant",
-      "photo": "/assets/Profilovka - gradient.png"
     }
   ]
 }
