@@ -1425,6 +1425,7 @@
           <div style="display:flex;justify-content:center;">
             <button type="submit" class="submit-btn">Request a Project</button>
           </div>
+          <p style="font-size:13px;color:var(--neutral-300);line-height:1.6;margin-top:16px;text-align:center;">By completing and submitting the form, you provide us with personal data for the purpose of handling your enquiry and related follow-up communication. The legal basis is our legitimate interest in handling a business enquiry and, where applicable, steps taken at your request before entering into a contract. Providing the data is voluntary, but without contact details and a basic project description we may not be able to respond. More information is available in our <a href="privacy-policy.html" style="color:var(--secondary-200);text-decoration:underline;">Privacy Policy</a>.</p>
         </form>
       </div>
 
@@ -1543,7 +1544,7 @@
   });
 
   // Language toggle
-  function setLang(btn) { var t=btn.textContent.trim(); if(t==='CZ'){var map={'index.html':'../index.html','sluzby.html':'../sluzby.html','reference.html':'../reference.html','onas.html':'../onas.html','kontakt.html':'../kontakt.html'}; var page=location.pathname.split('/').pop()||'index.html'; window.location.href=map[page]||'../index.html'; return;}
+  function setLang(btn) { var t=btn.textContent.trim(); if(t==='CZ'){var page=location.pathname.split('/').pop(); if(!page||page==='en')page='index.html'; var map={'index.html':'../index.html','sluzby.html':'../sluzby.html','reference.html':'../reference.html','onas.html':'../onas.html','kontakt.html':'../kontakt.html'}; window.location.href=map[page]||'../index.html'; return;}
     document.querySelectorAll('.lang-btn').forEach(b => b.classList.remove('active'));
     btn.classList.add('active');
   }
