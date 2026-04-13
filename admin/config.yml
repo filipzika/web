@@ -4,7 +4,7 @@ backend:
   branch: main
   base_url: "https://sveltia-cms-auth.filip-zika.workers.dev"
 
-site_url: "https://filipzika.github.io/web/"
+site_url: "https://forestbit.cz"
 
 media_folder: "assets"
 public_folder: "assets"
