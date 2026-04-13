@@ -1354,7 +1354,7 @@
       <img class="carousel-icon" src="../assets/union-icon.svg" alt="" />
       <div class="carousel-text">
         <h3 class="carousel-title" id="cTitle">Supply Chain & Logistics</h3>
-        <p class="carousel-desc" id="cDesc">We manage component sourcing, storage and distribution of finished devices. We take care of sourcing, including custom parts, inventory organization and subsequent dropshipping based on the project’s needs.</p>
+        <p class="carousel-desc" id="cDesc">We manage component sourcing, storage and distribution of finished devices. We take care of sourcing, including custom parts, inventory organization and subsequent dropshipping based on the project's needs.</p>
       </div>
       <div class="carousel-dots" id="carouselDots"></div>
     </div>
@@ -1555,50 +1555,50 @@
   const scrollPerSlide = 270;
   const cardHeight = 400;
   const stickyTop = 120;
-  const scrollContainer = document.getElementById(‘carouselScroll’);
-  const postSections = document.getElementById(‘postCarouselSections’);
-  const isMobile = window.matchMedia(‘(max-width: 480px)’);
+  const scrollContainer = document.getElementById('carouselScroll');
+  const postSections = document.getElementById('postCarouselSections');
+  const isMobile = window.matchMedia('(max-width: 480px)');
 
   function goTo(idx) {
     if (idx === ci || !slides.length) return;
     ci = idx;
-    document.getElementById(‘cTitle’).textContent = slides[ci].title;
-    document.getElementById(‘cDesc’).textContent = slides[ci].desc;
-    document.querySelectorAll(‘.dot’).forEach(function(d, i) { d.classList.toggle(‘active’, i === ci); });
+    document.getElementById('cTitle').textContent = slides[ci].title;
+    document.getElementById('cDesc').textContent = slides[ci].desc;
+    document.querySelectorAll('.dot').forEach(function(d, i) { d.classList.toggle('active', i === ci); });
     // Switch background
     slides.forEach(function(_, i) {
-      var bg = document.getElementById(‘cbg’ + i);
+      var bg = document.getElementById('cbg' + i);
       if (bg) {
-        bg.classList.toggle(‘visible’, i === ci);
-        bg.classList.toggle(‘hidden’, i !== ci);
+        bg.classList.toggle('visible', i === ci);
+        bg.classList.toggle('hidden', i !== ci);
       }
     });
   }
 
-  fetch(‘../data/services.json’)
+  fetch('../data/services.json')
     .then(function(r) { return r.json(); })
     .then(function(data) {
       slides = data.items.map(function(s) { return { title: s.title_en, desc: s.carousel_desc_en }; });
 
       // Update carousel with first slide
-      document.getElementById(‘cTitle’).textContent = slides[0].title;
-      document.getElementById(‘cDesc’).textContent = slides[0].desc;
+      document.getElementById('cTitle').textContent = slides[0].title;
+      document.getElementById('cDesc').textContent = slides[0].desc;
 
       // Build dots
-      var dotsEl = document.getElementById(‘carouselDots’);
-      dotsEl.innerHTML = ‘’;
+      var dotsEl = document.getElementById('carouselDots');
+      dotsEl.innerHTML = '';
       slides.forEach(function(_, i) {
-        var d = document.createElement(‘div’);
-        d.className = ‘dot’ + (i === 0 ? ‘ active’ : ‘’);
+        var d = document.createElement('div');
+        d.className = 'dot' + (i === 0 ? ' active' : '');
         dotsEl.appendChild(d);
       });
 
       // Set scroll container height
-      scrollContainer.style.height = (slides.length * scrollPerSlide + cardHeight) + ‘px’;
+      scrollContainer.style.height = (slides.length * scrollPerSlide + cardHeight) + 'px';
       var totalScroll = slides.length * scrollPerSlide + cardHeight;
 
       // Scroll-driven slide switching + next section reveal
-      window.addEventListener(‘scroll’, function() {
+      window.addEventListener('scroll', function() {
         if (isMobile.matches || !slides.length) return;
         var rect = scrollContainer.getBoundingClientRect();
         var scrolled = -rect.top + stickyTop;
@@ -1607,8 +1607,8 @@
         if (postSections) {
           var progress = Math.max(0, Math.min(1, scrolled / totalScroll));
           postSections.style.opacity = 0.15 + progress * 0.85;
-          postSections.style.transform = ‘scale(‘ + (0.95 + progress * 0.05) + ‘)’;
-          postSections.style.transformOrigin = ‘center top’;
+          postSections.style.transform = 'scale(' + (0.95 + progress * 0.05) + ')';
+          postSections.style.transformOrigin = 'center top';
         }
 
         if (scrolled < 0) { goTo(0); return; }
@@ -1618,31 +1618,31 @@
 
       // Mobile: generate horizontal scroll carousel
       if (isMobile.matches) {
-        var bgClasses = [‘carousel-bg-0’,’carousel-bg-1’,’carousel-bg-2’,’carousel-bg-3’];
-        var container = document.getElementById(‘carouselScroll’);
-        var scrollRow = document.createElement(‘div’);
-        scrollRow.className = ‘mobile-carousel-scroll’;
+        var bgClasses = ['carousel-bg-0','carousel-bg-1','carousel-bg-2','carousel-bg-3'];
+        var container = document.getElementById('carouselScroll');
+        var scrollRow = document.createElement('div');
+        scrollRow.className = 'mobile-carousel-scroll';
         slides.forEach(function(s, i) {
-          var card = document.createElement(‘div’);
-          card.className = ‘mobile-carousel-slide ‘ + (bgClasses[i] || ‘’);
-          card.innerHTML = ‘<img class="carousel-icon" src="../assets/union-icon.svg" alt="" />’ +
-            ‘<div class="carousel-text"><h3 class="carousel-title">’ + s.title + ‘</h3>’ +
-            ‘<p class="carousel-desc">’ + s.desc + ‘</p></div>’;
+          var card = document.createElement('div');
+          card.className = 'mobile-carousel-slide ' + (bgClasses[i] || '');
+          card.innerHTML = '<img class="carousel-icon" src="../assets/union-icon.svg" alt="" />' +
+            '<div class="carousel-text"><h3 class="carousel-title">' + s.title + '</h3>' +
+            '<p class="carousel-desc">' + s.desc + '</p></div>';
           scrollRow.appendChild(card);
         });
         container.appendChild(scrollRow);
       }
     })
-    .catch(function(e) { console.error(‘Services load error:’, e); });
+    .catch(function(e) { console.error('Services load error:', e); });
 
   // On mobile: reset postSections to static (no animation)
   function resetMobileStatic() {
     if (isMobile.matches && postSections) {
-      postSections.style.opacity = ‘1’;
-      postSections.style.transform = ‘none’;
+      postSections.style.opacity = '1';
+      postSections.style.transform = 'none';
     }
   }
-  isMobile.addEventListener(‘change’, resetMobileStatic);
+  isMobile.addEventListener('change', resetMobileStatic);
   resetMobileStatic();
 
   // Touch swipe for realizace carousel on mobile
