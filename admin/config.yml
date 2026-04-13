@@ -22,16 +22,16 @@ collections:
             label: "Projekty"
             widget: "list"
             fields:
-              - { name: "client", label: "Klient (CZ)", widget: "string" }
-              - { name: "client_en", label: "Client (EN)", widget: "string" }
-              - { name: "name", label: "Název projektu (CZ)", widget: "string" }
-              - { name: "name_en", label: "Project Name (EN)", widget: "string" }
-              - { name: "label", label: "Štítek (CZ)", widget: "string" }
-              - { name: "label_en", label: "Label (EN)", widget: "string" }
-              - { name: "desc", label: "Popis (CZ)", widget: "text" }
-              - { name: "desc_en", label: "Description (EN)", widget: "text" }
-              - { name: "img", label: "Obrázek", widget: "image" }
-              - { name: "featured", label: "Zobrazit na úvodní stránce", widget: "boolean", default: false }
+              - { name: "client", label: "Klient (CZ)", widget: "string", required: false }
+              - { name: "client_en", label: "Client (EN)", widget: "string", required: false }
+              - { name: "name", label: "Název projektu (CZ)", widget: "string", required: false }
+              - { name: "name_en", label: "Project Name (EN)", widget: "string", required: false }
+              - { name: "label", label: "Štítek (CZ)", widget: "string", required: false }
+              - { name: "label_en", label: "Label (EN)", widget: "string", required: false }
+              - { name: "desc", label: "Popis (CZ)", widget: "text", required: false }
+              - { name: "desc_en", label: "Description (EN)", widget: "text", required: false }
+              - { name: "img", label: "Obrázek", widget: "image", required: false }
+              - { name: "featured", label: "Zobrazit na úvodní stránce", widget: "boolean", default: false, required: false }
 
       - name: "services"
         label: "Služby / Services"
@@ -42,22 +42,23 @@ collections:
             label: "Služby"
             widget: "list"
             fields:
-              - { name: "id", label: "ID (pro kotvu v URL)", widget: "string" }
-              - { name: "title", label: "Název (CZ)", widget: "string" }
-              - { name: "title_en", label: "Title (EN)", widget: "string" }
-              - { name: "subtitle", label: "Popis (CZ)", widget: "text" }
-              - { name: "subtitle_en", label: "Description (EN)", widget: "text" }
-              - { name: "carousel_desc", label: "Krátký popis pro karusel (CZ)", widget: "text" }
-              - { name: "carousel_desc_en", label: "Short carousel description (EN)", widget: "text" }
+              - { name: "id", label: "ID (pro kotvu v URL)", widget: "string", required: false }
+              - { name: "title", label: "Název (CZ)", widget: "string", required: false }
+              - { name: "title_en", label: "Title (EN)", widget: "string", required: false }
+              - { name: "subtitle", label: "Popis (CZ)", widget: "text", required: false }
+              - { name: "subtitle_en", label: "Description (EN)", widget: "text", required: false }
+              - { name: "carousel_desc", label: "Krátký popis pro karusel (CZ)", widget: "text", required: false }
+              - { name: "carousel_desc_en", label: "Short carousel description (EN)", widget: "text", required: false }
               - name: "features"
                 label: "Vlastnosti"
                 widget: "list"
+                required: false
                 summary: "{{fields.name}}"
                 fields:
-                  - { name: "name", label: "Název (CZ)", widget: "string" }
-                  - { name: "name_en", label: "Name (EN)", widget: "string" }
-                  - { name: "desc", label: "Popis (CZ)", widget: "text" }
-                  - { name: "desc_en", label: "Description (EN)", widget: "text" }
+                  - { name: "name", label: "Název (CZ)", widget: "string", required: false }
+                  - { name: "name_en", label: "Name (EN)", widget: "string", required: false }
+                  - { name: "desc", label: "Popis (CZ)", widget: "text", required: false }
+                  - { name: "desc_en", label: "Description (EN)", widget: "text", required: false }
                   - { name: "icon", label: "Ikona (SVG kód)", widget: "string", required: false }
                   - { name: "img", label: "Obrázek ikony", widget: "image", required: false }
 
@@ -70,7 +71,7 @@ collections:
             label: "Členové týmu"
             widget: "list"
             fields:
-              - { name: "name", label: "Jméno", widget: "string" }
-              - { name: "desc", label: "Popis (CZ)", widget: "text" }
-              - { name: "desc_en", label: "Description (EN)", widget: "text" }
-              - { name: "photo", label: "Fotka", widget: "image" }
+              - { name: "name", label: "Jméno", widget: "string", required: false }
+              - { name: "desc", label: "Popis (CZ)", widget: "text", required: false }
+              - { name: "desc_en", label: "Description (EN)", widget: "text", required: false }
+              - { name: "photo", label: "Fotka", widget: "image", required: false }
