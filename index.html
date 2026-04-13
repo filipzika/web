@@ -1524,6 +1524,24 @@
     document.querySelector(id).scrollIntoView({ behavior: 'smooth' });
   }
 
+  // Scroll to top visibility
+  window.addEventListener('scroll', () => {
+    document.getElementById('scrollTopBtn').classList.toggle('visible', window.scrollY > 500);
+  });
+
+  // Language toggle
+  function setLang(btn) {
+    var t = btn.textContent.trim();
+    if (t === 'EN') {
+      var map = {'index.html':'en/index.html','sluzby.html':'en/sluzby.html','reference.html':'en/reference.html','onas.html':'en/onas.html','kontakt.html':'en/kontakt.html'};
+      var page = location.pathname.split('/').pop() || 'index.html';
+      window.location.href = map[page] || 'en/index.html';
+      return;
+    }
+    document.querySelectorAll('.lang-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+  }
+
   // Load featured project
   fetch('data/projects.json')
     .then(r => r.json())
@@ -1546,24 +1564,6 @@
           '<img class="realizace-img" src="' + img + '" alt="' + p.name + '" />' +
         '</div>';
     });
-
-  // Scroll to top visibility
-  window.addEventListener('scroll', () => {
-    document.getElementById('scrollTopBtn').classList.toggle('visible', window.scrollY > 500);
-  });
-
-  // Language toggle
-  function setLang(btn) {
-    var t = btn.textContent.trim();
-    if (t === 'EN') {
-      var map = {'index.html':'en/index.html','sluzby.html':'en/sluzby.html','reference.html':'en/reference.html','onas.html':'en/onas.html','kontakt.html':'en/kontakt.html'};
-      var page = location.pathname.split('/').pop() || 'index.html';
-      window.location.href = map[page] || 'en/index.html';
-      return;
-    }
-    document.querySelectorAll('.lang-btn').forEach(b => b.classList.remove('active'));
-    btn.classList.add('active');
-  }
 
   // Carousel (scroll-driven) — loaded from services.json
   let slides = [];
