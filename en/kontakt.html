@@ -656,29 +656,6 @@
     </a>
   </div>
 
-  <!-- FAQ -->
-  <div class="faq-section">
-    <h2 class="faq-heading">FAQ</h2>
-    <div class="faq-card">
-      <p class="faq-question">Lorem ipsum dolor sit amet?</p>
-      <p class="faq-answer">Lorem ipsum dolor sin amet. Lorem ipsum dolor sin amet. Lorem ipsum dolor sin amet.</p>
-    </div>
-    <div class="faq-nav">
-      <button class="faq-arrow faq-prev" aria-label="Previous">
-        <img src="../assets/faq-prev.svg" alt="" />
-      </button>
-      <div class="faq-dots">
-        <button class="faq-dot active" data-index="0"></button>
-        <button class="faq-dot" data-index="1"></button>
-        <button class="faq-dot" data-index="2"></button>
-        <button class="faq-dot" data-index="3"></button>
-      </div>
-      <button class="faq-arrow faq-next" aria-label="Next">
-        <img src="../assets/faq-next.svg" alt="" />
-      </button>
-    </div>
-  </div>
-
   <!-- FOOTER -->
   <footer>
     <div class="footer-top">
@@ -763,44 +740,6 @@
     document.body.style.overflow = '';
   }
 
-  // FAQ carousel navigation
-  (() => {
-    const faqSlides = [
-      { q: 'Lorem ipsum dolor sit amet?', a: 'Lorem ipsum dolor sin amet. Lorem ipsum dolor sin amet. Lorem ipsum dolor sin amet.' },
-      { q: 'How long does prototype development take?', a: 'It depends on the complexity of the project. Typically 4–12 weeks from brief to functional prototype.' },
-      { q: 'Do you also provide mass production?', a: 'Yes, we provide the complete manufacturing process, including PCB assembly, final assembly and testing.' },
-      { q: 'What are the minimum production volumes?', a: 'We do not have strict minimum volumes. We work on projects ranging from single units to production runs in the thousands.' },
-    ];
-    let faqIdx = 0;
-    const dots = document.querySelectorAll('.faq-dot');
-    const questionEl = document.querySelector('.faq-question');
-    const answerEl = document.querySelector('.faq-answer');
-    const prevBtn = document.querySelector('.faq-prev');
-    const nextBtn = document.querySelector('.faq-next');
-
-    function renderFaq() {
-      questionEl.textContent = faqSlides[faqIdx].q;
-      answerEl.textContent = faqSlides[faqIdx].a;
-      dots.forEach((d, i) => d.classList.toggle('active', i === faqIdx));
-    }
-
-    dots.forEach(dot => {
-      dot.addEventListener('click', function() {
-        faqIdx = parseInt(this.dataset.index);
-        renderFaq();
-      });
-    });
-
-    prevBtn.addEventListener('click', () => {
-      faqIdx = faqIdx > 0 ? faqIdx - 1 : faqSlides.length - 1;
-      renderFaq();
-    });
-
-    nextBtn.addEventListener('click', () => {
-      faqIdx = faqIdx < faqSlides.length - 1 ? faqIdx + 1 : 0;
-      renderFaq();
-    });
-  })();
 </script>
 <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 <script>

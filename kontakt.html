@@ -656,29 +656,6 @@
     </a>
   </div>
 
-  <!-- FAQ -->
-  <div class="faq-section">
-    <h2 class="faq-heading">FAQ</h2>
-    <div class="faq-card">
-      <p class="faq-question">Lorem ipsum dolor sin amet?</p>
-      <p class="faq-answer">Lorem ipsum dolor sin amet. Lorem ipsum dolor sin amet. Lorem ipsum dolor sin amet.</p>
-    </div>
-    <div class="faq-nav">
-      <button class="faq-arrow faq-prev" aria-label="Předchozí">
-        <img src="assets/faq-prev.svg" alt="" />
-      </button>
-      <div class="faq-dots">
-        <button class="faq-dot active" data-index="0"></button>
-        <button class="faq-dot" data-index="1"></button>
-        <button class="faq-dot" data-index="2"></button>
-        <button class="faq-dot" data-index="3"></button>
-      </div>
-      <button class="faq-arrow faq-next" aria-label="Další">
-        <img src="assets/faq-next.svg" alt="" />
-      </button>
-    </div>
-  </div>
-
   <!-- FOOTER -->
   <footer>
     <div class="footer-top">
@@ -770,44 +747,6 @@
     document.body.style.overflow = '';
   }
 
-  // FAQ carousel navigation
-  (() => {
-    const faqSlides = [
-      { q: 'Lorem ipsum dolor sin amet?', a: 'Lorem ipsum dolor sin amet. Lorem ipsum dolor sin amet. Lorem ipsum dolor sin amet.' },
-      { q: 'Jak dlouho trvá vývoj prototypu?', a: 'Záleží na složitosti projektu. Obvykle 4–12 týdnů od zadání po funkční prototyp.' },
-      { q: 'Zajišťujete i sériovou výrobu?', a: 'Ano, zajišťujeme kompletní výrobní proces včetně osazení DPS, montáže a testování.' },
-      { q: 'Jaké jsou minimální objemy výroby?', a: 'Nemáme striktní minimální objemy. Spolupracujeme na projektech od jednotek kusů po tisícové série.' },
-    ];
-    let faqIdx = 0;
-    const dots = document.querySelectorAll('.faq-dot');
-    const questionEl = document.querySelector('.faq-question');
-    const answerEl = document.querySelector('.faq-answer');
-    const prevBtn = document.querySelector('.faq-prev');
-    const nextBtn = document.querySelector('.faq-next');
-
-    function renderFaq() {
-      questionEl.textContent = faqSlides[faqIdx].q;
-      answerEl.textContent = faqSlides[faqIdx].a;
-      dots.forEach((d, i) => d.classList.toggle('active', i === faqIdx));
-    }
-
-    dots.forEach(dot => {
-      dot.addEventListener('click', function() {
-        faqIdx = parseInt(this.dataset.index);
-        renderFaq();
-      });
-    });
-
-    prevBtn.addEventListener('click', () => {
-      faqIdx = faqIdx > 0 ? faqIdx - 1 : faqSlides.length - 1;
-      renderFaq();
-    });
-
-    nextBtn.addEventListener('click', () => {
-      faqIdx = faqIdx < faqSlides.length - 1 ? faqIdx + 1 : 0;
-      renderFaq();
-    });
-  })();
 </script>
 <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 <script>

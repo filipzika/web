@@ -281,6 +281,53 @@
       margin: 0;
     }
 
+    /* FAQ SECTION */
+    .faq-section {
+      width: 1144px;
+      display: flex; flex-direction: column; gap: 32px;
+      margin: 0 auto;
+    }
+    .faq-heading {
+      font-family: 'Satoshi', sans-serif; font-weight: 600; font-size: 48px;
+      color: var(--tertiary-100); line-height: normal;
+    }
+    .faq-card {
+      width: 1144px; height: 230px;
+      border-radius: 32px; overflow: hidden;
+      background: linear-gradient(125deg, #060804 0%, #0e1205 12%, #1a2008 25%, #2d3a0c 38%, #435010 50%, #5a6814 62%, #6e7c12 74%, #808c16 86%, #8a9818 100%);
+      padding: 32px 48px 48px;
+      display: flex; flex-direction: column; gap: 16px;
+    }
+    .faq-question {
+      font-family: 'Satoshi', sans-serif; font-weight: 500; font-size: 32px;
+      color: var(--tertiary-100); letter-spacing: 0.32px; line-height: normal;
+    }
+    .faq-answer {
+      font-family: 'Satoshi', sans-serif; font-weight: 400; font-size: 24px;
+      color: var(--tertiary-100); line-height: 1.5; letter-spacing: 0.24px;
+    }
+    .faq-nav {
+      display: flex; align-items: center; justify-content: center; gap: 27px; margin-top: 20px;
+    }
+    .faq-arrow {
+      width: 32px; height: 32px; border-radius: 8px;
+      background: var(--tertiary-100); border: none; cursor: pointer; padding: 0;
+      display: flex; align-items: center; justify-content: center;
+      transition: opacity 0.2s;
+    }
+    .faq-arrow:hover { opacity: 0.8; }
+    .faq-arrow img { width: 32px; height: 32px; display: block; }
+    .faq-dots {
+      display: flex; justify-content: center; gap: 8px;
+    }
+    .faq-dot {
+      width: 16px; height: 16px; border-radius: 50%;
+      background: rgba(255,255,255,0.3);
+      border: none; cursor: pointer; padding: 0;
+      transition: background 0.2s;
+    }
+    .faq-dot.active { background: var(--tertiary-100); }
+
     /* FOOTER */
     footer { width: 100%; display: flex; flex-direction: column; align-items: center; gap: 32px; padding-bottom: 32px; }
     .footer-top { display: flex; gap: 64px; align-items: flex-start; padding: 32px 64px; width: 100%; }
@@ -389,6 +436,12 @@
       .dropzone { height: 180px; }
       .dropzone-txt { font-size: 20px; }
 
+      .faq-section { width: 984px; }
+      .faq-card { width: 984px; height: auto; }
+      .faq-heading { font-size: 40px; }
+      .faq-question { font-size: 24px; }
+      .faq-answer { font-size: 20px; }
+
       .footer-top { padding: 32px 20px; }
       .footer-logo-nav { gap: 64px; }
       .footer-logo { width: 200px; }
@@ -454,6 +507,12 @@
       .newsletter-title { font-size: 20px; }
       .newsletter-input { font-size: 20px; }
       .footer-deco { width: 60px; height: 180px; }
+
+      .faq-section { width: calc(100% - 40px); }
+      .faq-card { width: 100%; height: auto; padding: 24px 32px 32px; }
+      .faq-heading { font-size: 32px; }
+      .faq-question { font-size: 24px; }
+      .faq-answer { font-size: 18px; }
     }
 
     /* ── Mobile (max-width: 480px) ── */
@@ -566,6 +625,12 @@
       .footer-deco { display: none; }
       .legal-links { font-size: 14px; flex-wrap: wrap; justify-content: center; width: 288px; }
       .copyright { font-size: 12px; }
+
+      .faq-section { width: calc(100% - 48px); }
+      .faq-heading { font-size: 20px; }
+      .faq-card { width: calc(100vw - 48px); height: auto; padding: 24px; flex-shrink: 0; }
+      .faq-question { font-size: 16px; }
+      .faq-answer { font-size: 12px; }
     }
   </style>
 </head>
@@ -770,6 +835,24 @@
     </div>
   </div>
 
+  <!-- FAQ -->
+  <div class="faq-section" id="faq">
+    <h2 class="faq-heading">FAQ</h2>
+    <div class="faq-card">
+      <p class="faq-question"></p>
+      <p class="faq-answer"></p>
+    </div>
+    <div class="faq-nav">
+      <button class="faq-arrow faq-prev" aria-label="Previous">
+        <img src="../assets/faq-prev.svg" alt="" />
+      </button>
+      <div class="faq-dots"></div>
+      <button class="faq-arrow faq-next" aria-label="Next">
+        <img src="../assets/faq-next.svg" alt="" />
+      </button>
+    </div>
+  </div>
+
   <!-- FOOTER -->
   <footer>
     <div class="footer-top">
@@ -941,6 +1024,44 @@
   });
 
   function updateChar(el, id, max) { document.getElementById(id).textContent = el.value.length + '/' + max; }
+
+  // FAQ carousel
+  fetch('../data/faq.json')
+    .then(r => r.json())
+    .then(data => {
+      const faqSlides = data.items.map(i => ({ q: i.q_en, a: i.a_en }));
+      if (!faqSlides.length) return;
+      let faqIdx = 0;
+      const dotsEl = document.querySelector('.faq-dots');
+      const questionEl = document.querySelector('.faq-question');
+      const answerEl = document.querySelector('.faq-answer');
+      const prevBtn = document.querySelector('.faq-prev');
+      const nextBtn = document.querySelector('.faq-next');
+
+      dotsEl.innerHTML = '';
+      faqSlides.forEach((_, i) => {
+        const d = document.createElement('button');
+        d.className = 'faq-dot' + (i === 0 ? ' active' : '');
+        d.dataset.index = i;
+        dotsEl.appendChild(d);
+      });
+
+      function renderFaq() {
+        questionEl.textContent = faqSlides[faqIdx].q;
+        answerEl.textContent = faqSlides[faqIdx].a;
+        dotsEl.querySelectorAll('.faq-dot').forEach((d, i) => d.classList.toggle('active', i === faqIdx));
+      }
+      renderFaq();
+
+      dotsEl.addEventListener('click', e => {
+        if (e.target.classList.contains('faq-dot')) {
+          faqIdx = parseInt(e.target.dataset.index);
+          renderFaq();
+        }
+      });
+      prevBtn.addEventListener('click', () => { faqIdx = faqIdx > 0 ? faqIdx - 1 : faqSlides.length - 1; renderFaq(); });
+      nextBtn.addEventListener('click', () => { faqIdx = faqIdx < faqSlides.length - 1 ? faqIdx + 1 : 0; renderFaq(); });
+    });
 
 </script>
 <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>

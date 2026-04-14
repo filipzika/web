@@ -75,3 +75,17 @@ collections:
               - { name: "desc", label: "Popis (CZ)", widget: "text", required: false }
               - { name: "desc_en", label: "Description (EN)", widget: "text", required: false }
               - { name: "photo", label: "Fotka", widget: "image", required: false }
+
+      - name: "faq"
+        label: "FAQ"
+        file: "data/faq.json"
+        format: "json"
+        fields:
+          - name: "items"
+            label: "FAQ"
+            widget: "list"
+            fields:
+              - { name: "q", label: "Otázka (CZ)", widget: "string", required: false }
+              - { name: "q_en", label: "Question (EN)", widget: "string", required: false }
+              - { name: "a", label: "Odpověď (CZ)", widget: "text", required: false }
+              - { name: "a_en", label: "Answer (EN)", widget: "text", required: false }

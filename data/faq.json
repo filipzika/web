@@ -1,0 +1,22 @@
+{
+  "items": [
+    {
+      "q": "Jak dlouho trvá vývoj prototypu?",
+      "q_en": "How long does prototype development take?",
+      "a": "Záleží na složitosti projektu. Obvykle 4–12 týdnů od zadání po funkční prototyp.",
+      "a_en": "It depends on the complexity of the project. Typically 4–12 weeks from brief to functional prototype."
+    },
+    {
+      "q": "Zajišťujete i sériovou výrobu?",
+      "q_en": "Do you also provide mass production?",
+      "a": "Ano, zajišťujeme kompletní výrobní proces včetně osazení DPS, montáže a testování.",
+      "a_en": "Yes, we provide the complete manufacturing process, including PCB assembly, final assembly and testing."
+    },
+    {
+      "q": "Jaké jsou minimální objemy výroby?",
+      "q_en": "What are the minimum production volumes?",
+      "a": "Nemáme striktní minimální objemy. Spolupracujeme na projektech od jednotek kusů po tisícové série.",
+      "a_en": "We do not have strict minimum volumes. We work on projects ranging from single units to production runs in the thousands."
+    }
+  ]
+}
