@@ -1,8 +1,8 @@
 {
   "items": [
     {
-      "client": "Zatím neuveden",
-      "client_en": "Not listed",
+      "client": "",
+      "client_en": "",
       "name": "Chytrá hrazda",
       "name_en": "Smart pull-up bar",
       "label": "Vývoj, výroba",
@@ -13,8 +13,8 @@
       "featured": true
     },
     {
-      "client": "Zatím neuveden",
-      "client_en": "Not listed",
+      "client": "",
+      "client_en": "",
       "name": "Rosnička",
       "name_en": "Rosnička",
       "label": "Vývoj, výroba, nasazení",
@@ -25,8 +25,8 @@
       "featured": false
     },
     {
-      "client": "Zatím neuveden",
-      "client_en": "Not listed",
+      "client": "",
+      "client_en": "",
       "name": "Ondatra",
       "name_en": "Ondatra",
       "label": "Vývoj, výroba",
@@ -37,8 +37,8 @@
       "featured": false
     },
     {
-      "client": "Zatím neuveden",
-      "client_en": "Not listed",
+      "client": "",
+      "client_en": "",
       "name": "GSM dveřník",
       "name_en": "GSM doorman",
       "label": "Vývoj, zařízení masové produkce",
@@ -49,8 +49,8 @@
       "featured": false
     },
     {
-      "client": "Zatím neuveden",
-      "client_en": "Not listed",
+      "client": "",
+      "client_en": "",
       "name": "RS485 komunikátor",
       "name_en": "RS485 communicator",
       "label": "Vývoj, skladování, distribuce",
