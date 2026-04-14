@@ -1328,8 +1328,8 @@
     <div class="hero-ellipse-1"><img src="assets/ellipse1.svg" alt="" /></div>
     <div class="hero-ellipse-2"><img src="assets/ellipse2.svg" alt="" /></div>
     <div class="hero-content">
-      <h1 class="hero-title">Vyvíjíme a vyrábíme elektronická <br>zařízení na zakázku.</h1>
-      <p class="hero-subtitle">Od návrhu hardwaru a firmware přes prototypování až po sériovou výrobu, kontrolu kvality a logistiku.</p>
+      <h1 class="hero-title" id="heroTitle">Vyvíjíme a vyrábíme elektronická <br>zařízení na zakázku.</h1>
+      <p class="hero-subtitle" id="heroSubtitle">Od návrhu hardwaru a firmware přes prototypování až po sériovou výrobu, kontrolu kvality a logistiku.</p>
       <button class="hero-btn" onclick="scroll2('#kontakt')">Poptat projekt</button>
     </div>
     <div class="hero-scroll" onclick="scroll2('#sluzby')" role="button" aria-label="Scroll dolů">
@@ -1344,8 +1344,8 @@
       <!-- CO UMÍME -->
       <div style="display:flex;flex-direction:column;gap:48px;align-items:center;width:100%;">
         <div class="section-header">
-          <h2 class="heading-1">Co umíme</h2>
-          <p class="paragraph-1" style="max-width:678px;">Pomáháme firmám vyvíjet a vyrábět vlastní elektronická zařízení bez nutnosti budovat interní tým nebo výrobu.</p>
+          <h2 class="heading-1" id="coUmimeHeading">Co umíme</h2>
+          <p class="paragraph-1" id="coUmimeText" style="max-width:678px;">Pomáháme firmám vyvíjet a vyrábět vlastní elektronická zařízení bez nutnosti budovat interní tým nebo výrobu.</p>
         </div>
       </div>
     </div><!-- end section-wrap -->
@@ -1381,14 +1381,14 @@
       <div class="why-row" id="onas2">
         <div class="why-card">
           <img class="quote-img" src="assets/quote-mark.svg" alt="" />
-          <p class="why-card-text">Máte projekt, který potřebujete vyvinout nebo vyrobit?<br><br>Napište nám základní informace a ozveme se vám s dalším postupem.</p>
+          <p class="why-card-text" id="whyText">Máte projekt, který potřebujete vyvinout nebo vyrobit?<br><br>Napište nám základní informace a ozveme se vám s dalším postupem.</p>
         </div>
-        <h2 class="why-heading">Proč s námi spolupracovat?</h2>
+        <h2 class="why-heading" id="whyHeading">Proč s námi spolupracovat?</h2>
       </div>
 
       <!-- VYBRANÉ REALIZACE -->
       <div style="display:flex;flex-direction:column;gap:40px;width:100%;" id="realizace">
-        <h2 class="heading-2">Vybraná realizace</h2>
+        <h2 class="heading-2" id="selectedProjectHeading">Vybraná realizace</h2>
         <div class="realizace-row" id="realizaceContent">
         </div>
       </div>
@@ -1396,7 +1396,7 @@
       <!-- KONTAKTNÍ FORMULÁŘ -->
       <div class="form-section" id="kontakt" style="scroll-margin-top:120px;">
         <div class="section-header">
-          <h2 class="heading-2">Kontaktní formulář</h2>
+          <h2 class="heading-2" id="formHeading">Kontaktní formulář</h2>
           <p class="paragraph-1" style="max-width:678px;">Spolupráci stavíme na jasně definovaném procesu, aby bylo od začátku zřejmé, co se bude dít a v jakém pořadí.</p>
         </div>
         <form class="form-fields" id="contactForm" onsubmit="return handleContactSubmit(event);">

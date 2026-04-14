@@ -1,0 +1,62 @@
+{
+  "whatWeDo": {
+    "heading": "Čím se zabýváme",
+    "heading_en": "What We Do",
+    "paragraphs": [
+      "Zaměřujeme se na vývoj a výrobu hardwarových řešení od prvotního návrhu až po finální distribuci. Navrhujeme a vyvíjíme elektroniku včetně návrhu PCB, tvorby prototypů a vývoje firmware pro zařízení. Součástí naší práce je také prototypování pomocí 3D tisku, které umožňuje rychlé ověřování návrhů a iteraci během vývoje.",
+      "Vedle samotného vývoje zajišťujeme také sestavování zařízení, ruční montáž a kontrolu kvality. Díky tomu máme celý proces pod kontrolou a můžeme garantovat funkčnost i spolehlivost výsledného produktu.",
+      "Klientům pomáháme také s výrobou a dodávkami komponent. Zajišťujeme sourcing a supply chain z Číny, včetně výroby komponent na míru podle technických specifikací projektu.",
+      "Součástí našich služeb je i logistika a dropshipping. Pro klienty spravujeme skladové zásoby a zajišťujeme distribuci jejich produktů přímo koncovým zákazníkům."
+    ],
+    "paragraphs_en": [
+      "We focus on the development and manufacturing of hardware solutions from initial concept to final distribution. We design and develop electronics, including PCB design, prototype creation and firmware development for devices. Our work also includes 3D printing for prototyping, enabling rapid design verification and iteration during development.",
+      "In addition to development itself, we also handle device assembly, manual assembly and quality control. This gives us control over the entire process and allows us to guarantee both functionality and reliability of the final product.",
+      "We also help clients with manufacturing and component supply. We manage sourcing and the supply chain from China, including the production of custom components according to the project's technical specifications.",
+      "Our services also include logistics and dropshipping. For our clients, we manage inventory and ensure direct distribution of their products to end customers."
+    ]
+  },
+  "indexSection": {
+    "heading": "Co umíme",
+    "heading_en": "What We Do",
+    "text": "Pomáháme firmám vyvíjet a vyrábět vlastní elektronická zařízení bez nutnosti budovat interní tým nebo výrobu.",
+    "text_en": "We help companies develop and manufacture their own electronic devices without the need to build an internal team or production line."
+  },
+  "whyWorkWithUs": {
+    "heading": "Proč s námi spolupracovat?",
+    "heading_en": "Why Work With Us?",
+    "text": "Máte projekt, který potřebujete vyvinout nebo vyrobit?<br><br>Napište nám základní informace a ozveme se vám s dalším postupem.",
+    "text_en": "Do you have a project that needs to be developed or manufactured?<br><br>Send us the basic details and we will get back to you with the next steps."
+  },
+  "teamSection": {
+    "heading": "Tým ForestBit",
+    "heading_en": "Team ForestBit",
+    "subtitle": "Postaráme se o vše od návrhu hardwaru a firmware přes prototypování až po sériovou výrobu, kontrolu kvality a logistiku.",
+    "subtitle_en": "We take care of everything from hardware and firmware design through prototyping to mass production, quality control and logistics."
+  },
+  "contactInfo": {
+    "heading": "Kontaktní informace",
+    "heading_en": "Contact Information",
+    "text": "Máte projekt, který chcete realizovat, nebo hledáte partnera pro vývoj hardwaru, výrobu prototypů či zajištění dodavatelského řetězce? Ozvěte se nám. Rádi s vámi probereme možnosti spolupráce a pomůžeme najít vhodné řešení.",
+    "text_en": "Do you have a project you want to bring to life, or are you looking for a partner for hardware development, prototype production or supply chain support? Get in touch with us. We will be happy to discuss the possibilities and help you find the right solution.",
+    "infoCardText": "Můžete nás kontaktovat prostřednictvím e-mailu, telefonu nebo kontaktního formuláře. Pokud nám pošlete základní informace o vašem projektu, připravíme pro vás další kroky nebo návrh spolupráce.",
+    "infoCardText_en": "You can contact us by email, phone or via the contact form. If you send us the basic information about your project, we will prepare the next steps or a cooperation proposal for you.",
+    "companyHeading": "Údaje o firmě",
+    "companyHeading_en": "Company Details"
+  },
+  "contactForm": {
+    "heading": "Kontaktní formulář",
+    "heading_en": "Contact Form",
+    "text": "Spolupráci stavíme na jasně definovaném procesu, aby bylo od začátku zřejmé, co se bude dít a v jakém pořadí.",
+    "text_en": "We build every collaboration on a clearly defined process, so from the very beginning it is clear what will happen and in what order."
+  },
+  "servicesSection": {
+    "heading": "Služby",
+    "heading_en": "Services",
+    "text": "Pomáháme firmám vyvíjet a vyrábět vlastní elektronická zařízení bez nutnosti budovat interní tým nebo výrobu.",
+    "text_en": "We help companies develop and manufacture their own electronic devices without the need to build an internal team or production line."
+  },
+  "selectedProject": {
+    "heading": "Vybraná realizace",
+    "heading_en": "Selected Project"
+  }
+}

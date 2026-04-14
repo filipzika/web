@@ -89,3 +89,131 @@ collections:
               - { name: "q_en", label: "Question (EN)", widget: "string", required: false }
               - { name: "a", label: "Odpověď (CZ)", widget: "text", required: false }
               - { name: "a_en", label: "Answer (EN)", widget: "text", required: false }
+
+      - name: "company"
+        label: "Firemní údaje / Company Info"
+        file: "data/company.json"
+        format: "json"
+        fields:
+          - { name: "name", label: "Název firmy", widget: "string", required: false }
+          - { name: "address", label: "Adresa", widget: "string", required: false }
+          - { name: "ico", label: "IČO", widget: "string", required: false }
+          - { name: "dic", label: "DIČ", widget: "string", required: false }
+          - { name: "email", label: "E-mail", widget: "string", required: false }
+          - { name: "phone", label: "Telefon", widget: "string", required: false }
+          - { name: "instagram", label: "Instagram URL", widget: "string", required: false }
+          - { name: "linkedin", label: "LinkedIn URL", widget: "string", required: false }
+
+      - name: "heroes"
+        label: "Hero sekce / Hero Sections"
+        file: "data/heroes.json"
+        format: "json"
+        fields:
+          - name: "index"
+            label: "Úvodní stránka"
+            widget: "object"
+            fields:
+              - { name: "title", label: "Nadpis (CZ)", widget: "string", required: false }
+              - { name: "title_en", label: "Title (EN)", widget: "string", required: false }
+              - { name: "subtitle", label: "Podnadpis (CZ)", widget: "string", required: false }
+              - { name: "subtitle_en", label: "Subtitle (EN)", widget: "string", required: false }
+          - name: "sluzby"
+            label: "Služby"
+            widget: "object"
+            fields:
+              - { name: "title", label: "Nadpis (CZ)", widget: "string", required: false }
+              - { name: "title_en", label: "Title (EN)", widget: "string", required: false }
+              - { name: "subtitle", label: "Podnadpis (CZ)", widget: "string", required: false }
+              - { name: "subtitle_en", label: "Subtitle (EN)", widget: "string", required: false }
+          - name: "kontakt"
+            label: "Kontakt"
+            widget: "object"
+            fields:
+              - { name: "title", label: "Nadpis (CZ)", widget: "string", required: false }
+              - { name: "title_en", label: "Title (EN)", widget: "string", required: false }
+          - name: "reference"
+            label: "Reference"
+            widget: "object"
+            fields:
+              - { name: "title", label: "Nadpis (CZ)", widget: "string", required: false }
+              - { name: "title_en", label: "Title (EN)", widget: "string", required: false }
+              - { name: "subtitle", label: "Podnadpis (CZ)", widget: "string", required: false }
+              - { name: "subtitle_en", label: "Subtitle (EN)", widget: "string", required: false }
+          - name: "onas"
+            label: "O nás"
+            widget: "object"
+            fields:
+              - { name: "title", label: "Nadpis (CZ)", widget: "string", required: false }
+              - { name: "title_en", label: "Title (EN)", widget: "string", required: false }
+
+      - name: "about"
+        label: "Texty webu / Website Content"
+        file: "data/about.json"
+        format: "json"
+        fields:
+          - name: "whatWeDo"
+            label: "Čím se zabýváme (stránka O nás)"
+            widget: "object"
+            fields:
+              - { name: "heading", label: "Nadpis (CZ)", widget: "string", required: false }
+              - { name: "heading_en", label: "Heading (EN)", widget: "string", required: false }
+              - { name: "paragraphs", label: "Odstavce (CZ)", widget: "list", field: { name: "text", label: "Odstavec", widget: "text" }, required: false }
+              - { name: "paragraphs_en", label: "Paragraphs (EN)", widget: "list", field: { name: "text", label: "Paragraph", widget: "text" }, required: false }
+          - name: "indexSection"
+            label: "Co umíme (úvodní stránka)"
+            widget: "object"
+            fields:
+              - { name: "heading", label: "Nadpis (CZ)", widget: "string", required: false }
+              - { name: "heading_en", label: "Heading (EN)", widget: "string", required: false }
+              - { name: "text", label: "Text (CZ)", widget: "text", required: false }
+              - { name: "text_en", label: "Text (EN)", widget: "text", required: false }
+          - name: "whyWorkWithUs"
+            label: "Proč s námi spolupracovat"
+            widget: "object"
+            fields:
+              - { name: "heading", label: "Nadpis (CZ)", widget: "string", required: false }
+              - { name: "heading_en", label: "Heading (EN)", widget: "string", required: false }
+              - { name: "text", label: "Text (CZ)", widget: "text", required: false }
+              - { name: "text_en", label: "Text (EN)", widget: "text", required: false }
+          - name: "teamSection"
+            label: "Tým (stránka O nás)"
+            widget: "object"
+            fields:
+              - { name: "heading", label: "Nadpis (CZ)", widget: "string", required: false }
+              - { name: "heading_en", label: "Heading (EN)", widget: "string", required: false }
+              - { name: "subtitle", label: "Podnadpis (CZ)", widget: "text", required: false }
+              - { name: "subtitle_en", label: "Subtitle (EN)", widget: "text", required: false }
+          - name: "contactInfo"
+            label: "Kontaktní informace (stránka Kontakt)"
+            widget: "object"
+            fields:
+              - { name: "heading", label: "Nadpis (CZ)", widget: "string", required: false }
+              - { name: "heading_en", label: "Heading (EN)", widget: "string", required: false }
+              - { name: "text", label: "Text (CZ)", widget: "text", required: false }
+              - { name: "text_en", label: "Text (EN)", widget: "text", required: false }
+              - { name: "infoCardText", label: "Info karta (CZ)", widget: "text", required: false }
+              - { name: "infoCardText_en", label: "Info card (EN)", widget: "text", required: false }
+              - { name: "companyHeading", label: "Nadpis firmy (CZ)", widget: "string", required: false }
+              - { name: "companyHeading_en", label: "Company heading (EN)", widget: "string", required: false }
+          - name: "contactForm"
+            label: "Kontaktní formulář (sdíleno)"
+            widget: "object"
+            fields:
+              - { name: "heading", label: "Nadpis (CZ)", widget: "string", required: false }
+              - { name: "heading_en", label: "Heading (EN)", widget: "string", required: false }
+              - { name: "text", label: "Text (CZ)", widget: "text", required: false }
+              - { name: "text_en", label: "Text (EN)", widget: "text", required: false }
+          - name: "servicesSection"
+            label: "Služby (stránka Služby)"
+            widget: "object"
+            fields:
+              - { name: "heading", label: "Nadpis (CZ)", widget: "string", required: false }
+              - { name: "heading_en", label: "Heading (EN)", widget: "string", required: false }
+              - { name: "text", label: "Text (CZ)", widget: "text", required: false }
+              - { name: "text_en", label: "Text (EN)", widget: "text", required: false }
+          - name: "selectedProject"
+            label: "Vybraná realizace (úvodní stránka)"
+            widget: "object"
+            fields:
+              - { name: "heading", label: "Nadpis (CZ)", widget: "string", required: false }
+              - { name: "heading_en", label: "Heading (EN)", widget: "string", required: false }

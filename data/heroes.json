@@ -1,0 +1,28 @@
+{
+  "index": {
+    "title": "Vyvíjíme a vyrábíme elektronická <br>zařízení na zakázku.",
+    "title_en": "We develop and manufacture custom electronic devices.",
+    "subtitle": "Od návrhu hardwaru a firmware přes prototypování až po sériovou výrobu, kontrolu kvality a logistiku.",
+    "subtitle_en": "From hardware and firmware design through prototyping to mass production, quality control and logistics."
+  },
+  "sluzby": {
+    "title": "Nabízíme kompletní zajištění<br>vývoje, výroby a logistiky",
+    "title_en": "We provide complete support for<br>development, manufacturing and logistics",
+    "subtitle": "Můžeme převzít celý proces, nebo navázat na konkrétní fázi vašeho projektu.",
+    "subtitle_en": "We can take over the entire process or join at a specific stage of your project."
+  },
+  "kontakt": {
+    "title": "Kontakt",
+    "title_en": "Contact"
+  },
+  "reference": {
+    "title": "Reference",
+    "title_en": "Projects",
+    "subtitle": "Ukázky projektů, na kterých jsme se podíleli v oblasti vývoje, výroby a logistiky elektronických zařízení.",
+    "subtitle_en": "Examples of projects we have contributed to in the development, manufacturing and logistics of electronic devices."
+  },
+  "onas": {
+    "title": "O nás",
+    "title_en": "About Us"
+  }
+}
