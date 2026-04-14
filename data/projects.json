@@ -51,12 +51,12 @@
     {
       "client": "",
       "client_en": "",
-      "name": "GSM dveřník",
-      "name_en": "GSM doorman",
+      "name": "GSM brána",
+      "name_en": "GSM gate",
       "label": "Vývoj, zařízení masové produkce",
       "label_en": "Development, mass production equipment",
-      "desc": "GSM modul schopný zpřístupnit otevření a zavření dveří, funguje na různých napěťových logikách",
-      "desc_en": "GSM module capable of enabling door opening and closing, operates on various voltage logics",
+      "desc": "GSM modul schopný zpřístupnit otevření a zavření dveří, funguje pro libovolné elektrické zámky",
+      "desc_en": "GSM module capable of enabling door opening and closing, operates with various electrical locks",
       "img": "/assets/Profilovka - gradient.png",
       "featured": false
     },
