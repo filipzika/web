@@ -10,7 +10,7 @@
       "desc": "Vývoj chytrého květináče, včetně návrhu vlastního světla. Mezi používané technologie patří BLE, Wi-Fi, senzor teploty a okolního světla",
       "desc_en": "Development of a smart flowerpot, including the design of a custom light. Technologies used include BLE, Wi-Fi, temperature and ambient light sensors",
       "img": "/assets/Profilovka - gradient.png",
-      "featured": false
+      "featured": true
     },
     {
       "client": "",
@@ -22,7 +22,7 @@
       "desc": "Chytrá hrazda počítá přítahy a zasílá data do databáze",
       "desc_en": "The smart pull-up bar counts pull-ups and sends the data to the database",
       "img": "/assets/Profilovka - gradient.png",
-      "featured": true
+      "featured": false
     },
     {
       "client": "",
