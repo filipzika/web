@@ -51,8 +51,8 @@
         {
           "name": "Rychlé prototypy",
           "name_en": "Rapid Prototypes",
-          "desc": "Vytváříme funkční prototypy pro ověření konceptu během dní, ne týdnů.",
-          "desc_en": "We create functional prototypes to validate the concept in days, not weeks.",
+          "desc": "Co nejrychleji vytváříme funkční prototypy pro ověření konceptu.",
+          "desc_en": "We create functional prototypes for proof of concept as quickly as possible.",
           "icon": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><polygon points=\"12 2 2 7 12 12 22 7 12 2\"/><polyline points=\"2 17 12 22 22 17\"/><polyline points=\"2 12 12 17 22 12\"/></svg>"
         },
         {
