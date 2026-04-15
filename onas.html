@@ -504,7 +504,7 @@
   <img class="hero-bg" src="assets/hero-onas.jpg" alt="" />
   <div class="hero-overlay"></div>
   <div class="hero-content">
-    <h1 class="hero-title">O nás</h1>
+    <h1 class="hero-title" id="heroTitle">O nás</h1>
   </div>
 </section>
 
@@ -513,8 +513,8 @@
 
   <!-- ČÍM SE ZABÝVÁME -->
   <div class="about-card">
-    <h2 class="about-heading">Čím se zabýváme</h2>
-    <div class="about-text">
+    <h2 class="about-heading" id="aboutHeading">Čím se zabýváme</h2>
+    <div class="about-text" id="aboutText">
       <p>Zaměřujeme se na vývoj a výrobu hardwarových řešení od prvotního návrhu až po finální distribuci. Navrhujeme a vyvíjíme elektroniku včetně návrhu PCB, tvorby prototypů a vývoje firmware pro zařízení. Součástí naší práce je také prototypování pomocí 3D tisku, které umožňuje rychlé ověřování návrhů a iteraci během vývoje.</p>
       <p>Vedle samotného vývoje zajišťujeme také sestavování zařízení, ruční montáž a kontrolu kvality. Díky tomu máme celý proces pod kontrolou a můžeme garantovat funkčnost i spolehlivost výsledného produktu.</p>
       <p>Klientům pomáháme také s výrobou a dodávkami komponent. Zajišťujeme sourcing a supply chain z Číny, včetně výroby komponent na míru podle technických specifikací projektu.</p>
@@ -525,8 +525,8 @@
   <!-- TÝM FORESTBIT -->
   <div class="team-section">
     <div class="team-header">
-      <h2 class="team-heading">Tým ForestBit</h2>
-      <p class="team-subtitle">Postaráme se o vše od návrhu hardwaru a firmware přes prototypování až po sériovou výrobu, kontrolu kvality a logistiku.</p>
+      <h2 class="team-heading" id="teamHeading">Tým ForestBit</h2>
+      <p class="team-subtitle" id="teamSubtitle">Postaráme se o vše od návrhu hardwaru a firmware přes prototypování až po sériovou výrobu, kontrolu kvality a logistiku.</p>
     </div>
     <div id="teamContainer" style="display:flex;flex-direction:column;gap:80px;align-items:center;">
     </div>
@@ -552,8 +552,8 @@
   <div class="contact-wrap" style="width:1144px; scroll-margin-top:120px;" id="kontakt">
     <div class="form-section">
       <div style="display:flex;flex-direction:column;gap:16px;width:100%;">
-        <h2 class="heading-2">Kontaktní formulář</h2>
-        <p class="paragraph-1" style="max-width:678px;">Spolupráci stavíme na jasně definovaném procesu, aby bylo od začátku zřejmé, co se bude dít a v jakém pořadí.</p>
+        <h2 class="heading-2" id="formHeading">Kontaktní formulář</h2>
+        <p class="paragraph-1" id="formText" style="max-width:678px;">Spolupráci stavíme na jasně definovaném procesu, aby bylo od začátku zřejmé, co se bude dít a v jakém pořadí.</p>
       </div>
       <form class="form-fields" id="contactForm" onsubmit="return handleContactSubmit(event);">
         <div class="form-block1">
@@ -634,8 +634,8 @@
     </div>
     <div class="footer-socials">
       <div class="social-row">
-        <a href="https://www.instagram.com/forestbit_electronics/" target="_blank" aria-label="Instagram"><svg class="social-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a>
-        <a href="https://www.linkedin.com/company/forestbit-electronics-s-r-o/" target="_blank" aria-label="LinkedIn"><svg class="social-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a>
+        <a href="https://www.instagram.com/forestbit_electronics/" target="_blank" aria-label="Instagram" id="footerInstagram"><svg class="social-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a>
+        <a href="https://www.linkedin.com/company/forestbit-electronics-s-r-o/" target="_blank" aria-label="LinkedIn" id="footerLinkedin"><svg class="social-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a>
       </div>
       <div class="footer-legal">
         <div class="legal-links">
@@ -644,7 +644,7 @@
           <a href="gdpr.html">GDPR</a><span>|</span>
           <a href="accessibility.html">Accessibility statement</a>
         </div>
-        <div class="copyright"><span>2026</span><span>•</span><span>ForestBit Electronics s.r.o.</span><span>•</span><span>All rights reserved</span></div>
+        <div class="copyright"><span id="copyrightYear">2026</span><span>•</span><span id="copyrightName">ForestBit Electronics s.r.o.</span><span>•</span><span>All rights reserved</span></div>
       </div>
     </div>
   </footer>
@@ -733,3 +733,4 @@
     setTimeout(function() { msg.remove(); }, 6000);
   }
 </script>
+<script src="assets/cms-data.js"></script>

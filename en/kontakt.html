@@ -573,7 +573,7 @@
   <img class="hero-bg" src="../assets/hero-kontakt.jpg" alt="" />
   <div class="hero-overlay"></div>
   <div class="hero-content">
-    <h1 class="hero-title">Contact</h1>
+    <h1 class="hero-title" id="heroTitle">Contact</h1>
   </div>
 </section>
 
@@ -582,19 +582,19 @@
 
   <!-- KONTAKTNÍ INFORMACE -->
   <div class="kontakt-info">
-    <h2 class="kontakt-heading">Contact Information</h2>
-    <p class="kontakt-text">Do you have a project you want to bring to life, or are you looking for a partner for hardware development, prototype production or supply chain support? Get in touch with us. We will be happy to discuss the possibilities and help you find the right solution.</p>
+    <h2 class="kontakt-heading" id="kontaktInfoHeading">Contact Information</h2>
+    <p class="kontakt-text" id="kontaktInfoText">Do you have a project you want to bring to life, or are you looking for a partner for hardware development, prototype production or supply chain support? Get in touch with us. We will be happy to discuss the possibilities and help you find the right solution.</p>
   </div>
 
   <!-- INFO CARD -->
   <div class="info-card">
-    <p class="info-card-text">You can contact us by email, phone or via the contact form. If you send us the basic information about your project, we will prepare the next steps or a cooperation proposal for you.</p>
+    <p class="info-card-text" id="infoCardText">You can contact us by email, phone or via the contact form. If you send us the basic information about your project, we will prepare the next steps or a cooperation proposal for you.</p>
   </div>
 
   <!-- ÚDAJE O FIRMĚ -->
   <div class="company-section">
-    <h2 class="company-heading">Company Details</h2>
-    <div class="company-details">
+    <h2 class="company-heading" id="companyHeading">Company Details</h2>
+    <div class="company-details" id="companyDetails">
       <p><span class="label">ForestBit Electronics s.r.o.</span></p>
       <p><span class="label">Adresa:</span> Preslova 72/25, Praha 150 00</p>
       <p><span class="label">Company ID / VAT ID:</span> 14303388/CZ14303388</p>
@@ -607,8 +607,8 @@
   <div class="contact-wrap" style="width:1144px; scroll-margin-top:120px;" id="kontakt">
     <div class="form-section">
       <div style="display:flex;flex-direction:column;gap:16px;width:100%;">
-        <h2 class="heading-2">Contact Form</h2>
-        <p class="paragraph-1" style="max-width:678px;">We build every collaboration on a clearly defined process, so from the very beginning it is clear what will happen and in what order.</p>
+        <h2 class="heading-2" id="formHeading">Contact Form</h2>
+        <p class="paragraph-1" id="formText" style="max-width:678px;">We build every collaboration on a clearly defined process, so from the very beginning it is clear what will happen and in what order.</p>
       </div>
       <form class="form-fields" id="contactForm" onsubmit="return handleContactSubmit(event);">
         <div class="form-block1">
@@ -704,8 +704,8 @@
     </div>
     <div class="footer-socials">
       <div class="social-row">
-        <a href="https://www.instagram.com/forestbit_electronics/" target="_blank" aria-label="Instagram"><svg class="social-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a>
-        <a href="https://www.linkedin.com/company/forestbit-electronics-s-r-o/" target="_blank" aria-label="LinkedIn"><svg class="social-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a>
+        <a href="https://www.instagram.com/forestbit_electronics/" target="_blank" aria-label="Instagram" id="footerInstagram"><svg class="social-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a>
+        <a href="https://www.linkedin.com/company/forestbit-electronics-s-r-o/" target="_blank" aria-label="LinkedIn" id="footerLinkedin"><svg class="social-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a>
       </div>
       <div class="footer-legal">
         <div class="legal-links">
@@ -714,7 +714,7 @@
           <a href="gdpr.html">GDPR</a><span>|</span>
           <a href="accessibility.html">Accessibility statement</a>
         </div>
-        <div class="copyright"><span>2026</span><span>•</span><span>ForestBit Electronics s.r.o.</span><span>•</span><span>All rights reserved</span></div>
+        <div class="copyright"><span id="copyrightYear">2026</span><span>•</span><span id="copyrightName">ForestBit Electronics s.r.o.</span><span>•</span><span>All rights reserved</span></div>
       </div>
     </div>
   </footer>
@@ -797,3 +797,4 @@
     setTimeout(function() { msg.remove(); }, 6000);
   }
 </script>
+<script src="../assets/cms-data.js"></script>

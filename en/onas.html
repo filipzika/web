@@ -504,7 +504,7 @@
   <img class="hero-bg" src="../assets/hero-onas.jpg" alt="" />
   <div class="hero-overlay"></div>
   <div class="hero-content">
-    <h1 class="hero-title">About Us</h1>
+    <h1 class="hero-title" id="heroTitle">About Us</h1>
   </div>
 </section>
 
@@ -513,8 +513,8 @@
 
   <!-- ČÍM SE ZABÝVÁME -->
   <div class="about-card">
-    <h2 class="about-heading">What We Do</h2>
-    <div class="about-text">
+    <h2 class="about-heading" id="aboutHeading">What We Do</h2>
+    <div class="about-text" id="aboutText">
       <p>We focus on the development and manufacturing of hardware solutions from initial concept to final distribution. We design and develop electronics, including PCB design, prototype creation and firmware development for devices. Our work also includes 3D printing for prototyping, enabling rapid design verification and iteration during development.</p>
       <p>In addition to development itself, we also handle device assembly, manual assembly and quality control. This gives us control over the entire process and allows us to guarantee both functionality and reliability of the final product.</p>
       <p>We also help clients with manufacturing and component supply. We manage sourcing and the supply chain from China, including the production of custom components according to the project's technical specifications.</p>
@@ -525,8 +525,8 @@
   <!-- TÝM FORESTBIT -->
   <div class="team-section">
     <div class="team-header">
-      <h2 class="team-heading">Team ForestBit</h2>
-      <p class="team-subtitle">We take care of everything from hardware and firmware design through prototyping to mass production, quality control and logistics.</p>
+      <h2 class="team-heading" id="teamHeading">Team ForestBit</h2>
+      <p class="team-subtitle" id="teamSubtitle">We take care of everything from hardware and firmware design through prototyping to mass production, quality control and logistics.</p>
     </div>
     <div id="teamContainer" style="display:flex;flex-direction:column;gap:80px;align-items:center;">
     </div>
@@ -554,8 +554,8 @@
   <div class="contact-wrap" style="width:1144px; scroll-margin-top:120px;" id="kontakt">
     <div class="form-section">
       <div style="display:flex;flex-direction:column;gap:16px;width:100%;">
-        <h2 class="heading-2">Contact Form</h2>
-        <p class="paragraph-1" style="max-width:678px;">We build every collaboration on a clearly defined process, so from the very beginning it is clear what will happen and in what order.</p>
+        <h2 class="heading-2" id="formHeading">Contact Form</h2>
+        <p class="paragraph-1" id="formText" style="max-width:678px;">We build every collaboration on a clearly defined process, so from the very beginning it is clear what will happen and in what order.</p>
       </div>
       <form class="form-fields" id="contactForm" onsubmit="return handleContactSubmit(event);">
         <div class="form-block1">
@@ -636,8 +636,8 @@
     </div>
     <div class="footer-socials">
       <div class="social-row">
-        <a href="https://www.instagram.com/forestbit_electronics/" target="_blank" aria-label="Instagram"><svg class="social-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a>
-        <a href="https://www.linkedin.com/company/forestbit-electronics-s-r-o/" target="_blank" aria-label="LinkedIn"><svg class="social-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a>
+        <a href="https://www.instagram.com/forestbit_electronics/" target="_blank" aria-label="Instagram" id="footerInstagram"><svg class="social-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a>
+        <a href="https://www.linkedin.com/company/forestbit-electronics-s-r-o/" target="_blank" aria-label="LinkedIn" id="footerLinkedin"><svg class="social-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a>
       </div>
       <div class="footer-legal">
         <div class="legal-links">
@@ -646,7 +646,7 @@
           <a href="gdpr.html">GDPR</a><span>|</span>
           <a href="accessibility.html">Accessibility statement</a>
         </div>
-        <div class="copyright"><span>2026</span><span>•</span><span>ForestBit Electronics s.r.o.</span><span>•</span><span>All rights reserved</span></div>
+        <div class="copyright"><span id="copyrightYear">2026</span><span>•</span><span id="copyrightName">ForestBit Electronics s.r.o.</span><span>•</span><span>All rights reserved</span></div>
       </div>
     </div>
   </footer>
@@ -728,3 +728,4 @@
     setTimeout(function() { msg.remove(); }, 6000);
   }
 </script>
+<script src="../assets/cms-data.js"></script>

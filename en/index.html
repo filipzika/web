@@ -1378,7 +1378,7 @@
 
       <!-- VYBRANÉ REALIZACE -->
       <div style="display:flex;flex-direction:column;gap:40px;width:100%;" id="realizace">
-        <h2 class="heading-2">Selected Project</h2>
+        <h2 class="heading-2" id="selectedProjectHeading">Selected Project</h2>
         <div class="realizace-row" id="realizaceContent">
         </div>
       </div>
@@ -1386,8 +1386,8 @@
       <!-- KONTAKTNÍ FORMULÁŘ -->
       <div class="form-section" id="kontakt" style="scroll-margin-top:120px;">
         <div class="section-header">
-          <h2 class="heading-2">Contact Form</h2>
-          <p class="paragraph-1" style="max-width:678px;">We build every collaboration on a clearly defined process, so from the very beginning it is clear what will happen and in what order.</p>
+          <h2 class="heading-2" id="formHeading">Contact Form</h2>
+          <p class="paragraph-1" id="formText" style="max-width:678px;">We build every collaboration on a clearly defined process, so from the very beginning it is clear what will happen and in what order.</p>
         </div>
         <form class="form-fields" id="contactForm" onsubmit="return handleContactSubmit(event);">
           <div class="form-block1">
@@ -1480,13 +1480,13 @@
     </div>
     <div class="footer-socials">
       <div class="social-row">
-        <a href="https://www.instagram.com/forestbit_electronics/" target="_blank" aria-label="Instagram">
+        <a href="https://www.instagram.com/forestbit_electronics/" target="_blank" aria-label="Instagram" id="footerInstagram">
           <svg class="social-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
             <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><circle cx="12" cy="12" r="5"/>
             <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/>
           </svg>
         </a>
-        <a href="https://www.linkedin.com/company/forestbit-electronics-s-r-o/" target="_blank" aria-label="LinkedIn">
+        <a href="https://www.linkedin.com/company/forestbit-electronics-s-r-o/" target="_blank" aria-label="LinkedIn" id="footerLinkedin">
           <svg class="social-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
             <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/>
             <rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/>
@@ -1501,7 +1501,7 @@
           <a href="accessibility.html">Accessibility statement</a>
         </div>
         <div class="copyright">
-          <span>2026</span><span>•</span><span>ForestBit Electronics s.r.o.</span><span>•</span><span>All rights reserved</span>
+          <span id="copyrightYear">2026</span><span>•</span><span id="copyrightName">ForestBit Electronics s.r.o.</span><span>•</span><span>All rights reserved</span>
         </div>
       </div>
     </div>
@@ -1769,3 +1769,4 @@
     setTimeout(function() { msg.remove(); }, 6000);
   }
 </script>
+<script src="../assets/cms-data.js"></script>

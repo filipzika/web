@@ -754,8 +754,8 @@
   <div class="hero-overlay"></div>
   <div class="hero-content">
     <div class="hero-text">
-      <h1 class="hero-title">Nabízíme kompletní zajištění<br>vývoje, výroby a logistiky</h1>
-      <p class="hero-subtitle">Můžeme převzít celý proces, nebo navázat na konkrétní fázi vašeho projektu.</p>
+      <h1 class="hero-title" id="heroTitle">Nabízíme kompletní zajištění<br>vývoje, výroby a logistiky</h1>
+      <p class="hero-subtitle" id="heroSubtitle">Můžeme převzít celý proces, nebo navázat na konkrétní fázi vašeho projektu.</p>
     </div>
     <button class="hero-btn" onclick="document.getElementById('kontakt').scrollIntoView({behavior:'smooth'})">Poptat projekt</button>
   </div>
@@ -768,8 +768,8 @@
   <div style="width:100%;">
     <div class="services-wrap" style="width:1144px; margin:0 auto;">
       <div class="services-header">
-        <h2 class="heading-1">Služby</h2>
-        <p class="paragraph-1">Pomáháme firmám vyvíjet a vyrábět vlastní elektronická zařízení bez nutnosti budovat interní tým nebo výrobu.</p>
+        <h2 class="heading-1" id="servicesHeading">Služby</h2>
+        <p class="paragraph-1" id="servicesText">Pomáháme firmám vyvíjet a vyrábět vlastní elektronická zařízení bez nutnosti budovat interní tým nebo výrobu.</p>
       </div>
     </div>
     <!-- Scroll-driven carousel -->
@@ -819,8 +819,8 @@
   <div class="contact-wrap" style="width:1144px; scroll-margin-top:120px;" id="kontakt">
     <div class="form-section">
       <div style="display:flex;flex-direction:column;gap:16px;width:100%;">
-        <h2 class="heading-2">Kontaktní formulář</h2>
-        <p class="paragraph-1" style="max-width:678px;">Spolupráci stavíme na jasně definovaném procesu, aby bylo od začátku zřejmé, co se bude dít a v jakém pořadí.</p>
+        <h2 class="heading-2" id="formHeading">Kontaktní formulář</h2>
+        <p class="paragraph-1" id="formText" style="max-width:678px;">Spolupráci stavíme na jasně definovaném procesu, aby bylo od začátku zřejmé, co se bude dít a v jakém pořadí.</p>
       </div>
       <form class="form-fields" id="contactForm" onsubmit="return handleContactSubmit(event);">
         <div class="form-block1">
@@ -901,8 +901,8 @@
     </div>
     <div class="footer-socials">
       <div class="social-row">
-        <a href="https://www.instagram.com/forestbit_electronics/" target="_blank" aria-label="Instagram"><svg class="social-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a>
-        <a href="https://www.linkedin.com/company/forestbit-electronics-s-r-o/" target="_blank" aria-label="LinkedIn"><svg class="social-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a>
+        <a href="https://www.instagram.com/forestbit_electronics/" target="_blank" aria-label="Instagram" id="footerInstagram"><svg class="social-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a>
+        <a href="https://www.linkedin.com/company/forestbit-electronics-s-r-o/" target="_blank" aria-label="LinkedIn" id="footerLinkedin"><svg class="social-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a>
       </div>
       <div class="footer-legal">
         <div class="legal-links">
@@ -911,7 +911,7 @@
           <a href="gdpr.html">GDPR</a><span>|</span>
           <a href="accessibility.html">Accessibility statement</a>
         </div>
-        <div class="copyright"><span>2026</span><span>•</span><span>ForestBit Electronics s.r.o.</span><span>•</span><span>All rights reserved</span></div>
+        <div class="copyright"><span id="copyrightYear">2026</span><span>•</span><span id="copyrightName">ForestBit Electronics s.r.o.</span><span>•</span><span>All rights reserved</span></div>
       </div>
     </div>
   </footer>
@@ -1134,3 +1134,4 @@
     setTimeout(function() { msg.remove(); }, 6000);
   }
 </script>
+<script src="assets/cms-data.js"></script>
