@@ -81,16 +81,16 @@
           "name_en": "3D printing",
           "desc": "Poskytujeme 3D tisk a modelování ať už pro fázi prototypu, nebo pro tisk menších sérií.",
           "desc_en": "We provide 3D printing and modeling, whether for the prototyping stage or for printing small production runs.",
-          "icon": "",
-          "img": "/assets/icon-3d-print.svg"
+          "icon": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M12 2v4\"/><path d=\"M10 6h4\"/><path d=\"M6 10l6 3 6-3\"/><path d=\"M6 10v7l6 3 6-3v-7\"/><path d=\"M12 13v7\"/></svg>",
+          "img": ""
         },
         {
           "name": "Kovovýroba",
           "name_en": "Metal fabrication",
           "desc": "Pokud váš prototyp nebo finální produkt vyžaduje práci s kovem, zajistíme svařování, obrábění a další související služby.",
           "desc_en": "If your prototype or final product requires metalworking, we can provide services such as welding, machining, and related fabrication work.",
-          "icon": "",
-          "img": "/assets/icon-hammer.svg"
+          "icon": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M3 21l10-10\"/><path d=\"M13 11l-3-3\"/><path d=\"M13.5 2.5a1 1 0 0 1 1.41 0l6.59 6.59a1 1 0 0 1 0 1.41l-1.59 1.59a1 1 0 0 1-1.41 0L11.91 5.5a1 1 0 0 1 0-1.41l1.59-1.59z\"/></svg>",
+          "img": ""
         }
       ]
     },
