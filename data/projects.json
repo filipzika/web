@@ -3,12 +3,12 @@
     {
       "client": "",
       "client_en": "",
-      "name": "Chytrý květináč",
-      "name_en": "Smart planter",
+      "name": "Nemůžeme zveřejnit",
+      "name_en": "Can't disclose",
       "label": "Vývoj, testování, <br>firmware, prototypy",
       "label_en": "Development, testing, firmware, prototypes",
-      "desc": "Vývoj chytrého květináče, včetně návrhu vlastního světla. Mezi používané technologie patří BLE, Wi-Fi, senzor teploty a okolního světla",
-      "desc_en": "Development of a smart flowerpot, including the design of a custom light. Technologies used include BLE, Wi-Fi, temperature and ambient light sensors",
+      "desc": "Řídící jednotka. Mezi používané technologie patří BLE, Wi-Fi, senzor teploty a okolního světla",
+      "desc_en": "Control unit. Technologies used include BLE, Wi-Fi, temperature and ambient light sensors",
       "img": "/assets/Profilovka - gradient.png",
       "featured": false
     },
