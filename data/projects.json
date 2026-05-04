@@ -3,18 +3,6 @@
     {
       "client": "",
       "client_en": "",
-      "name": "Nemůžeme zveřejnit",
-      "name_en": "Can't disclose",
-      "label": "Vývoj, testování, <br>firmware, prototypy",
-      "label_en": "Development, testing, firmware, prototypes",
-      "desc": "Řídící jednotka. Mezi používané technologie patří BLE, Wi-Fi, senzor teploty a okolního světla",
-      "desc_en": "Control unit. Technologies used include BLE, Wi-Fi, temperature and ambient light sensors",
-      "img": "/assets/Profilovka - gradient.png",
-      "featured": false
-    },
-    {
-      "client": "",
-      "client_en": "",
       "name": "Chytrá hrazda",
       "name_en": "Smart pull-up bar",
       "label": "Vývoj, výroba",
@@ -23,30 +11,6 @@
       "desc_en": "The smart pull-up bar counts pull-ups and sends the data to the database",
       "img": "/assets/Profilovka - gradient.png",
       "featured": true
-    },
-    {
-      "client": "",
-      "client_en": "",
-      "name": "Rosnička",
-      "name_en": "Rosnička",
-      "label": "Vývoj, výroba, nasazení",
-      "label_en": "Development, production, deployment",
-      "desc": "Bezdrátový Wi-Fi teploměr, s vysokou výdrží baterie",
-      "desc_en": "Wireless Wi-Fi thermometer, with long battery life",
-      "img": "/assets/Profilovka - gradient.png",
-      "featured": false
-    },
-    {
-      "client": "",
-      "client_en": "",
-      "name": "Ondatra",
-      "name_en": "Ondatra",
-      "label": "Vývoj, výroba",
-      "label_en": "Development, manufacturing",
-      "desc": "Wi-Fi senzor hladiny a teploty vody",
-      "desc_en": "Wi-Fi water level and temperature sensor",
-      "img": "/assets/Profilovka - gradient.png",
-      "featured": false
     },
     {
       "client": "",
@@ -69,6 +33,42 @@
       "label_en": "Development, storage, distribution",
       "desc": "Zařízení schopné komunikovat prostřednictvím RS485",
       "desc_en": "Custom-made devices capable of communicating via RS485",
+      "img": "/assets/Profilovka - gradient.png",
+      "featured": false
+    },
+    {
+      "client": "",
+      "client_en": "",
+      "name": "Nemůžeme zveřejnit",
+      "name_en": "Can't disclose",
+      "label": "Vývoj, testování, <br>firmware, prototypy",
+      "label_en": "Development, testing, firmware, prototypes",
+      "desc": "Řídící jednotka. Mezi používané technologie patří BLE, Wi-Fi, senzor teploty a okolního světla",
+      "desc_en": "Control unit. Technologies used include BLE, Wi-Fi, temperature and ambient light sensors",
+      "img": "/assets/Profilovka - gradient.png",
+      "featured": false
+    },
+    {
+      "client": "",
+      "client_en": "",
+      "name": "Rosnička",
+      "name_en": "Rosnička",
+      "label": "Vývoj, výroba, nasazení",
+      "label_en": "Development, production, deployment",
+      "desc": "Bezdrátový Wi-Fi teploměr, s vysokou výdrží baterie",
+      "desc_en": "Wireless Wi-Fi thermometer, with long battery life",
+      "img": "/assets/Profilovka - gradient.png",
+      "featured": false
+    },
+    {
+      "client": "",
+      "client_en": "",
+      "name": "Ondatra",
+      "name_en": "Ondatra",
+      "label": "Vývoj, výroba",
+      "label_en": "Development, manufacturing",
+      "desc": "Wi-Fi senzor hladiny a teploty vody",
+      "desc_en": "Wi-Fi water level and temperature sensor",
       "img": "/assets/Profilovka - gradient.png",
       "featured": false
     }
