@@ -3,24 +3,48 @@
     {
       "client": "",
       "client_en": "",
-      "name": "Chytrý květináč",
-      "name_en": "Smart planter",
-      "label": "Vývoj, testování, <br>firmware, prototypy",
-      "label_en": "Development, testing, firmware, prototypes",
-      "desc": "Vývoj chytrého květináče, včetně návrhu vlastního světla. Mezi používané technologie patří BLE, Wi-Fi, senzor teploty a okolního světla",
-      "desc_en": "Development of a smart flowerpot, including the design of a custom light. Technologies used include BLE, Wi-Fi, temperature and ambient light sensors",
-      "img": "/assets/Profilovka - gradient.png",
-      "featured": true
-    },
-    {
-      "client": "",
-      "client_en": "",
       "name": "Chytrá hrazda",
       "name_en": "Smart pull-up bar",
       "label": "Vývoj, výroba",
       "label_en": "Development, production",
       "desc": "Chytrá hrazda počítá přítahy a zasílá data do databáze",
       "desc_en": "The smart pull-up bar counts pull-ups and sends the data to the database",
+      "img": "/assets/Profilovka - gradient.png",
+      "featured": true
+    },
+    {
+      "client": "",
+      "client_en": "",
+      "name": "GSM brána",
+      "name_en": "GSM gate",
+      "label": "Vývoj, zařízení masové produkce",
+      "label_en": "Development, mass production equipment",
+      "desc": "GSM modul schopný zpřístupnit otevření a zavření dveří, funguje pro libovolné elektrické zámky",
+      "desc_en": "GSM module capable of enabling door opening and closing, operates with various electrical locks",
+      "img": "/assets/Profilovka - gradient.png",
+      "featured": false
+    },
+    {
+      "client": "",
+      "client_en": "",
+      "name": "RS485 komunikátor",
+      "name_en": "RS485 communicator",
+      "label": "Vývoj, skladování, distribuce",
+      "label_en": "Development, storage, distribution",
+      "desc": "Zařízení schopné komunikovat prostřednictvím RS485",
+      "desc_en": "Custom-made devices capable of communicating via RS485",
+      "img": "/assets/Profilovka - gradient.png",
+      "featured": false
+    },
+    {
+      "client": "",
+      "client_en": "",
+      "name": "Nemůžeme zveřejnit",
+      "name_en": "Can't disclose",
+      "label": "Vývoj, testování, <br>firmware, prototypy",
+      "label_en": "Development, testing, firmware, prototypes",
+      "desc": "Řídící jednotka. Mezi používané technologie patří BLE, Wi-Fi, senzor teploty a okolního světla",
+      "desc_en": "Control unit. Technologies used include BLE, Wi-Fi, temperature and ambient light sensors",
       "img": "/assets/Profilovka - gradient.png",
       "featured": false
     },
@@ -45,30 +69,6 @@
       "label_en": "Development, manufacturing",
       "desc": "Wi-Fi senzor hladiny a teploty vody",
       "desc_en": "Wi-Fi water level and temperature sensor",
-      "img": "/assets/Profilovka - gradient.png",
-      "featured": false
-    },
-    {
-      "client": "",
-      "client_en": "",
-      "name": "GSM brána",
-      "name_en": "GSM gate",
-      "label": "Vývoj, zařízení masové produkce",
-      "label_en": "Development, mass production equipment",
-      "desc": "GSM modul schopný zpřístupnit otevření a zavření dveří, funguje pro libovolné elektrické zámky",
-      "desc_en": "GSM module capable of enabling door opening and closing, operates with various electrical locks",
-      "img": "/assets/Profilovka - gradient.png",
-      "featured": false
-    },
-    {
-      "client": "",
-      "client_en": "",
-      "name": "RS485 komunikátor",
-      "name_en": "RS485 communicator",
-      "label": "Vývoj, skladování, distribuce",
-      "label_en": "Development, storage, distribution",
-      "desc": "Zařízení schopné komunikovat prostřednictvím RS485",
-      "desc_en": "Custom-made devices capable of communicating via RS485",
       "img": "/assets/Profilovka - gradient.png",
       "featured": false
     }
