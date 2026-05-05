@@ -35,7 +35,7 @@ collections:
                 label: "Fotogalerie (více fotek — nepovinné)"
                 widget: "list"
                 required: false
-                field: { name: "item", label: "Fotka", widget: "image" }
+                field: { name: "item", label: "Fotka", widget: "image", required: false }
               - { name: "featured", label: "Zobrazit na úvodní stránce", widget: "boolean", default: false, required: false }
 
       - name: "services"
