@@ -10,11 +10,7 @@
       "desc": "Chytrá hrazda počítá přítahy a zasílá data do databáze",
       "desc_en": "The smart pull-up bar counts pull-ups and sends the data to the database",
       "img": "/assets/Profilovka - gradient.png",
-      "imgs": [
-        "",
-        "",
-        ""
-      ],
+      "imgs": [],
       "featured": true
     },
     {
