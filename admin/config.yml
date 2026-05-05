@@ -30,7 +30,13 @@ collections:
               - { name: "label_en", label: "Label (EN)", widget: "string", required: false }
               - { name: "desc", label: "Popis (CZ)", widget: "text", required: false }
               - { name: "desc_en", label: "Description (EN)", widget: "text", required: false }
-              - { name: "img", label: "Obrázek", widget: "image", required: false }
+              - { name: "img", label: "Hlavní obrázek", widget: "image", required: false }
+              - name: "imgs"
+                label: "Fotogalerie (více fotek)"
+                widget: "list"
+                required: false
+                summary: "Fotka {{i}}"
+                field: { name: "item", label: "Fotka", widget: "image" }
               - { name: "featured", label: "Zobrazit na úvodní stránce", widget: "boolean", default: false, required: false }
 
       - name: "services"

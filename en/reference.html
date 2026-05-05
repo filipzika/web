@@ -160,6 +160,35 @@
       object-fit: cover; border-radius: 40px;
     }
 
+    /* IMAGE GALLERY */
+    .gallery-slides { position: absolute; inset: 0; }
+    .gallery-slide { opacity: 0; transition: opacity 0.45s ease; z-index: 0; }
+    .gallery-slide.active { opacity: 1; z-index: 1; }
+
+    /* STEPPER */
+    .img-stepper {
+      position: absolute; bottom: 16px; left: 50%; transform: translateX(-50%);
+      display: flex; align-items: center; gap: 8px;
+      background: #ededed; border-radius: 24px;
+      padding: 2px; height: 40px; z-index: 3;
+    }
+    .stepper-btn {
+      width: 36px; height: 36px; border: none; background: none;
+      cursor: pointer; padding: 0; flex-shrink: 0;
+      display: flex; align-items: center; justify-content: center;
+      border-radius: 10px; transition: opacity 0.2s;
+    }
+    .stepper-btn:hover { opacity: 0.7; }
+    .stepper-btn svg rect { transition: fill 0.2s; }
+    .stepper-btn:hover svg rect { fill: var(--secondary-200); }
+    .stepper-counter {
+      font-family: 'Satoshi', sans-serif; font-weight: 300; font-size: 14px;
+      letter-spacing: 0.28px; white-space: nowrap;
+      display: flex; gap: 4px; align-items: center;
+    }
+    .stepper-current, .stepper-sep { color: #141414; }
+    .stepper-total { color: #6a6a6a; }
+
     /* CONTACT FORM */
     .form-section { display: flex; flex-direction: column; gap: 48px; align-items: center; width: 1147px; }
     .heading-2 { font-family: 'Satoshi', sans-serif; font-weight: 600; font-size: 48px; color: var(--tertiary-100); line-height: 1; }
@@ -439,6 +468,7 @@
       <a class="navbar-link" href="index.html">Home</a>
       <a class="navbar-link" href="sluzby.html">Services</a>
       <a class="navbar-link active" href="reference.html">Projects</a>
+      <a class="navbar-link" href="https://shop.forestbit.cz" target="_blank" rel="noopener">E-shop</a>
       <a class="navbar-link" href="onas.html">About Us</a>
       <a class="navbar-link" href="kontakt.html">Contact</a>
     </div>
@@ -485,6 +515,7 @@
     <a href="index.html" class="mobile-menu-link">Home <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M9 18L15 12L9 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
     <a href="sluzby.html" class="mobile-menu-link">Services <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M9 18L15 12L9 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
     <a href="reference.html" class="mobile-menu-link active">Projects <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M9 18L15 12L9 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+    <a href="https://shop.forestbit.cz" target="_blank" rel="noopener" class="mobile-menu-link">E-shop <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M9 18L15 12L9 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
     <a href="onas.html" class="mobile-menu-link">About Us <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M9 18L15 12L9 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
     <a href="kontakt.html" class="mobile-menu-link">Contact <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M9 18L15 12L9 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
   </div>
@@ -631,13 +662,48 @@
     btn.classList.add('active');
   }
 
+  function fmtIdx(n) { return n < 10 ? '0' + n : '' + n; }
+
+  function stepGallery(btn, dir) {
+    var wrap = btn.closest('.project-image-wrap');
+    var slides = wrap.querySelectorAll('.gallery-slide');
+    var total = slides.length;
+    var current = Array.prototype.indexOf.call(slides, wrap.querySelector('.gallery-slide.active'));
+    slides[current].classList.remove('active');
+    var next = (current + dir + total) % total;
+    slides[next].classList.add('active');
+    var counter = wrap.querySelector('.stepper-current');
+    if (counter) counter.textContent = fmtIdx(next + 1);
+  }
+
   fetch('../data/projects.json')
     .then(r => r.json())
     .then(data => {
       var container = document.getElementById('projectsContainer');
       var html = data.items.map(function(p) {
-        var img = p.img.replace(/^\//, '');
-        if (!img.match(/^https?:\/\//)) img = '../' + img;
+        var imgs = (p.imgs && p.imgs.length > 0) ? p.imgs : [p.img];
+        imgs = imgs.map(function(src) {
+          src = src.replace(/^\//, '');
+          if (!src.match(/^https?:\/\//)) src = '../' + src;
+          return src;
+        });
+
+        var slideHTML = imgs.map(function(src, i) {
+          return '<img class="gallery-slide' + (i === 0 ? ' active' : '') + '" src="' + src + '" alt="' + p.name_en + '" loading="' + (i === 0 ? 'eager' : 'lazy') + '" />';
+        }).join('');
+
+        var stepperHTML = imgs.length > 1 ? (
+          '<div class="img-stepper">' +
+            '<button class="stepper-btn" onclick="stepGallery(this,-1)" aria-label="Previous photo">' +
+              '<svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="36" height="36" rx="10" fill="#141414"/><path d="M21 12L15 18L21 24" stroke="#fefdf9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>' +
+            '</button>' +
+            '<span class="stepper-counter"><span class="stepper-current">01</span><span class="stepper-sep"> | </span><span class="stepper-total">' + fmtIdx(imgs.length) + '</span></span>' +
+            '<button class="stepper-btn" onclick="stepGallery(this,1)" aria-label="Next photo">' +
+              '<svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="36" height="36" rx="10" fill="#141414"/><path d="M15 12L21 18L15 24" stroke="#fefdf9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>' +
+            '</button>' +
+          '</div>'
+        ) : '';
+
         return '<div class="project-card">' +
           '<div class="project-text">' +
             '<div class="project-meta">' +
@@ -650,7 +716,8 @@
             '</div>' +
           '</div>' +
           '<div class="project-image-wrap">' +
-            '<img src="' + img + '" alt="' + p.name_en + '" />' +
+            '<div class="gallery-slides">' + slideHTML + '</div>' +
+            stepperHTML +
           '</div>' +
         '</div>';
       }).join('');
