@@ -79,9 +79,7 @@
   }
   </script>
   <link rel="preconnect" href="https://api.fontshare.com" />
-  <link href="https://api.fontshare.com/v2/css?f[]=clash-display@400,500,600&f[]=satoshi@400,500,700&display=swap" rel="stylesheet" />
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>tailwind.config = { corePlugins: { preflight: false } }</script>
+  <link rel="preload" href="https://api.fontshare.com/v2/css?f[]=clash-display@400,500,600&f[]=satoshi@400,500,700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'" /><noscript><link rel="stylesheet" href="https://api.fontshare.com/v2/css?f[]=clash-display@400,500,600&f[]=satoshi@400,500,700&display=swap" /></noscript>
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     :root {
@@ -94,6 +92,16 @@
     }
     html { scroll-behavior: smooth; }
     body { background: var(--bg); color: var(--tertiary-100); font-family: 'Satoshi', sans-serif; overflow-x: hidden; }
+
+    /* CAROUSEL TAILWIND REPLACEMENTS */
+    .c-bg-overlay { position:absolute; top:-166px; left:0; right:-305px; bottom:-92px; pointer-events:none; }
+    .c-bg-circle { position:absolute; left:60px; top:331px; width:258px; height:258px; border-radius:300px; background:rgba(42,42,42,0.1); border:1px solid rgba(255,255,255,0.12); overflow:clip; pointer-events:none; }
+    .c-icon-wrap { position:relative; z-index:1; flex-shrink:0; width:97px; height:296px; display:flex; align-items:center; justify-content:center; }
+    .c-icon-img { width:81px; height:250px; object-fit:contain; }
+    .c-text-wrap { position:relative; z-index:1; flex:1; min-width:0; }
+    .c-slide { display:flex; flex-direction:column; gap:16px; }
+    .c-title { font-family:'Clash Display',sans-serif; font-weight:400; font-size:48px; line-height:1; color:#fefdf9; }
+    .c-desc { font-family:'Satoshi',sans-serif; font-weight:400; font-size:24px; line-height:1.5; letter-spacing:0.24px; color:#fefdf9; }
 
     /* NAVBAR */
     .navbar {
@@ -832,7 +840,7 @@
 
 <!-- HERO -->
 <section class="hero">
-  <img class="hero-bg" src="../assets/hero-sluzby.jpg" alt="" />
+  <img class="hero-bg" src="../assets/hero-sluzby.webp" alt="" />
   <div class="hero-overlay"></div>
   <div class="hero-content">
     <div class="hero-text">
@@ -858,27 +866,27 @@
     <div class="carousel-scroll-container" id="carouselScroll">
       <div class="carousel-sticky">
         <div class="carousel-card" id="carouselCard">
-          <div class="absolute -top-[166px] left-0 -right-[305px] -bottom-[92px] pointer-events-none" style="background: linear-gradient(125deg, #060804 0%, #0e1205 12%, #1a2008 25%, #2d3a0c 38%, #435010 50%, #5a6814 62%, #6e7c12 74%, #808c16 86%, #8a9818 100%)"></div>
-          <div class="absolute left-[60px] top-[331px] w-[258px] h-[258px] rounded-[300px] bg-[rgba(42,42,42,0.1)] border border-[rgba(255,255,255,0.12)] overflow-clip pointer-events-none"></div>
-          <div class="relative z-[1] shrink-0 w-[97px] h-[296px] flex items-center justify-center">
-            <img id="cIcon" class="w-[81px] h-[250px] object-contain" src="../assets/union-icon.svg" alt="" />
+          <div class="c-bg-overlay" style="background: linear-gradient(125deg, #060804 0%, #0e1205 12%, #1a2008 25%, #2d3a0c 38%, #435010 50%, #5a6814 62%, #6e7c12 74%, #808c16 86%, #8a9818 100%)"></div>
+          <div class="c-bg-circle"></div>
+          <div class="c-icon-wrap">
+            <img id="cIcon" class="c-icon-img" src="../assets/union-icon.svg" alt="" />
           </div>
-          <div class="relative z-[1]" style="flex:1;min-width:0;">
-            <div class="flex flex-col gap-4 carousel-slide-text" id="cSlide0">
-              <h3 class="font-['Clash_Display',sans-serif] font-normal text-[48px] leading-[100%] text-[#fefdf9]">Supply Chain & Logistics</h3>
-              <p class="font-['Satoshi',sans-serif] font-normal text-[24px] leading-[1.5] tracking-[0.24px] text-[#fefdf9]">We manage component sourcing, storage and distribution of finished devices. We take care of sourcing, including custom parts, inventory organization and subsequent dropshipping based on the project's needs.</p>
+          <div class="c-text-wrap">
+            <div class="c-slide carousel-slide-text" id="cSlide0">
+              <h3 class="c-title">Supply Chain & Logistics</h3>
+              <p class="c-desc">We manage component sourcing, storage and distribution of finished devices. We take care of sourcing, including custom parts, inventory organization and subsequent dropshipping based on the project's needs.</p>
             </div>
-            <div class="flex flex-col gap-4 carousel-slide-text" id="cSlide1" style="display:none">
-              <h3 class="font-['Clash_Display',sans-serif] font-normal text-[48px] leading-[100%] text-[#fefdf9]">Prototyping & Testing</h3>
-              <p class="font-['Satoshi',sans-serif] font-normal text-[24px] leading-[1.5] tracking-[0.24px] text-[#fefdf9]">We provide device prototyping and testing, including rapid design verification, small-batch production and technical validation before mass production begins.</p>
+            <div class="c-slide carousel-slide-text" id="cSlide1" style="display:none">
+              <h3 class="c-title">Prototyping & Testing</h3>
+              <p class="c-desc">We provide device prototyping and testing, including rapid design verification, small-batch production and technical validation before mass production begins.</p>
             </div>
-            <div class="flex flex-col gap-4 carousel-slide-text" id="cSlide2" style="display:none">
-              <h3 class="font-['Clash_Display',sans-serif] font-normal text-[48px] leading-[100%] text-[#fefdf9]">Hardware Development</h3>
-              <p class="font-['Satoshi',sans-serif] font-normal text-[24px] leading-[1.5] tracking-[0.24px] text-[#fefdf9]">We design electronic circuits and PCBs for industrial and consumer applications. We cover the entire cycle from concept through schematics to final production documentation.</p>
+            <div class="c-slide carousel-slide-text" id="cSlide2" style="display:none">
+              <h3 class="c-title">Hardware Development</h3>
+              <p class="c-desc">We design electronic circuits and PCBs for industrial and consumer applications. We cover the entire cycle from concept through schematics to final production documentation.</p>
             </div>
-            <div class="flex flex-col gap-4 carousel-slide-text" id="cSlide3" style="display:none">
-              <h3 class="font-['Clash_Display',sans-serif] font-normal text-[48px] leading-[100%] text-[#fefdf9]">Firmware & Software</h3>
-              <p class="font-['Satoshi',sans-serif] font-normal text-[24px] leading-[1.5] tracking-[0.24px] text-[#fefdf9]">We develop firmware for embedded systems, IoT devices and industrial controllers. We work with ARM, RISC-V, ESP32 and other platforms.</p>
+            <div class="c-slide carousel-slide-text" id="cSlide3" style="display:none">
+              <h3 class="c-title">Firmware & Software</h3>
+              <p class="c-desc">We develop firmware for embedded systems, IoT devices and industrial controllers. We work with ARM, RISC-V, ESP32 and other platforms.</p>
             </div>
           </div>
           <div class="carousel-dots" id="dots"></div>
@@ -1198,7 +1206,7 @@
     });
 
 </script>
-<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js" async></script>
 <script>
   emailjs.init('DhPaiacQzrwxKkBSF');
 
