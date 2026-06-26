@@ -11,7 +11,7 @@
       "desc_en": "The smart pull-up bar counts pull-ups and sends the data to the database",
       "img": "/assets/Profilovka - gradient.png",
       "imgs": [],
-      "featured": true
+      "featured": false
     },
     {
       "client": "",
@@ -36,7 +36,7 @@
       "desc_en": "Wireless kill switch for humanoid robot",
       "img": "/assets/KillSwitch_3D1.png",
       "imgs": [],
-      "featured": false
+      "featured": true
     },
     {
       "client": "Electree Connect s.r.o.",
