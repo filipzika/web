@@ -28,6 +28,19 @@
     {
       "client": "",
       "client_en": "",
+      "name": "Kill switch",
+      "name_en": "Kill switch",
+      "label": "Vývoj",
+      "label_en": "Development",
+      "desc": "Bezdrátový kill switch pro humanoidního robota",
+      "desc_en": "Wireless kill switch for humanoid robot",
+      "img": "/assets/KillSwitch_3D1.png",
+      "imgs": [],
+      "featured": false
+    },
+    {
+      "client": "",
+      "client_en": "",
       "name": "RS485 komunikátor",
       "name_en": "RS485 communicator",
       "label": "Vývoj, skladování, distribuce",
@@ -47,19 +60,6 @@
       "desc": "Řídící jednotka. Mezi používané technologie patří BLE, Wi-Fi, senzor teploty a okolního světla",
       "desc_en": "Control unit. Technologies used include BLE, Wi-Fi, temperature and ambient light sensors",
       "img": "/assets/Profilovka - gradient.png",
-      "featured": false
-    },
-    {
-      "client": "",
-      "client_en": "",
-      "name": "Kill switch",
-      "name_en": "Kill switch",
-      "label": "Vývoj",
-      "label_en": "Development",
-      "desc": "Bezdrátový kill switch pro humanoidního robota",
-      "desc_en": "Wireless kill switch for humanoid robot",
-      "img": "/assets/KillSwitch_3D1.png",
-      "imgs": [],
       "featured": false
     },
     {
