@@ -26,8 +26,8 @@
       "featured": false
     },
     {
-      "client": "",
-      "client_en": "",
+      "client": "Česká IT akademie",
+      "client_en": "Czech IT academy",
       "name": "Kill switch",
       "name_en": "Kill switch",
       "label": "Vývoj",
@@ -39,8 +39,8 @@
       "featured": false
     },
     {
-      "client": "",
-      "client_en": "",
+      "client": "Electree Connect s.r.o.",
+      "client_en": "Electree Connect s.r.o.",
       "name": "RS485 komunikátor",
       "name_en": "RS485 communicator",
       "label": "Vývoj, skladování, distribuce",
