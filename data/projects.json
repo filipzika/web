@@ -59,9 +59,9 @@
       "label_en": "Development, testing, firmware, prototypes",
       "desc": "Řídící jednotka. Mezi používané technologie patří BLE, Wi-Fi, senzor teploty a okolního světla",
       "desc_en": "Control unit. Technologies used include BLE, Wi-Fi, temperature and ambient light sensors",
-      "img": "",
+      "img": "/assets/Pestitko_3D.png",
       "imgs": [
-        ""
+        "/assets/Pestitko_3D1.png"
       ],
       "featured": false
     },
