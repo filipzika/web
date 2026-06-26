@@ -52,6 +52,19 @@
     {
       "client": "",
       "client_en": "",
+      "name": "Kill switch",
+      "name_en": "Kill switch",
+      "label": "Vývoj",
+      "label_en": "Development",
+      "desc": "Bezdrátový kill switch pro humanoidního robota",
+      "desc_en": "Wireless kill switch for humanoid robot",
+      "img": "/assets/KillSwitch_3D1.png",
+      "imgs": [],
+      "featured": false
+    },
+    {
+      "client": "Catermat.com",
+      "client_en": "Catermat.com",
       "name": "Rosnička",
       "name_en": "Rosnička",
       "label": "Vývoj, výroba, nasazení",
@@ -62,8 +75,8 @@
       "featured": false
     },
     {
-      "client": "",
-      "client_en": "",
+      "client": "ForestBit s.r.o.",
+      "client_en": "ForestBit s.r.o.",
       "name": "Ondatra",
       "name_en": "Ondatra",
       "label": "Vývoj, výroba",
