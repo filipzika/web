@@ -9,7 +9,7 @@
       "label_en": "Development, production",
       "desc": "Chytrá hrazda detekuje dotek, počítá přítahy a zasílá data do databáze",
       "desc_en": "The smart pull-up bar counts pull-ups and sends the data to the database",
-      "img": "/assets/Profilovka - gradient.png",
+      "img": "/assets/Hrrazda_3D.png",
       "imgs": [],
       "featured": false
     },
@@ -22,7 +22,7 @@
       "label_en": "Development, mass production equipment",
       "desc": "GSM modul schopný zpřístupnit otevření a zavření dveří, funguje pro libovolné elektrické zámky",
       "desc_en": "GSM module capable of enabling door opening and closing, operates with various electrical locks",
-      "img": "/assets/Návrh bez názvu.png",
+      "img": "/assets/Profilovka - gradient.png",
       "featured": false
     },
     {
@@ -59,7 +59,10 @@
       "label_en": "Development, testing, firmware, prototypes",
       "desc": "Řídící jednotka. Mezi používané technologie patří BLE, Wi-Fi, senzor teploty a okolního světla",
       "desc_en": "Control unit. Technologies used include BLE, Wi-Fi, temperature and ambient light sensors",
-      "img": "/assets/Profilovka - gradient.png",
+      "img": "",
+      "imgs": [
+        ""
+      ],
       "featured": false
     },
     {
@@ -71,7 +74,7 @@
       "label_en": "Development, production, deployment",
       "desc": "Bezdrátový Wi-Fi teploměr, s vysokou výdrží baterie",
       "desc_en": "Wireless Wi-Fi thermometer, with long battery life",
-      "img": "/assets/První prototyp, výsledek nemůžeme publikovat (1).png",
+      "img": "/assets/Profilovka - gradient.png",
       "featured": false
     },
     {
