@@ -90,7 +90,7 @@
   }
 
   var CSS =
-    '.fbc{position:fixed;left:16px;bottom:16px;z-index:9999;max-width:380px;' +
+    '.fbc{position:fixed;left:0;right:0;margin:0 auto;bottom:16px;z-index:9999;width:calc(100% - 32px);max-width:420px;' +
     'box-sizing:border-box;padding:16px 16px 14px;border-radius:16px;' +
     'background:rgba(28,27,36,.94);-webkit-backdrop-filter:blur(16px);backdrop-filter:blur(16px);' +
     'border:1px solid rgba(106,97,217,.28);box-shadow:0 12px 32px rgba(0,0,0,.45);' +
@@ -105,7 +105,7 @@
     'background:rgba(254,253,249,.07);border:1px solid rgba(254,253,249,.18);transition:background .2s,border-color .2s}' +
     '.fbc button:hover{background:rgba(106,97,217,.28);border-color:rgba(106,97,217,.6)}' +
     '.fbc button:focus-visible,.fbc a:focus-visible{outline:2px solid #6a61d9;outline-offset:2px}' +
-    '@media (max-width:480px){.fbc{left:12px;right:12px;bottom:12px;max-width:none}}' +
+    '@media (max-width:480px){.fbc{bottom:12px;width:calc(100% - 24px)}}' +
     '@media (prefers-reduced-motion:reduce){.fbc{transition:none}}';
 
   var bar = null;
