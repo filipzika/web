@@ -51,6 +51,7 @@
   function loadTag() {
     if (tagLoaded) return;
     tagLoaded = true;
+    if (document.querySelector('script[src*="googletagmanager.com/gtag/js"]')) return;
     var s = document.createElement('script');
     s.async = true;
     s.src = 'https://www.googletagmanager.com/gtag/js?id=' + TAG_ID;
