@@ -219,6 +219,7 @@
       .scroll-top svg { width: 36px; height: 36px; }
     }
   </style>
+  <script src="../assets/consent.js" defer></script>
 </head>
 <body>
 
@@ -301,24 +302,24 @@
 <!-- CONTENT -->
 <div class="legal-content">
   <h1>Cookies</h1>
-  <p class="legal-updated">Last updated: 10 April 2026</p>
+  <p class="legal-updated">Last updated: 28 September 2026</p>
 
   <p>This page explains what cookies and similar technical tools we use on the ForestBit website.</p>
+
+  <p><button type="button" data-cookie-settings style="font-family:'Satoshi',sans-serif;font-size:16px;font-weight:500;letter-spacing:0.32px;color:var(--tertiary-100);background:rgba(106,97,217,0.18);border:1px solid rgba(106,97,217,0.5);border-radius:10px;padding:10px 16px;cursor:pointer;">Change cookie settings</button></p>
 
   <h2>1. What cookies are</h2>
   <p>Cookies are small text files stored on your device when you visit a website. They help the website function properly, protect forms, and ensure secure content delivery.</p>
 
-  <h2>2. What cookies we currently use</h2>
-  <p>At the moment, we only use <strong>strictly necessary technical cookies and similar technical identifiers</strong> for:</p>
+  <h2>2. What cookies we use</h2>
+  <p>We use two categories of cookies on this website:</p>
   <ul>
-    <li>secure website operation,</li>
-    <li>protection against bots, attacks, and abuse,</li>
-    <li>proper content delivery,</li>
-    <li>contact form functionality.</li>
+    <li><strong>Strictly necessary technical cookies</strong> – for secure website operation, protection against bots and abuse, proper content delivery, and contact form functionality. They are always set because the website cannot work properly without them.</li>
+    <li><strong>Marketing cookies (Google Ads)</strong> – for conversion measurement, i.e. to find out whether a visitor came from our Google Ads campaign and then contacted us. They are set <strong>only with your consent</strong>.</li>
   </ul>
-  <p><strong>We do not use analytics, marketing, or advertising cookies.</strong><br><strong>We do not use cookies for behavioural profiling of visitors.</strong></p>
+  <p>We do not use analytics cookies or cookies for behavioural profiling.</p>
 
-  <h2>3. Overview of typical technical cookies</h2>
+  <h2>3. Strictly necessary technical cookies</h2>
   <p>Depending on the current hosting and security configuration, the website may use the following technical cookies or similar identifiers:</p>
   <table style="width:100%;border-collapse:collapse;margin:16px 0;">
     <thead>
@@ -348,31 +349,77 @@
         <td style="padding:8px;">Form protection and maintenance of technical session state</td>
         <td style="padding:8px;">for the session</td>
       </tr>
+      <tr style="border-top:1px solid var(--neutral-400);">
+        <td style="padding:8px;"><code>fb_consent</code> (localStorage)</td>
+        <td style="padding:8px;">ForestBit</td>
+        <td style="padding:8px;">Remembers your cookie choice so we don't ask on every visit</td>
+        <td style="padding:8px;">12 months</td>
+      </tr>
     </tbody>
   </table>
-  <p>If the website's technical configuration changes, the exact list of cookie names or retention periods may change as well. We will update this page accordingly.</p>
 
-  <h2>4. Legal basis</h2>
-  <p>We use technical cookies because they are <strong>necessary for the proper functioning, security, and delivery of the website</strong>. Where personal data are processed in connection with these cookies, we rely on our legitimate interest in the secure and proper operation of the website.</p>
-  <p>If we start using non-essential cookies in the future, such as analytics or marketing cookies, we will ask for the relevant consent in advance and update this page accordingly.</p>
+  <h2>4. Marketing cookies (consent only)</h2>
+  <p>If you choose “Allow” in the cookie bar, the Google tag (gtag.js) for Google Ads is loaded and the following cookies may be set:</p>
+  <table style="width:100%;border-collapse:collapse;margin:16px 0;">
+    <thead>
+      <tr style="border-bottom:2px solid var(--neutral-400);">
+        <th style="text-align:left;padding:8px;color:var(--tertiary-100);">Name</th>
+        <th style="text-align:left;padding:8px;color:var(--tertiary-100);">Provider</th>
+        <th style="text-align:left;padding:8px;color:var(--tertiary-100);">Purpose</th>
+        <th style="text-align:left;padding:8px;color:var(--tertiary-100);">Retention</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr style="border-bottom:1px solid var(--neutral-400);">
+        <td style="padding:8px;"><code>_gcl_au</code></td>
+        <td style="padding:8px;">Google Ads (forestbit.cz)</td>
+        <td style="padding:8px;">Links a visit to a conversion to measure ad performance</td>
+        <td style="padding:8px;">90 days</td>
+      </tr>
+      <tr style="border-bottom:1px solid var(--neutral-400);">
+        <td style="padding:8px;"><code>_gcl_aw</code></td>
+        <td style="padding:8px;">Google Ads (forestbit.cz)</td>
+        <td style="padding:8px;">Stores the ad click identifier (GCLID)</td>
+        <td style="padding:8px;">90 days</td>
+      </tr>
+      <tr style="border-bottom:1px solid var(--neutral-400);">
+        <td style="padding:8px;"><code>IDE</code></td>
+        <td style="padding:8px;">Google (doubleclick.net)</td>
+        <td style="padding:8px;">Conversion measurement and serving Google ads</td>
+        <td style="padding:8px;">13 months</td>
+      </tr>
+      <tr>
+        <td style="padding:8px;"><code>test_cookie</code></td>
+        <td style="padding:8px;">Google (doubleclick.net)</td>
+        <td style="padding:8px;">Checks whether the browser supports cookies</td>
+        <td style="padding:8px;">15 minutes</td>
+      </tr>
+    </tbody>
+  </table>
+  <p>If you do not consent, the Google tag is not loaded at all and none of these cookies are set. If the website's or Google's technical configuration changes, the exact list of cookies may change as well. We will update this page accordingly.</p>
 
-  <h2>5. Third-party cookies</h2>
-  <p>Third-party technical services may be used in connection with the operation of the website, in particular:</p>
+  <h2>5. Legal basis</h2>
+  <p>We use strictly necessary technical cookies because they are <strong>necessary for the proper functioning, security, and delivery of the website</strong> (Section 89(3) of Czech Act No. 127/2005 Coll., on Electronic Communications). Where personal data are processed in connection with them, we rely on our legitimate interest in the secure and proper operation of the website (Art. 6(1)(f) GDPR).</p>
+  <p>We use marketing cookies <strong>only on the basis of your consent</strong> (Art. 6(1)(a) GDPR). Consent is voluntary, declining it does not affect your use of the website, and you can withdraw it at any time.</p>
+
+  <h2>6. Third-party cookies</h2>
+  <p>The following third-party services are used in connection with the operation of the website:</p>
   <ul>
     <li><strong>Cloudflare</strong> – security and network services,</li>
+    <li><strong>Google Ireland Limited</strong> (Google Ads) – conversion measurement for advertising campaigns, only with your consent. Data may be transferred to Google LLC in the USA under the EU–US Data Privacy Framework. See <a href="https://policies.google.com/technologies/ads" target="_blank" rel="noopener">Google's advertising policies</a> for more information,</li>
     <li>where applicable, other technical services related to hosting or content delivery.</li>
   </ul>
-  <p>These services may use their own technical cookies or similar identifiers where necessary for security or operational purposes.</p>
 
-  <h2>6. How you can manage cookies</h2>
-  <p>In most cases, you can control or delete cookies in your browser settings. Please note that blocking strictly necessary cookies may result in:</p>
+  <h2>7. How you can manage cookies</h2>
+  <p>You can give or withdraw consent to marketing cookies at any time with the <strong>“Change cookie settings”</strong> button at the top of this page. When you withdraw consent, we delete the marketing cookies and the Google tag is not loaded on later visits.</p>
+  <p>You can also control or delete cookies in your browser settings. Please note that blocking strictly necessary cookies may result in:</p>
   <ul>
     <li>limited website functionality,</li>
     <li>contact form submission issues,</li>
     <li>more frequent security challenges or blocked requests.</li>
   </ul>
 
-  <h2>7. Contact</h2>
+  <h2>8. Contact</h2>
   <p>If you have any questions about our use of cookies, please contact us at <a href="mailto:filip.zika@forestbit.cz"><strong>filip.zika@forestbit.cz</strong></a>.</p>
   <p>More information about personal data processing is available in our <a href="privacy-policy.html"><strong>Privacy Policy</strong></a>.</p>
 </div>

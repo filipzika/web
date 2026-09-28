@@ -82,6 +82,7 @@
     @media (max-width: 768px) { .navbar { display: none; } .navbar-mobile { display: flex !important; } }
     @media (max-width: 480px) { .legal-content h1 { font-size: 28px; } .legal-content { padding: 120px 20px 60px; } .footer-top { flex-direction: column; padding: 0 8px 32px; gap: 32px; align-items: center; overflow: visible; height: auto; } .footer-left { align-items: center; overflow: visible; } .footer-logo-nav { flex-direction: column; gap: 24px; align-items: center; } .footer-nav { gap: 40px; justify-content: center; flex-wrap: wrap; } .footer-col { min-width: 100px; } .scroll-top { right: 16px; bottom: 24px; } .scroll-top svg { width: 36px; height: 36px; } }
   </style>
+  <script src="assets/consent.js" defer></script>
 </head>
 <body>
 
@@ -141,24 +142,24 @@
 <!-- CONTENT -->
 <div class="legal-content">
   <h1>Cookies</h1>
-  <p class="legal-updated">Poslední aktualizace: 10. dubna 2026</p>
+  <p class="legal-updated">Poslední aktualizace: 28. září 2026</p>
 
   <p>Tato stránka vysvětluje, jaké cookies a obdobné technické prostředky používáme na webu ForestBit.</p>
+
+  <p><button type="button" data-cookie-settings style="font-family:'Satoshi',sans-serif;font-size:16px;font-weight:500;letter-spacing:0.32px;color:var(--tertiary-100);background:rgba(106,97,217,0.18);border:1px solid rgba(106,97,217,0.5);border-radius:10px;padding:10px 16px;cursor:pointer;">Změnit nastavení cookies</button></p>
 
   <h2>1. Co jsou cookies</h2>
   <p>Cookies jsou malé textové soubory ukládané do vašeho zařízení při návštěvě webových stránek. Pomáhají webu správně fungovat, chránit formuláře a zajistit bezpečné doručení obsahu.</p>
 
-  <h2>2. Jaké cookies aktuálně používáme</h2>
-  <p>V současné době používáme pouze <strong>nezbytné technické cookies a obdobné technické identifikátory</strong>, které slouží k:</p>
+  <h2>2. Jaké cookies používáme</h2>
+  <p>Na webu používáme dvě kategorie cookies:</p>
   <ul>
-    <li>bezpečnému provozu webu,</li>
-    <li>ochraně proti botům, útokům a zneužití,</li>
-    <li>správnému doručení obsahu,</li>
-    <li>zajištění funkčnosti kontaktního formuláře.</li>
+    <li><strong>Nezbytné technické cookies</strong> – slouží k bezpečnému provozu webu, ochraně proti botům a zneužití, správnému doručení obsahu a funkčnosti kontaktního formuláře. Ukládají se vždy, protože bez nich web nemůže správně fungovat.</li>
+    <li><strong>Marketingové cookies (Google Ads)</strong> – slouží k měření konverzí, tedy k tomu, abychom zjistili, zda návštěvník přišel z naší reklamy v Google Ads a zda nás poté kontaktoval. Ukládají se <strong>pouze s vaším souhlasem</strong>.</li>
   </ul>
-  <p><strong>Nepoužíváme analytické, marketingové ani reklamní cookies.</strong><br><strong>Nepoužíváme cookies pro behaviorální profilování návštěvníků.</strong></p>
+  <p>Analytické cookies ani cookies pro behaviorální profilování na našem webu nepoužíváme.</p>
 
-  <h2>3. Přehled typických technických cookies</h2>
+  <h2>3. Nezbytné technické cookies</h2>
   <p>V závislosti na aktuální konfiguraci hostingu a bezpečnostních služeb může web používat zejména tyto technické cookies nebo obdobné identifikátory:</p>
   <table style="width:100%;border-collapse:collapse;margin:16px 0;">
     <thead>
@@ -188,31 +189,77 @@
         <td style="padding:8px;">Ochrana formuláře a zachování technického stavu relace</td>
         <td style="padding:8px;">po dobu relace</td>
       </tr>
+      <tr style="border-top:1px solid var(--neutral-400);">
+        <td style="padding:8px;"><code>fb_consent</code> (localStorage)</td>
+        <td style="padding:8px;">ForestBit</td>
+        <td style="padding:8px;">Zapamatování vaší volby ohledně cookies, abychom se vás neptali při každé návštěvě</td>
+        <td style="padding:8px;">12 měsíců</td>
+      </tr>
     </tbody>
   </table>
-  <p>Pokud se technická konfigurace webu změní, může se změnit i přesný seznam názvů nebo doba trvání těchto cookies. V takovém případě tuto stránku aktualizujeme.</p>
 
-  <h2>4. Právní základ</h2>
-  <p>Technické cookies používáme proto, že jsou <strong>nezbytné pro správnou funkci, zabezpečení a poskytování webu</strong>. Pokud v souvislosti s těmito cookies dochází i ke zpracování osobních údajů, opíráme se o náš oprávněný zájem na bezpečném a řádném provozu webových stránek.</p>
-  <p>Pokud bychom v budoucnu začali používat netechnické cookies (například analytické nebo marketingové), požádáme vás předem o příslušný souhlas a tuto stránku odpovídajícím způsobem upravíme.</p>
+  <h2>4. Marketingové cookies (pouze se souhlasem)</h2>
+  <p>Pokud v liště cookies zvolíte „Povolit“, načte se značka Google (gtag.js) služby Google Ads a mohou se uložit tyto cookies:</p>
+  <table style="width:100%;border-collapse:collapse;margin:16px 0;">
+    <thead>
+      <tr style="border-bottom:2px solid var(--neutral-400);">
+        <th style="text-align:left;padding:8px;color:var(--tertiary-100);">Název</th>
+        <th style="text-align:left;padding:8px;color:var(--tertiary-100);">Poskytovatel</th>
+        <th style="text-align:left;padding:8px;color:var(--tertiary-100);">Účel</th>
+        <th style="text-align:left;padding:8px;color:var(--tertiary-100);">Doba trvání</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr style="border-bottom:1px solid var(--neutral-400);">
+        <td style="padding:8px;"><code>_gcl_au</code></td>
+        <td style="padding:8px;">Google Ads (forestbit.cz)</td>
+        <td style="padding:8px;">Propojení návštěvy s konverzí pro měření účinnosti reklam</td>
+        <td style="padding:8px;">90 dní</td>
+      </tr>
+      <tr style="border-bottom:1px solid var(--neutral-400);">
+        <td style="padding:8px;"><code>_gcl_aw</code></td>
+        <td style="padding:8px;">Google Ads (forestbit.cz)</td>
+        <td style="padding:8px;">Uložení identifikátoru kliknutí na reklamu (GCLID)</td>
+        <td style="padding:8px;">90 dní</td>
+      </tr>
+      <tr style="border-bottom:1px solid var(--neutral-400);">
+        <td style="padding:8px;"><code>IDE</code></td>
+        <td style="padding:8px;">Google (doubleclick.net)</td>
+        <td style="padding:8px;">Měření konverzí a zobrazování reklam Google</td>
+        <td style="padding:8px;">13 měsíců</td>
+      </tr>
+      <tr>
+        <td style="padding:8px;"><code>test_cookie</code></td>
+        <td style="padding:8px;">Google (doubleclick.net)</td>
+        <td style="padding:8px;">Ověření, zda prohlížeč podporuje cookies</td>
+        <td style="padding:8px;">15 minut</td>
+      </tr>
+    </tbody>
+  </table>
+  <p>Pokud souhlas neudělíte, značka Google se vůbec nenačte a žádné z těchto cookies se neuloží. Pokud se technická konfigurace webu nebo služeb Google změní, může se změnit i přesný seznam cookies. V takovém případě tuto stránku aktualizujeme.</p>
 
-  <h2>5. Cookies třetích stran</h2>
-  <p>V souvislosti s technickým provozem webu mohou být používány služby třetích stran, zejména:</p>
+  <h2>5. Právní základ</h2>
+  <p>Nezbytné technické cookies používáme proto, že jsou <strong>nezbytné pro správnou funkci, zabezpečení a poskytování webu</strong> (§ 89 odst. 3 zákona č. 127/2005 Sb., o elektronických komunikacích). Pokud v souvislosti s nimi dochází ke zpracování osobních údajů, opíráme se o náš oprávněný zájem na bezpečném a řádném provozu webu (čl. 6 odst. 1 písm. f) GDPR).</p>
+  <p>Marketingové cookies používáme <strong>pouze na základě vašeho souhlasu</strong> (čl. 6 odst. 1 písm. a) GDPR). Souhlas je dobrovolný, jeho odmítnutí nemá vliv na používání webu a můžete ho kdykoli odvolat.</p>
+
+  <h2>6. Cookies třetích stran</h2>
+  <p>V souvislosti s provozem webu jsou používány služby třetích stran, zejména:</p>
   <ul>
     <li><strong>Cloudflare</strong> – bezpečnostní a síťové služby,</li>
+    <li><strong>Google Ireland Limited</strong> (Google Ads) – měření konverzí z reklamních kampaní, pouze s vaším souhlasem. Údaje mohou být předány společnosti Google LLC v USA na základě EU–US Data Privacy Framework. Více informací najdete v <a href="https://policies.google.com/technologies/ads?hl=cs" target="_blank" rel="noopener">zásadách Google pro reklamy</a>,</li>
     <li>případně další technické služby související s hostingem nebo doručením obsahu.</li>
   </ul>
-  <p>Tyto služby mohou v odůvodněných případech používat vlastní technické cookies nebo obdobné identifikátory, pokud je to nezbytné pro jejich bezpečnostní či provozní funkci.</p>
 
-  <h2>6. Jak můžete cookies spravovat</h2>
-  <p>Technické cookies můžete ve většině případů kontrolovat nebo mazat ve svém prohlížeči. Upozorňujeme však, že blokování nezbytných cookies může způsobit:</p>
+  <h2>7. Jak můžete cookies spravovat</h2>
+  <p>Svůj souhlas s marketingovými cookies můžete kdykoli udělit nebo odvolat tlačítkem <strong>„Změnit nastavení cookies“</strong> na začátku této stránky. Po odvolání souhlasu marketingové cookies smažeme a značka Google se při dalších návštěvách nenačte.</p>
+  <p>Cookies můžete také kontrolovat nebo mazat v nastavení svého prohlížeče. Upozorňujeme však, že blokování nezbytných cookies může způsobit:</p>
   <ul>
     <li>omezenou funkčnost webu,</li>
     <li>nefunkční odeslání formuláře,</li>
     <li>častější bezpečnostní výzvy nebo blokaci některých požadavků.</li>
   </ul>
 
-  <h2>7. Kontakt</h2>
+  <h2>8. Kontakt</h2>
   <p>Máte-li dotaz k používání cookies, napište nám na <a href="mailto:filip.zika@forestbit.cz"><strong>filip.zika@forestbit.cz</strong></a>.</p>
   <p>Podrobnosti o zpracování osobních údajů najdete v dokumentu <a href="privacy-policy.html"><strong>Zásady ochrany osobních údajů</strong></a>.</p>
 </div>
