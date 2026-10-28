@@ -316,10 +316,10 @@
     .social-icon { width: 24px; height: 24px; color: var(--neutral-300); cursor: pointer; transition: color 0.2s; }
     .social-icon:hover { color: var(--tertiary-100); }
     .footer-legal { display: flex; flex-direction: column; align-items: center; gap: 16px; }
-    .legal-links { display: flex; gap: 16px; align-items: center; font-family: 'Satoshi', sans-serif; font-size: 16px; color: var(--neutral-300); letter-spacing: 0.32px; }
+    .legal-links { display: flex; flex-wrap: wrap; justify-content: center; text-align: center; gap: 8px 16px; align-items: center; font-family: 'Satoshi', sans-serif; font-size: 16px; color: var(--neutral-300); letter-spacing: 0.32px; }
     .legal-links a { color: var(--neutral-300); text-decoration: none; transition: color 0.2s; }
     .legal-links a:hover { color: var(--tertiary-100); }
-    .copyright { display: flex; gap: 16px; align-items: center; font-family: 'Satoshi', sans-serif; font-size: 14px; color: var(--neutral-300); letter-spacing: 0.28px; }
+    .copyright { display: flex; flex-wrap: wrap; justify-content: center; text-align: center; gap: 8px 16px; align-items: center; font-family: 'Satoshi', sans-serif; font-size: 14px; color: var(--neutral-300); letter-spacing: 0.28px; }
 
     /* MOBILE NAVBAR */
     .navbar-mobile {
@@ -372,23 +372,23 @@
       .hero { height: 400px; }
       .hero-title { font-size: 44px; }
       .page-wrap { gap: 60px; padding-top: 32px; }
-      .kontakt-info { width: 984px; }
+      .kontakt-info { width: 984px; max-width: calc(100vw - 40px); }
       .kontakt-heading { font-size: 40px; }
       .kontakt-text { font-size: 20px; }
-      .info-card { width: 984px; }
+      .info-card { width: 984px; max-width: calc(100vw - 40px); }
       .info-card-text { font-size: 20px; }
-      .company-section { width: 984px; }
+      .company-section { width: 984px; max-width: calc(100vw - 40px); }
       .company-heading { font-size: 40px; }
       .company-details { font-size: 20px; }
-      .map-section { width: 984px; }
-      .map-container { width: 984px; height: 480px; }
+      .map-section { width: 984px; max-width: calc(100vw - 40px); }
+      .map-container { width: 984px; max-width: calc(100vw - 40px); height: 480px; }
       .map-heading { font-size: 40px; }
-      .faq-section { width: 984px; }
-      .faq-card { width: 984px; height: auto; }
+      .faq-section { width: 984px; max-width: calc(100vw - 40px); }
+      .faq-card { width: 984px; max-width: calc(100vw - 40px); height: auto; }
       .faq-heading { font-size: 40px; }
       .faq-question { font-size: 24px; }
       .faq-answer { font-size: 20px; }
-      .contact-wrap { width: 984px !important; }
+      .contact-wrap { width: 984px !important; max-width: calc(100vw - 40px) !important; }
       .heading-2 { font-size: 40px; }
       .paragraph-1 { font-size: 20px; }
       .footer-top { padding: 32px 20px; }

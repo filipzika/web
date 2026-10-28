@@ -143,7 +143,7 @@
       display: flex; flex-direction: column; gap: 48px;
       width: 563px; color: var(--tertiary-100);
     }
-    .project-meta { display: flex; flex-direction: column; gap: 0; width: 387px; }
+    .project-meta { display: flex; flex-direction: column; gap: 0; width: 387px; max-width: 100%; }
     .project-client {
       font-family: 'Satoshi', sans-serif; font-weight: 300; font-size: 22px;
       color: var(--tertiary-100); letter-spacing: 0.44px; line-height: 1.5;
@@ -282,10 +282,10 @@
     .social-icon { width: 24px; height: 24px; color: var(--neutral-300); cursor: pointer; transition: color 0.2s; }
     .social-icon:hover { color: var(--tertiary-100); }
     .footer-legal { display: flex; flex-direction: column; align-items: center; gap: 16px; }
-    .legal-links { display: flex; gap: 16px; align-items: center; font-family: 'Satoshi', sans-serif; font-size: 16px; color: var(--neutral-300); letter-spacing: 0.32px; }
+    .legal-links { display: flex; flex-wrap: wrap; justify-content: center; text-align: center; gap: 8px 16px; align-items: center; font-family: 'Satoshi', sans-serif; font-size: 16px; color: var(--neutral-300); letter-spacing: 0.32px; }
     .legal-links a { color: var(--neutral-300); text-decoration: none; transition: color 0.2s; }
     .legal-links a:hover { color: var(--tertiary-100); }
-    .copyright { display: flex; gap: 16px; align-items: center; font-family: 'Satoshi', sans-serif; font-size: 14px; color: var(--neutral-300); letter-spacing: 0.28px; }
+    .copyright { display: flex; flex-wrap: wrap; justify-content: center; text-align: center; gap: 8px 16px; align-items: center; font-family: 'Satoshi', sans-serif; font-size: 14px; color: var(--neutral-300); letter-spacing: 0.28px; }
 
     /* MOBILE NAVBAR */
     .navbar-mobile {
@@ -342,15 +342,15 @@
 
       .page-wrap { gap: 60px; padding-top: 32px; }
 
-      .projects-section { width: 984px; }
+      .projects-section { width: 984px; max-width: calc(100vw - 40px); }
       .project-text { width: 480px; gap: 32px; }
       .project-name { font-size: 36px; }
       .project-label { font-size: 26px; }
       .project-desc { font-size: 20px; }
       .project-image-wrap { width: 380px; height: 380px; }
 
-      .form-section { width: 984px; }
-      .contact-wrap { width: 984px !important; }
+      .form-section { width: 984px; max-width: calc(100vw - 40px); }
+      .contact-wrap { width: 984px !important; max-width: calc(100vw - 40px) !important; }
       .heading-2 { font-size: 40px; }
       .fta { height: 250px; font-size: 20px; }
       .dropzone { height: 180px; }

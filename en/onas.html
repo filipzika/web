@@ -157,7 +157,7 @@
       max-width: 778px;
     }
     .team-grid-row {
-      display: flex; justify-content: center; gap: 80px;
+      display: flex; flex-wrap: wrap; justify-content: center; gap: 80px;
     }
     .team-card {
       width: 329px;
@@ -265,10 +265,10 @@
     .social-icon { width: 24px; height: 24px; color: var(--neutral-300); cursor: pointer; transition: color 0.2s; }
     .social-icon:hover { color: var(--tertiary-100); }
     .footer-legal { display: flex; flex-direction: column; align-items: center; gap: 16px; }
-    .legal-links { display: flex; gap: 16px; align-items: center; font-family: 'Satoshi', sans-serif; font-size: 16px; color: var(--neutral-300); letter-spacing: 0.32px; }
+    .legal-links { display: flex; flex-wrap: wrap; justify-content: center; text-align: center; gap: 8px 16px; align-items: center; font-family: 'Satoshi', sans-serif; font-size: 16px; color: var(--neutral-300); letter-spacing: 0.32px; }
     .legal-links a { color: var(--neutral-300); text-decoration: none; transition: color 0.2s; }
     .legal-links a:hover { color: var(--tertiary-100); }
-    .copyright { display: flex; gap: 16px; align-items: center; font-family: 'Satoshi', sans-serif; font-size: 14px; color: var(--neutral-300); letter-spacing: 0.28px; }
+    .copyright { display: flex; flex-wrap: wrap; justify-content: center; text-align: center; gap: 8px 16px; align-items: center; font-family: 'Satoshi', sans-serif; font-size: 14px; color: var(--neutral-300); letter-spacing: 0.28px; }
 
     /* MOBILE NAVBAR */
     .navbar-mobile {
@@ -320,18 +320,18 @@
     @media (max-width: 1100px) {
       .hero { height: 400px; }
       .hero-title { font-size: 44px; }
-      .about-card { width: 984px; padding: 32px; }
+      .about-card { width: 984px; max-width: calc(100vw - 40px); padding: 32px; }
       .about-heading { font-size: 40px; }
       .about-text { font-size: 20px; }
-      .team-section { width: 984px; gap: 48px; }
+      .team-section { width: 984px; max-width: calc(100vw - 40px); gap: 48px; }
       .team-heading { font-size: 40px; }
       .team-subtitle { font-size: 20px; max-width: 678px; }
-      .team-grid-row { gap: 48px; }
+      .team-grid-row { gap: 48px; flex-wrap: wrap; }
       .team-card { width: 262px; }
       .team-photo { width: 262px; }
       .team-name { font-size: 20px; }
       .team-desc { font-size: 20px; }
-      .contact-wrap { width: 984px !important; }
+      .contact-wrap { width: 984px !important; max-width: calc(100vw - 40px) !important; }
       .heading-2 { font-size: 40px; }
       .paragraph-1 { font-size: 20px; }
       .footer-top { padding: 32px 20px; }

@@ -478,10 +478,10 @@
     .social-icon { width: 24px; height: 24px; color: var(--neutral-300); cursor: pointer; transition: color 0.2s; }
     .social-icon:hover { color: var(--tertiary-100); }
     .footer-legal { display: flex; flex-direction: column; align-items: center; gap: 16px; }
-    .legal-links { display: flex; gap: 16px; align-items: center; font-family: 'Satoshi', sans-serif; font-size: 16px; color: var(--neutral-300); letter-spacing: 0.32px; }
+    .legal-links { display: flex; flex-wrap: wrap; justify-content: center; text-align: center; gap: 8px 16px; align-items: center; font-family: 'Satoshi', sans-serif; font-size: 16px; color: var(--neutral-300); letter-spacing: 0.32px; }
     .legal-links a { color: var(--neutral-300); text-decoration: none; transition: color 0.2s; }
     .legal-links a:hover { color: var(--tertiary-100); }
-    .copyright { display: flex; gap: 16px; align-items: center; font-family: 'Satoshi', sans-serif; font-size: 14px; color: var(--neutral-300); letter-spacing: 0.28px; }
+    .copyright { display: flex; flex-wrap: wrap; justify-content: center; text-align: center; gap: 8px 16px; align-items: center; font-family: 'Satoshi', sans-serif; font-size: 14px; color: var(--neutral-300); letter-spacing: 0.28px; }
 
     /* MOBILE NAVBAR */
     .navbar-mobile {
@@ -539,7 +539,7 @@
       .hero-subtitle { font-size: 20px; }
 
       .page-wrap { gap: 60px; padding-top: 32px; }
-      .section-inner { width: 984px; }
+      .section-inner { width: 984px; max-width: calc(100vw - 40px); }
 
       .services-header { margin-bottom: 48px; }
       .heading-1 { font-size: 52px; }
@@ -548,8 +548,8 @@
       .carousel-title { font-size: 40px; }
       .carousel-desc { font-size: 20px; }
 
-      .services-wrap { width: 984px !important; }
-      .contact-wrap { width: 984px !important; }
+      .services-wrap { width: 984px !important; max-width: calc(100vw - 40px) !important; }
+      .contact-wrap { width: 984px !important; max-width: calc(100vw - 40px) !important; }
 
       .service-detail { min-height: 400px; }
       .service-detail-number { font-size: 64px; width: 100px; padding-top: 48px; }
@@ -563,8 +563,8 @@
       .dropzone { height: 180px; }
       .dropzone-txt { font-size: 20px; }
 
-      .faq-section { width: 984px; }
-      .faq-card { width: 984px; height: auto; }
+      .faq-section { width: 984px; max-width: calc(100vw - 40px); }
+      .faq-card { width: 984px; max-width: calc(100vw - 40px); height: auto; }
       .faq-heading { font-size: 40px; }
       .faq-question { font-size: 24px; }
       .faq-answer { font-size: 20px; }
