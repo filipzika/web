@@ -1902,9 +1902,8 @@
 
     emailjs.sendForm('service_8vwiv8m', 'template_71av8jr', form)
       .then(function() {
-        showFormMsg(form, 'Your message has been sent successfully. We will get back to you as soon as possible.', 'success');
-        form.reset();
-        document.getElementById('charCnt').textContent = '0/1000';
+        // Redirect to a dedicated URL for conversion tracking (Google Ads)
+        window.location.href = './?formular=odeslano#kontakt';
       }, function(err) {
         showFormMsg(form, 'Sending failed: ' + (err.text || err.message || JSON.stringify(err)), 'error');
         console.error('EmailJS error:', JSON.stringify(err));
@@ -1947,6 +1946,15 @@
         ? 'background:rgba(106,97,217,0.15);color:#6a61d9;border:1px solid #6a61d9;'
         : 'background:rgba(220,38,38,0.1);color:#dc2626;border:1px solid #dc2626;');
     setTimeout(function() { msg.remove(); }, 6000);
+  }
+
+  // Confirmation after redirect from a submitted form (conversion tracking URL)
+  if (new URLSearchParams(location.search).get('formular') === 'odeslano') {
+    window.addEventListener('load', function() {
+      var form = document.getElementById('contactForm');
+      document.getElementById('kontakt').scrollIntoView();
+      showFormMsg(form, 'Your message has been sent successfully. We will get back to you as soon as possible.', 'success');
+    });
   }
 </script>
 <script src="../assets/cms-data.js"></script>

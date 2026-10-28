@@ -1918,9 +1918,8 @@
 
     emailjs.sendForm('service_8vwiv8m', 'template_71av8jr', form)
       .then(function() {
-        showFormMsg(form, 'Zpráva byla úspěšně odeslána! Ozveme se vám co nejdříve.', 'success');
-        form.reset();
-        document.getElementById('charCnt').textContent = '0/1000';
+        // Přesměrování na samostatnou URL kvůli měření konverzí (Google Ads)
+        window.location.href = './?formular=odeslano#kontakt';
       }, function(err) {
         showFormMsg(form, 'Odeslání se nezdařilo: ' + (err.text || err.message || JSON.stringify(err)), 'error');
         console.error('EmailJS error:', JSON.stringify(err));
@@ -1963,6 +1962,15 @@
         ? 'background:rgba(106,97,217,0.15);color:#6a61d9;border:1px solid #6a61d9;'
         : 'background:rgba(220,38,38,0.1);color:#dc2626;border:1px solid #dc2626;');
     setTimeout(function() { msg.remove(); }, 6000);
+  }
+
+  // Potvrzení po přesměrování z odeslaného formuláře (URL pro měření konverzí)
+  if (new URLSearchParams(location.search).get('formular') === 'odeslano') {
+    window.addEventListener('load', function() {
+      var form = document.getElementById('contactForm');
+      document.getElementById('kontakt').scrollIntoView();
+      showFormMsg(form, 'Zpráva byla úspěšně odeslána! Ozveme se vám co nejdříve.', 'success');
+    });
   }
 </script>
 <script src="assets/cms-data.js"></script>

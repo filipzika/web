@@ -725,9 +725,8 @@
     btn.textContent = 'Sending...';
     emailjs.sendForm('service_8vwiv8m', 'template_71av8jr', form)
       .then(function() {
-        showFormMsg(form, 'Your message has been sent successfully. We will get back to you as soon as possible.', 'success');
-        form.reset();
-        document.getElementById('charCnt').textContent = '0/1000';
+        // Redirect to a dedicated URL for conversion tracking (Google Ads)
+        window.location.href = './?formular=odeslano#kontakt';
       }, function(err) {
         showFormMsg(form, 'Sending failed. Please try again.', 'error');
         console.error('EmailJS error:', err);

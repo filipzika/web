@@ -800,9 +800,8 @@
     btn.textContent = 'Odesílání...';
     emailjs.sendForm('service_8vwiv8m', 'template_71av8jr', form)
       .then(function() {
-        showFormMsg(form, 'Zpráva byla úspěšně odeslána! Ozveme se vám co nejdříve.', 'success');
-        form.reset();
-        document.getElementById('charCnt').textContent = '0/1000';
+        // Přesměrování na samostatnou URL kvůli měření konverzí (Google Ads)
+        window.location.href = './?formular=odeslano#kontakt';
       }, function(err) {
         showFormMsg(form, 'Odeslání se nezdařilo. Zkuste to prosím znovu.', 'error');
         console.error('EmailJS error:', err);
