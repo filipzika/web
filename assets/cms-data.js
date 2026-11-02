@@ -40,11 +40,15 @@
         var addrLabel = isEN ? 'Address:' : 'Adresa:';
         var idLabel = isEN ? 'Company ID / VAT ID:' : 'I\u010C/DI\u010C:';
         var phoneLabel = isEN ? 'Phone:' : 'Telefon:';
+        /* E-mail address → mailto link (@ as entity, same as the hardcoded fallback) */
+        var email = /^[^\s@]+@[^\s@]+$/.test(d.email || '')
+          ? '<a href="mailto:' + d.email.replace('@', '&#64;') + '">' + d.email.replace('@', '&#64;') + '</a>'
+          : d.email;
         cd.innerHTML =
           '<p><span class="label">' + d.name + '</span></p>' +
           '<p><span class="label">' + addrLabel + '</span> ' + d.address + '</p>' +
           '<p><span class="label">' + idLabel + '</span> ' + d.ico + '/' + d.dic + '</p>' +
-          '<p><span class="label">E-mail:</span> ' + d.email + '</p>' +
+          '<p><span class="label">E-mail:</span> ' + email + '</p>' +
           '<p><span class="label">' + phoneLabel + '</span> ' + d.phone + '</p>';
       }
     })
