@@ -179,6 +179,16 @@
           "img": "/assets/icon-sdcard.svg"
         }
       ]
+    },
+    {
+      "id": "networking",
+      "title": "IT infrastruktura",
+      "title_en": "IT infrastructure",
+      "subtitle": "Navrhujeme a spravujeme sítě a servery pro malé i velké organizace, od návrhu infrastruktury po moderní nástroje pro snadnou správu.",
+      "subtitle_en": "We design and manage networks and servers for both small and large organizations, from infrastructure design to modern tools for easy management.",
+      "carousel_desc": "Navrhuje a spravujeme síťovou infrastrukturu pro malé i velké podniky.",
+      "carousel_desc_en": "We design and manage network infrastructure for both small and large businesses.",
+      "features": []
     }
   ]
 }
