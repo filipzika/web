@@ -188,7 +188,40 @@
       "subtitle_en": "We design and manage networks and servers for both small and large organizations, from infrastructure design to modern tools for easy management.",
       "carousel_desc": "Navrhuje a spravujeme síťovou infrastrukturu pro malé i velké podniky.",
       "carousel_desc_en": "We design and manage network infrastructure for both small and large businesses.",
-      "features": []
+      "features": [
+        {
+          "name": "Zasíťování",
+          "name_en": "Networking",
+          "desc": "Návrh LAN i Wi-Fi sítí, strukturovaná kabeláž, VLAN a propojení poboček.",
+          "desc_en": "LAN and Wi-Fi network design, structured cabling, VLANs and branch office connectivity.",
+          "img": "/assets/icon-network.svg",
+          "icon": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><rect x=\"16\" y=\"16\" width=\"6\" height=\"6\" rx=\"1\"/><rect x=\"2\" y=\"16\" width=\"6\" height=\"6\" rx=\"1\"/><rect x=\"9\" y=\"2\" width=\"6\" height=\"6\" rx=\"1\"/><path d=\"M5 16v-3a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v3\"/><path d=\"M12 12V8\"/></svg>"
+        },
+        {
+          "name": "Správa IT systémů",
+          "name_en": "IT Systems Management",
+          "desc": "Návrh a správa serverů, stanic i síťových prvků včetně monitoringu, záloh a aktualizací.",
+          "desc_en": "Design and management of servers, workstations and network devices, including monitoring, backups and updates.",
+          "img": "/assets/icon-server.svg",
+          "icon": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><rect x=\"2\" y=\"2\" width=\"20\" height=\"8\" rx=\"2\" ry=\"2\"/><rect x=\"2\" y=\"14\" width=\"20\" height=\"8\" rx=\"2\" ry=\"2\"/><line x1=\"6\" y1=\"6\" x2=\"6.01\" y2=\"6\"/><line x1=\"6\" y1=\"18\" x2=\"6.01\" y2=\"18\"/></svg>"
+        },
+        {
+          "name": "Implementace moderních funkcí",
+          "name_en": "Modern Features Implementation",
+          "desc": "Virtualizace, centrální správa zařízení a automatizace každodenního provozu.",
+          "desc_en": "Virtualization, centralized device management and automation of day-to-day operations.",
+          "img": "/assets/icon-zap.svg",
+          "icon": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M4 14a1 1 0 0 1-.78-1.63l9.9-10.2a.5.5 0 0 1 .86.46l-1.92 6.02A1 1 0 0 0 13 10h7a1 1 0 0 1 .78 1.63l-9.9 10.2a.5.5 0 0 1-.86-.46l1.92-6.02A1 1 0 0 0 11 14z\"/></svg>"
+        },
+        {
+          "name": "Zabezpečení",
+          "name_en": "Security",
+          "desc": "Firewally, VPN, segmentace sítě a řízení přístupů pro ochranu dat i provozu.",
+          "desc_en": "Firewalls, VPNs, network segmentation and access control to protect your data and operations.",
+          "img": "/assets/icon-shield-check.svg",
+          "icon": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z\"/><path d=\"m9 12 2 2 4-4\"/></svg>"
+        }
+      ]
     }
   ]
 }
