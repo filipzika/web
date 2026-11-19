@@ -1759,7 +1759,7 @@
   fetch('../data/services.json')
     .then(function(r) { return r.json(); })
     .then(function(data) {
-      slides = data.items.map(function(s) { return { title: s.title_en, desc: s.carousel_desc_en }; });
+      slides = data.items.filter(function(s) { return s.carousel !== false; }).map(function(s) { return { title: s.title_en, desc: s.carousel_desc_en }; });
 
       // Update carousel with first slide
       document.getElementById('cTitle').textContent = slides[0].title;

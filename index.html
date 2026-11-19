@@ -1775,7 +1775,7 @@
   fetch('data/services.json')
     .then(function(r) { return r.json(); })
     .then(function(data) {
-      slides = data.items.map(function(s) { return { title: s.title, desc: s.carousel_desc }; });
+      slides = data.items.filter(function(s) { return s.carousel !== false; }).map(function(s) { return { title: s.title, desc: s.carousel_desc }; });
 
       // Update carousel with first slide
       document.getElementById('cTitle').textContent = slides[0].title;

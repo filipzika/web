@@ -1170,7 +1170,7 @@
   fetch('../data/services.json')
     .then(function(r) { return r.json(); })
     .then(function(data) {
-      slides = data.items.map(function(s) { return { title: s.title_en, desc: s.carousel_desc_en }; });
+      slides = data.items.filter(function(s) { return s.carousel !== false; }).map(function(s) { return { title: s.title_en, desc: s.carousel_desc_en }; });
       var dotsEl = document.getElementById('dots');
       dotsEl.innerHTML = '';
       slides.forEach(function(_, i) {

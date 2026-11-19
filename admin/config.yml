@@ -54,6 +54,7 @@ collections:
               - { name: "subtitle_en", label: "Description (EN)", widget: "text", required: false }
               - { name: "carousel_desc", label: "Krátký popis pro karusel (CZ)", widget: "text", required: false }
               - { name: "carousel_desc_en", label: "Short carousel description (EN)", widget: "text", required: false }
+              - { name: "carousel", label: "Zobrazit v karuselu", widget: "boolean", default: true, required: false }
               - name: "features"
                 label: "Vlastnosti"
                 widget: "list"

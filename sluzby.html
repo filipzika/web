@@ -1177,7 +1177,7 @@
   fetch('data/services.json')
     .then(r => r.json())
     .then(data => {
-      slides = data.items.map(function(s) { return { title: s.title, desc: s.carousel_desc }; });
+      slides = data.items.filter(function(s) { return s.carousel !== false; }).map(function(s) { return { title: s.title, desc: s.carousel_desc }; });
       servicesLoaded = true;
       // Build dots
       var dotsEl = document.getElementById('dots');
